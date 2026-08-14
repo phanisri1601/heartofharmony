@@ -1,0 +1,1794 @@
+/**
+Theme Name: Astra Child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astra-child
+Template: astra
+*/
+
+/***************** HOH CSS **********************/
+
+/* HOH Popup CSS*/
+#popup-form.cf7-form-wrapper>h2 {
+	font-family:'Fraunces', sans-serif;
+	font-size: 32px;
+	letter-spacing: -0.64px;
+	line-height: normal;
+	margin-bottom: 30px;
+}
+
+button.pum-close.popmake-close {
+	color: #8E3628 !important;
+	background: unset !important;
+	border: 2px solid #8E3628 !important;
+	box-shadow: unset !important;
+	right: 28px !important;
+	top: 39px !important;
+}
+
+.pum-theme-lightbox .pum-container {
+	border: 0 !important;
+	box-shadow: unset !important;
+	padding: 32px !important;
+	border-radius: 24px !important;
+	background: #FCFCFC !important;
+}
+
+.pum-theme-lightbox .custom-form input[type="submit"] {
+	width: 100%;
+	margin-top: 30px;
+}
+
+#popup-msg.cf7-success-message * {
+	text-align: center;
+	margin: auto;
+	max-width: max-content;
+	display: block;
+}
+
+#popup-msg.cf7-success-message h2 {
+	margin-top: 24px;
+	margin-bottom: 16px;
+	font-size: 32px;
+	line-height: 40px;
+}
+
+#popup-msg.cf7-success-message p {
+	max-width: 280px;
+	margin-bottom: 40px;
+	color: #505050;
+	text-align: center;
+	font-family: "Albert Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 20.8px;
+	letter-spacing: -0.48px;
+}
+
+#popup-msg.cf7-success-message a {
+	display: flex;
+	height: 40px;
+	padding: 8px 16px;
+	justify-content: center;
+	align-items: center;
+	gap: 4px;
+	align-self: stretch;
+	border-radius: 50px;
+	background: #141414;
+	color: #FCFCFC;
+	text-align: center;
+	font-family: "Albert Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	letter-spacing: -0.32px;
+}
+
+/* Landing Page CSS */
+.landing-header.sticky {
+	background: #141414 !important;
+}
+
+.popmake .wpcf7-spinner {
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.sub-heading.elementor-widget-heading::before, .sub-heading.elementor-widget-heading::after {
+	content: "";
+	width: 40px;
+	height: 1px;
+	background-color: #672B21;
+	display: block;
+	position: absolute;
+	left: -60px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.sub-heading.elementor-widget-heading::after {
+	right: -60px;
+	left: unset;
+}
+
+.left.sub-heading.elementor-widget-heading {
+	padding-left: 60px;
+}
+
+.left.sub-heading.elementor-widget-heading::before {
+	left: 0;
+}
+
+.left.sub-heading.elementor-widget-heading::after {
+	content: none;
+}
+
+span.landing-banner-text {
+	color: #672B21;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 30px;
+	letter-spacing: -0.56px;
+}
+
+.floors-slider .elementor-swiper-button:hover {
+    background: unset !important;
+}
+.floors-slider .elementor-swiper-button:hover path {
+    fill: #672B21 !important;
+}
+
+#gallery .cus_virtual_tour .e-n-tabs-heading .e-n-tab-title {
+	padding: 8px 34px;
+}
+
+.landing-gallery img.swiper-slide-image {
+	height: 520px;
+	object-fit: cover;
+}
+
+.landing-gallery .elementor-image-carousel-wrapper.swiper {
+	overflow: visible;
+}
+
+.landing-gallery span.swiper-pagination-bullet.swiper-pagination-bullet-active,
+.landing-gallery span.swiper-pagination-bullet:hover,
+.floors-slider span.swiper-pagination-bullet.swiper-pagination-bullet-active,
+.floors-slider span.swiper-pagination-bullet:hover{
+	background: #672B21 !important;
+}
+
+.landing-gallery span.swiper-pagination-bullet,
+.floors-slider span.swiper-pagination-bullet{
+	border: 2px solid #672B21 !important;
+	background: transparent !important;
+}
+
+/* .landing-gallery .elementor-swiper-button.elementor-swiper-button-next {
+	right: 37% !important;
+}
+
+.landing-gallery .elementor-swiper-button.elementor-swiper-button-prev {
+	left: 37% !important;
+}
+
+.landing-gallery.elementor-element .swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: -33px !important;
+	z-index: 1 !important;
+}
+
+.landing-gallery .elementor-swiper-button {
+	top: unset !important;
+	bottom: -65px;
+	z-index: 2 !important;
+} */
+
+#amenities .e-n-accordion .e-n-accordion-item:not(#amenities .e-n-accordion .e-n-accordion-item:last-child) {
+	border-bottom: 1px solid #1414141A;
+}
+
+#download-btn a svg:not(#download-btn a:hover svg, #download-btn a:focus svg) {
+	filter: brightness(0) saturate(100%) invert(18%) sepia(11%) saturate(4681%) hue-rotate(328deg) brightness(100%) contrast(91%);
+	transition: all 0.5s;
+}
+
+#download-btn a:focus svg path{
+fill: #fcfcfc !important;	
+}
+
+.landing-page-form .custom-form input[type="submit"] {
+	background-color: #672B21 !important;
+}
+.banner-info .elementor-widget-image-box .elementor-widget-container,
+.floor-info .elementor-widget-icon-box .elementor-widget-container{
+	background-color:unset !important;
+}
+.tab-amenities li.elementor-icon-list-item {
+    padding: 9px 16px !important;
+    border: 0.5px solid #1414141A;
+    border-radius: 80px;
+    margin-bottom: 8px;
+}
+#multi-download-btn{
+ cursor:pointer;	
+}
+/* Landing Page CSS */
+
+
+/* General CSS */
+body,
+html {
+	overflow-x: hidden;
+}
+
+.elementor-heading-title i.brown-text {
+	font-weight: 300;
+}
+
+.elementor-heading-title i.brown-text {
+	color: #8E3628;
+}
+
+.blurred-btn {
+	backdrop-filter: blur(2.6500000953674316px);
+}
+
+.wpcf7-form input.wpcf7-submit:hover,
+.elementor-button:hover,
+.elementor-button,
+a .elementor-button-icon svg path,
+.elementor-icon-box-icon span svg path,
+.elementor-icon-box-icon span svg rect {
+	transition: all 0.5s;
+}
+
+a:not(.e-loop-item a):hover .elementor-button-icon svg path {
+	fill: #f1f1f1;
+	color: #f1f1f1;
+}
+
+.centersubheading .elementor-heading-title {
+	max-width: max-content;
+	margin: auto;
+}
+
+.centersubheading .elementor-heading-title::after {
+	content: "";
+	width: 100%;
+	background: #202020;
+	height: 1px;
+	display: block;
+	position: relative;
+	bottom: -5px;
+}
+
+.e-loop-item .elementor-heading-title a {
+	display: block;
+}
+.elementor-slideshow__title{
+	display:none;
+}
+@media(min-width:768px) {
+	.banner-content {
+		background-color: transparent !important;
+	}
+}
+
+/*Home CSS*/
+.home .elementor-widget-n-tabs .e-n-tab-title:hover,
+.home .elementor-widget-n-tabs .e-n-tab-title:focus {
+	border-radius: 0 !important;
+}
+
+.tabs-images .elementor-widget-image:not(.tabs-images .elementor-widget-image:first-child),
+.amenity-images .elementor-widget-image:not(.amenity-images .elementor-widget-image:first-child) {
+	display: none;
+}
+
+.tabs-images .elementor-widget-image,
+.amenity-images .elementor-widget-image {
+	height: 100%;
+}
+
+.featuredtabs.elementor-widget-n-tabs .e-n-tab-title-text {
+	flex-direction: column;
+	text-align: left !important;
+	align-items: flex-start;
+	gap: 0px;
+	transition: all 0.7s ease !important;
+}
+
+.featuredtabs.elementor-widget-n-tabs .e-n-tab-title[aria-selected="true"] .e-n-tab-title-text {
+	gap: 16px;
+}
+
+.featuredtabs .e-n-tab-title-text span {
+	color: #505050;
+	font-family: "Albert Sans";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 130%;
+	letter-spacing: -0.48px;
+	display: block;
+	align-items: stretch;
+	height: auto;
+	opacity: 1;
+	transition: all 0.7s ease !important;
+}
+
+.featuredtabs.elementor-widget-n-tabs .e-n-tab-title[aria-selected="false"]:not(.featuredtabs.homes-tab.elementor-widget-n-tabs .e-n-tab-title[aria-selected="false"]) .e-n-tab-icon {
+	width: 0px;
+	opacity: 0;
+	transition: all 0.7s ease !important;
+}
+
+.featuredtabs.elementor-widget-n-tabs .e-n-tab-title[aria-selected="true"]:not(.featuredtabs.homes-tab.elementor-widget-n-tabs .e-n-tab-title[aria-selected="true"]) .e-n-tab-icon {
+	width: auto;
+	opacity: 1;
+	transition: all 0.7s ease !important;
+}
+
+.featuredtabs.elementor-widget-n-tabs .e-n-tab-title[aria-selected="false"] .e-n-tab-title-text span {
+/* 	display: none; */
+	height: 0px;
+	opacity: 0;
+	transition: all 0.7s ease !important;
+}
+
+.featuredtabs.elementor-widget-n-tabs .e-n-tab-title {
+	border-radius: 0 !important;
+	box-shadow: unset !important;
+	align-items: flex-start;
+}
+
+.featuredtabs.elementor-widget-n-tabs .e-n-tab-title .e-n-tab-icon svg,
+.traveltabs.elementor-widget-n-tabs .e-n-tab-title .e-n-tab-icon svg {
+	fill: transparent !important;
+}
+
+.featuredtabs.elementor-widget-n-tabs span.e-n-tab-icon {
+	top: 5px;
+	position: relative;
+}
+
+.featuredtabs.homes-tab.elementor-widget-n-tabs span.e-n-tab-icon {
+	top: -2px;
+}
+
+.featuredtabs span.e-n-tab-title-text {
+	width: 100%;
+}
+
+.featuredtabs span.e-n-tab-title-text div {
+	font-family: Albert Sans;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 130%;
+	letter-spacing: -0.3%;
+	color: #505050 !important;
+}
+
+.featuredtabs .e-n-tabs-heading .e-n-tab-title:not(:last-child)::after {
+	content: unset;
+}
+
+.featuredtabs .e-n-tabs-heading .e-n-tab-title {
+	padding: 32px 16px;
+	align-items: flex-start !important;
+}
+
+.location-benefit .elementor-widget-icon-box span.elementor-icon::after {
+	content: url(/wp-content/uploads/2026/03/pointer-vector.svg);
+	position: absolute;
+	bottom: -13px;
+	z-index: -1;
+	left: 50% !important;
+	transform: translate(-50%, 50%);
+}
+
+
+/* Project CSS */
+.elementor-element.herosection,
+.location-benefit .elementor-widget-icon-box span.elementor-icon {
+	position: relative;
+}
+
+.herosection::after {
+	content: "";
+	display: block;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: linear-gradient(180deg, rgba(20, 20, 20, 0) 50%, rgba(20, 20, 20, 0.6) 75%, rgba(20, 20, 20, 0.8) 100%);
+	position: absolute;
+	z-index: 0;
+}
+
+.elementor-element.herosection > .e-con-inner {
+	position: relative;
+	z-index: 1;
+}
+
+.e-n-tabs-heading > button:not(.e-n-tabs-heading > button:last-child)::after {
+	content: "";
+	position: absolute;
+	top: 0%;
+	bottom: 0%;
+	right: calc(var(--n-tabs-title-gap) / -2);
+	width: 1px;
+	background: #1414141A;
+	height: 32px;
+}
+
+
+/* Resources CSS */
+.e-loop-item .elementor-element.featured-img::before {
+	background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 0.2) 50%, #141414 100%) !important;
+	opacity: 1;
+}
+
+/* About CSS */
+.leaders-logos img {
+	filter: brightness(0) saturate(100%) invert(70%) sepia(10%) saturate(16%) hue-rotate(349deg) brightness(90%) contrast(95%);
+}
+
+.elementor-testimonial-content {
+	margin-bottom: 48px !important;
+}
+
+.elementor-testimonial-details {
+	padding-left: 16px;
+	border-left: 2px solid #8E3628;
+}
+
+.elementor-testimonial-name {
+	margin-bottom: 4px;
+	margin-top: -5px;
+}
+
+.record-section small {
+	font-size: 24px;
+}
+
+.record-section span.elementor-icon-box-title {
+	margin-bottom: 8px !important;
+	display: block;
+}
+
+.record-section .record-grid::before {
+	content: "";
+	background: linear-gradient(190.15deg, rgba(0, 0, 0, 0) 7.58%, rgba(0, 0, 0, 0.2) 49.98%, rgba(0, 0, 0, 0.8) 92.39%);
+}
+
+.tab-project-slider .swiper-slide {
+	border-radius: 24px !important;
+}
+
+.tab-project-slider .project-heading-wrap::after {
+	content: "";
+	background: linear-gradient(0deg, rgba(20, 20, 20, 0.91) 0%, rgba(20, 20, 20, 0.6) 60%, rgba(20, 20, 20, 0) 100%);
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	height: 100%;
+	left: 0;
+/*     border-radius: 0 0 24px 24px; */;
+}
+
+.tab-project-slider .swiper-slide {
+	overflow: hidden;
+}
+
+.tab-project-slider .swiper-slide img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.tab-project-slider .swiper-wrapper {
+	cursor: grab;
+	touch-action: pan-y;
+	user-select: none;
+}
+
+.tab-project-slider .swiper-wrapper {
+	pointer-events: auto !important;
+}
+
+.tab-project-slider .swiper-slide {
+	pointer-events: auto;
+}
+
+.tab-project-slider .swiper-wrapper .swiper-slide:active {
+	cursor: grabbing;
+}
+
+@media(min-width:1025px) {
+	.elementor-element.project-details-wrap {
+		bottom: -20% !important;
+		transition: all 0.4s ease;
+	}
+
+	.swiper-slide>.elementor-element.e-con.e-child:hover .elementor-element.project-details-wrap {
+		bottom: 0% !important;
+	}
+}
+
+.cus_virtual_tour.project-slider-wrap .e-n-tabs-heading {
+	margin-right: 0;
+}
+
+.featuredtabs .e-n-tabs-heading .e-n-tab-title:last-child {
+	border-bottom: 0 !important;
+}
+
+@media(max-width:767px) {
+	.herosection::after {
+		background: linear-gradient(180deg, rgba(20, 20, 20, 0) 0%, rgba(20, 20, 20, 0) 50%, #141414 100%);
+	}
+
+	.banner-content {
+		position: relative;
+		bottom: unset;
+	}
+
+	.tab-project-slider .swiper-slide {
+		border-radius: 16px !important;
+	}
+}
+
+@media(max-width:1140px) and (min-width:1025px) {
+	.location-benefit {
+		background-size: 90% !important;
+		background-position: top center !important;
+	}
+}
+/*******************HOH CSS****************/
+
+
+
+    
+
+/*New Footer CSS */
+
+.wpcf7-form input.wpcf7-submit:hover,
+.wpcf7-form input.wpcf7-submit:focus {
+	background-color: transparent;
+}
+
+.wpcf7-form input.wpcf7-submit:hover {
+	background: #8E3628 !important;
+}
+
+.wpcf7-form input.wpcf7-submit {
+	border: 0 !important;
+}
+
+/*New Header CSS */
+
+.site-header.sticky {
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 99999;
+	box-shadow: 0 -6px 10px 5px rgba(0, 0, 0, 0.5);
+	background-color: #FCFCFC;
+}
+
+/* Initially hide the header off-screen when scrolling up */
+.site-header.sticky-header-hidden {
+	top: -100px;
+  /* Adjust this value based on your header height */
+	;
+}
+
+.site-header.sticky span.site-logo-img img,
+body:not(.ast-theme-transparent-header) .site-header span.site-logo-img img {
+	content: url('/wp-content/uploads/2026/03/Header-Logo-Black.svg');
+}
+
+.site-header.sticky p.header-official-site-text,
+body:not(.ast-theme-transparent-header) .site-header p.header-official-site-text {
+	color: #141414 !important;
+	border: 1px solid #141414;
+}
+
+.site-header.sticky a.menu-link,
+body:not(.ast-theme-transparent-header) .site-header a.menu-link {
+	color: #141414 !important;
+}
+
+.site-header.sticky .ast-builder-menu-1 .menu-item.current-menu-item > .menu-link,
+.site-header.sticky .ast-builder-menu-1 .menu-item:hover > .menu-link,
+body:not(.ast-theme-transparent-header) .site-header .ast-builder-menu-1 .menu-item:hover > .menu-link,
+body:not(.ast-theme-transparent-header) .site-header .ast-builder-menu-1 .menu-item.current-menu-item > .menu-link {
+	background: rgb(244 244 244);
+}
+
+body.ast-theme-transparent-header .site-header:not(.sticky) {
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.site-header.sticky .ast-custom-button,
+body:not(.ast-theme-transparent-header) .site-header .ast-custom-button {
+	background: transparent;
+	color: #141414;
+	border-color: #141414;
+}
+
+.site-header.sticky .ast-custom-button:after,
+body:not(.ast-theme-transparent-header) .site-header .ast-custom-button:after {
+	filter: invert(1);
+}
+
+.hidden-desktop {
+	display: none !important;
+}
+
+nav .main-navigation > ul {
+	column-gap: 4px !important;
+}
+
+.main-header-bar-wrap a.ast-custom-button-link:focus,
+button[type="button"]:focus,
+a:not(a.elementor-button):focus {
+	border-width: 0 !important;
+	outline: unset !important;
+}
+
+.main-header-bar-wrap a.ast-custom-button-link {
+	display: inline-flex;
+	align-items: center;
+}
+
+.main-header-bar-wrap a.ast-custom-button-link .ast-custom-button {
+	position: relative;
+}
+
+.main-header-bar-wrap a.ast-custom-button-link .ast-custom-button::after {
+	content: "";
+	display: block;
+	width: 14px;
+	height: 14px;
+	background-image: url("/wp-content/uploads/2026/03/right-arrow-icon.svg");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 13px;
+	right: 16px;
+}
+
+.site-branding.ast-site-identity {
+	padding: 0;
+}
+
+.sticky #ast-mobile-header .site-header-primary-section-right a .ast-custom-button,
+.sticky #ast-mobile-header .site-header-primary-section-right .menu-toggle span,
+body:not(.ast-theme-transparent-header) #ast-mobile-header .site-header-primary-section-right a .ast-custom-button,
+body:not(.ast-theme-transparent-header) #ast-mobile-header .site-header-primary-section-right .menu-toggle span {
+	color: #141414 !important;
+}
+
+.sticky #ast-mobile-header .main-header-bar-wrap a.ast-custom-button-link::after,
+.sticky #ast-mobile-header .menu-toggle .mobile-menu-toggle-icon::before,
+body:not(.ast-theme-transparent-header) #masthead #ast-mobile-header .main-header-bar-wrap a.ast-custom-button-link::after,
+body:not(.ast-theme-transparent-header) #masthead #ast-mobile-header .menu-toggle .mobile-menu-toggle-icon::before {
+	filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(19%) hue-rotate(139deg) brightness(96%) contrast(75%);
+}
+
+/* Header CSS */
+/***New CSS***/
+
+body.ast-main-header-nav-open header::after,
+body.ast-main-header-nav-open::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: #000000cc;
+	z-index: 99999;
+}
+
+.ast-header-break-point .ast-mobile-header-wrap .ast-mobile-header-content {
+	display: block !important;
+	max-width: 100%;
+	min-height: auto;
+}
+
+.ast-builder-grid-row > .site-header-section.site-header-primary-section-right.site-header-section.ast-flex.ast-grid-right-section {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.ast-main-header-nav-open.ast-header-break-point #ast-desktop-header .ast-desktop-header-content,
+.ast-main-header-nav-open.ast-header-break-point .ast-mobile-header-wrap .ast-mobile-header-content {
+	transform: translateX(0);
+	transition: all 0.6s ease-in-out;
+	overflow-y: scroll;
+	height: 100vh;
+}
+
+.ast-header-break-point .ast-mobile-header-wrap .ast-mobile-header-content {
+	transform: translateX(100%);
+	background: #e4e4e4e5;
+	min-height: 100vh !important;
+	overflow-y: scroll;
+	transition: all 0.4s ease-in-out;
+	display: block;
+	max-width: 320px !important;
+	margin-left: auto;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 999999;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu .sub-menu {
+	padding: 0 30px;
+	margin-top: 8px;
+	position: static;
+	opacity: 1;
+	visibility: visible;
+	border: 0;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu {
+	padding-top: 0px;
+	padding-right: 40px;
+	padding-left: 40px;
+	padding-bottom: 40px;
+	gap: 24px;
+	max-height: 80vh;
+	overflow-y: auto;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu li.menu-item a.menu-link {
+	color: #141414;
+	font-size: 24px;
+	line-height: 31.2px;
+	margin: 8px 0;
+	font-family: "Albert Sans",sans-serif;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu li.menu-item a.menu-link span.ast-icon.icon-arrow {
+	font-size: 12px;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu li.menu-item ul.sub-menu li.menu-item a.menu-link {
+	font-size: 16px;
+	line-height: 20.8px;
+	margin: 8px 0 0;
+	padding: 0;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu li.menu-item ul.sub-menu li.menu-item:first-child a.menu-link {
+	margin-top: 0;
+}
+
+.ast-builder-menu-mobile .main-navigation .menu-item:not(.menu-item-has-children) > .menu-link:hover,
+.ast-builder-menu-mobile .main-navigation .menu-item.menu-item-has-children:hover > .menu-link,
+.ast-builder-menu-mobile .main-navigation .inline-on-mobile .menu-item:hover > .ast-menu-toggle,
+.ast-builder-menu-mobile .main-navigation .menu-item.current-menu-item > .menu-link,
+.ast-builder-menu-mobile .main-navigation .inline-on-mobile .menu-item.current-menu-item > .ast-menu-toggle,
+.ast-builder-menu-mobile .main-navigation .menu-item.current-menu-ancestor > .menu-link,
+.ast-builder-menu-mobile .main-navigation .menu-item.current-menu-ancestor > .ast-menu-toggle {
+	background: transparent;
+	color: #8E3628 !important;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu li.menu-item {
+	width: 100%;
+}
+
+body.ast-popup-nav-open,
+html:has(body.ast-popup-nav-open) {
+	overflow-y: hidden !important;
+}
+
+.ast-header-break-point #ast-mobile-header {
+	overflow: hidden;
+}
+
+.ast-header-break-point .ast-icon.icon-arrow svg {
+	margin-left: 0;
+}
+
+.ast-builder-menu-mobile .main-navigation .menu-item.menu-item-has-children > .ast-menu-toggle {
+	top: 19px;
+	transform: translate(-50%, -50%);
+	box-shadow: none;
+	display: inline-block;
+	position: absolute;
+	left: 48%;
+	max-width: max-content;
+	border: 0;
+	padding: 0px !important;
+	overflow: hidden;
+}
+
+.ast-builder-menu-mobile .main-navigation .menu-item.menu-item-has-children > .ast-menu-toggle:focus {
+	outline: none;
+	border: none;
+}
+
+.ast-mobile-header-wrap .menu-toggle .mobile-menu-toggle-icon span {
+	display: none !important;
+}
+
+.ast-mobile-header-wrap .menu-toggle .mobile-menu-toggle-icon {
+	position: relative;
+	width: 20px;
+	height: 20px;
+}
+
+.ast-mobile-header-wrap .menu-toggle .mobile-menu-toggle-icon:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: url("/wp-content/uploads/2026/03/Hamburger.svg");
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ast-header-break-point .ast-mobile-header-wrap .ast-mobile-header-content > .ast-builder-layout-element.ast-flex.site-header-focus-item.ast-header-html-1 {
+	display: block;
+	padding: 26.5px 28px 20.5px 28px;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu .ast-submenu-expanded svg.ast-arrow-svg {
+	transform: rotate(180deg);
+}
+
+.ast-header-break-point .ast-mobile-header-wrap .ast-mobile-header-content .ast-builder-menu-mobile {
+	overflow: hidden auto;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu li.menu-item.closemenubutton {
+	padding-top: 10px;
+	border-bottom: none;
+}
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu li.menu-item.closemenubutton a.menu-link {
+	font-weight: 700;
+	color: #2b2b2b;
+	font-size: 24px;
+}
+
+/* NEW HOME CSS*/
+.home-banner::after {
+	content: "";
+	background: linear-gradient(180deg,rgba(32, 32, 32, 0.1) 0%,rgba(32, 32, 32, 0.2) 50%, rgba(32, 32, 32, 0) 100%);
+	width: 100%;
+	height: 100%;
+	display: block;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: 1;
+}
+
+.home .swiper-slide .elementor-widget-image .elementor-widget-container::after {
+	background: linear-gradient(180deg,rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 0.75) 50%,#202020 100%);
+	content: "";
+	display: block;
+	z-index: 1;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40%;
+	border-radius: 16px !important;
+}
+
+.e-n-carousel.swiper {
+	overflow: visible;
+}
+
+/* Travel Tabs Home */
+.elementor-element.travelcarditem .elementor-image-box-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.elementor-element.travelcarditem .elementor-image-box-content p.elementor-image-box-title {
+	padding-left: 12px;
+	position: relative;
+	transition: all 0.4s ease-in-out;
+}
+
+.elementor-element.travelcarditem .elementor-image-box-content p.elementor-image-box-title::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	display: block;
+	width: 6px;
+	height: 6px;
+	background: #8E3628;
+	border-radius: 50%;
+}
+
+.elementor-element.travelcarditem .elementor-image-box-content p.elementor-image-box-description {
+	background: #FEF4EA;
+	border-radius: 65px;
+	padding: 4px 8px;
+	transition: all 0.4s ease-in-out;
+	min-width: max-content;
+}
+
+.elementor-element.travelcarditem:hover .elementor-image-box-content p.elementor-image-box-description {
+	background: #8E3628;
+	color: #FCFCFC;
+	transition: all 0.4s ease-in-out;
+}
+
+.elementor-element.travelcarditem:hover .elementor-image-box-content p.elementor-image-box-title {
+	color: #8E3628;
+	transition: all 0.4s ease-in-out;
+}
+
+/* New Search Results CSS */
+.search-results .searchandfilter ul li.sf-field-search label {
+	max-width: 100%;
+}
+
+.search-results .searchandfilter ul li.sf-field-search {
+	text-align: center;
+	padding-bottom: 25px;
+}
+
+.search .ast-menu-toggle:hover,
+.search .ast-menu-toggle:focus {
+	background: transparent;
+}
+
+.search .ast-mobile-popup-content .ast-icon svg {
+	fill: #202020;
+}
+
+/* New Project Listing CSS */
+.e-loop-item.project-tag-upcoming a .elementor-widget-image {
+	background: #000;
+}
+
+.e-loop-item.project-tag-upcoming a img {
+	object-fit: none !important;
+	max-width: max-content !important;
+}
+
+.e-loop-item.project-tag-upcoming a .projecthoverloopitem,
+.e-loop-item.project-tag-upcoming .project-loop-cta {
+	display: none;
+}
+
+.featuredloopitemimagebox .projecthoverloopitem {
+	background: linear-gradient(180deg, rgba(32, 32, 32, 0) 0%, rgba(32, 32, 32, 0.75) -13%, #202020 100%);
+	border-radius: 0px 0px 16px 16px;
+}
+
+.e-loop-item.project-tag-upcoming a .elementor-element.projectloopitembox:hover, 
+.e-loop-item.project-tag-upcoming a .elementor-element.featuredloopitemimagebox {
+	padding-bottom: 0 !important;
+	bottom: 16% !important;
+	transform: translateY(-50%);
+	background: unset;
+}
+
+.e-loop-item.project-tag-upcoming a img {
+	height: 80% !important;
+}
+
+.e-loop-item.project-tag-upcoming a .elementor-image-box-wrapper .elementor-image-box-content {
+	text-align: center;
+}
+
+.e-loop-item.project-tag-upcoming a .elementor-widget-image-box .elementor-widget-container {
+	padding-top: 0 !important;
+}
+
+.project-tag-upcoming a.elementor-element.projectloopitembox {
+	pointer-events: none;
+}
+
+
+/* Wrapper for navigation - we'll create this with JS */
+.carousel-nav-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+}
+
+.carousel-nav-wrapper .swiper-pagination {
+    position: static !important;
+    width: auto !important;
+    display: flex !important;
+}
+
+.carousel-nav-wrapper .elementor-swiper-button-prev,
+.carousel-nav-wrapper .elementor-swiper-button-next {
+    position: static !important;
+    margin: 0 !important;
+	transform: translateY(0%) !important;
+/* 	border: 1px solid #000; */
+/* 	padding: 8px 16px; */
+/* 	border-radius: 16px; */
+/* 	transition: all 0.5s; */
+}
+
+/* Contact CSS */
+.wpcf7-checkbox span.wpcf7-list-item-label {
+    color: #202020;
+}
+.wpcf7-checkbox .wpcf7-list-item.first{
+	margin-left:0;
+}
+.wpcf7-checkbox input[type="checkbox"]:focus,
+.wpcf7-checkbox input[type="checkbox"]:focus-visible{
+	border: 1px solid rgb(35 35 35 / .2) !important;
+}
+
+.wpcf7-checkbox input[type="checkbox"]:checked, .wpcf7-checkbox input[type="checkbox"]:checked {
+    background: #202020 !important;
+    border-color: #202020 !important;
+}
+.wpcf7-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px !important;
+    height: 20px !important;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgb(35 35 35 / .2) !important;
+    border-radius: 6px !important;
+    background: #2323230A !important;
+    cursor: pointer;
+    position: relative;
+    min-width: max-content;
+}
+.wpcf7-checkbox input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 7px;
+    width: 5px;
+    height: 9px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.form-control {
+	display: flex;
+	justify-content: space-between;
+	row-gap: 24px;
+	flex-wrap: wrap;
+}
+
+.form-control .contact-name-field {
+	width: 100%;
+}
+
+.form-control .contact-email-field {
+	width: 49%;
+}
+
+.form-control .contact-number-field {
+	width: 49%;
+}
+
+.form-control .contact-message-field {
+	width: 100%;
+}
+
+.wpcf7 .form-control span .contact-form-field {
+	background: #fff;
+	border: 1px solid #A1A1A1;
+	border-radius: 50px;
+	height: 56px;
+	color: #202020 !important;
+	padding: 17px 20px !important;
+	transition: all 0.5s;
+}
+
+.wpcf7 .form-control span .contact-form-field:focus {
+	border: 1px solid #A1A1A1;
+}
+
+.wpcf7 .form-control span .contact-form-field::placeholder {
+	color: #A1A1A1;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 21.86px;
+}
+
+.wpcf7 .form-control span .contact-form-field:focus::placeholder {
+	font-size: 0;
+}
+
+.wpcf7 .form-control span textarea.contact-form-field {
+	height: auto;
+	resize: vertical;
+	border: 1px solid #A1A1A1;
+}
+
+.wpcf7 .form-control span textarea.contact-form-field:focus {
+	border: 1px solid #A1A1A1;
+}
+
+.wpcf7 .form-control .btn-submit .form-control-submit {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 16px 24px;
+	height: 53px;
+	width: 99px;
+	background: #202020;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20.8px;
+	color: #f1f1f1;
+	transition: all 0.5s;
+	border-radius: 50px;
+}
+
+.wpcf7 .form-control .btn-submit .form-control-submit:hover {
+	color: #202020;
+	background: #a1a1a1;
+}
+
+/* Resources, Features Grid CSS */
+.resource-grid .e-loop-item .elementor-widget-image,
+.resource-grid .e-loop-item .elementor-widget-image img,
+.resource-slider .e-loop-item .elementor-widget-image,
+.resource-slider .e-loop-item .elementor-widget-image img {
+	height: 220px;
+}
+
+.features-grid .e-loop-item .elementor-widget-image,
+.features-grid .e-loop-item .elementor-widget-image img,
+.feature-slider .e-loop-item .elementor-widget-image,
+.feature-slider .e-loop-item .elementor-widget-image img {
+	height: 200px;
+}
+
+.elementor-editor-active .ast-container > .project-features-tabs {
+	display: none;
+}
+
+.e-loop-item .elementor-widget-image,
+.e-loop-item .elementor-widget-image img,
+.e-loop-item .elementor-widget-image a {
+	width: 100% !important;
+}
+
+.e-loop-item .elementor-widget-image,
+.e-loop-item .elementor-widget-image img {
+	object-fit: cover;
+}
+
+.featuressearchfilter .searchandfilter ul li.sf-field-search,
+.resources-search-and-filter .searchandfilter ul li.sf-field-search {
+	margin-bottom: 32px;
+}
+
+.resources-search-and-filter .searchandfilter ul li.sf-field-search input.sf-input-text {
+	background: #d9d9d966;
+}
+
+.resource-grid .elementor-heading-title a{
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-height: 57px;
+	padding-bottom: 1px;
+}
+
+.rightcolumncontent-text {
+	min-height: 125px;
+}
+
+/* Features and Resources Detail CSS */
+
+.single-post .site-content .ast-container .elementor div:not(:first-child) p:not(.related-featured-section p),
+.single-post .site-content .ast-container .elementor div:not(:first-child) ul:not(.elementor-post-info)  li,
+.single-post .site-content .ast-container .elementor div:not(:first-child) ol:not(.elementor-post-info)  li {
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 31.2px;
+	text-align: left;
+	color: #707070;
+	font-family: "onest", sans-serif;
+}
+
+
+.single-post .elementor-widget.elementor-widget-video {
+	max-width: 720px !important;
+	margin: auto;
+}
+
+.single-post b, .single-post strong {
+	font-weight: 600;
+}
+
+.related-featured-section {
+	padding-top: 120px;
+	padding-bottom: 80px;
+}
+/* End of New site CSS*/
+
+
+p.header-official-site-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px !important;
+    border: 1px solid #FCFCFC;
+    padding: 4px 8px;
+    border-radius: 50px;
+	backdrop-filter: blur(92.80000305175781px);
+    background-color: #FCFCFC0A;
+}
+
+header .custom-logo-link img{
+	border-radius: 0;
+}
+
+.ast-builder-layout-element.ast-header-html-1 {
+    padding-left: 0;
+}
+
+.ast-builder-menu-1 .menu-item > .menu-link{
+	font-weight: 500;
+	font-family: "Albert Sans";
+	border-radius:87px;
+}
+
+.ast-builder-menu-1 .current-menu-item.menu-item > .menu-link{
+	backdrop-filter: blur(20px);
+}
+
+.traveltabs .e-n-tabs-heading .e-n-tab-title:not(:last-child)::after {
+       top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.site-header-section .ast-custom-button{
+	transition: all .2s linear !important;
+}
+
+.site-header-section .ast-custom-button:hover,
+body:not(.ast-theme-transparent-header) .site-header-section .ast-custom-button:hover{
+    background: #8E3628 !important;
+    color: #FCFCFC;
+	border-color: #8E3628 !important;
+	transition: all .2s linear !important;
+}
+
+.site-header-section .ast-custom-button:hover::after,
+body:not(.ast-theme-transparent-header) .site-header-section .ast-custom-button:hover::after{
+    filter: unset;
+	transition: all .2s linear !important;
+}
+
+.glancecard .elementor-element.glancecardimage {
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden !important;
+	transition: all 0.4s ease-in-out;
+}
+
+.glancecard:hover .elementor-element.glancecardimage{
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+}
+
+.elementor-element.glancecardimage::before {
+    content: "";
+    background: linear-gradient(195.65deg, #02010100 53.76%, #000000 93.22%);
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	border-radius: 24px;
+}
+
+/* New HOH resources css */
+/* Wrapper */
+.newsletter-field {
+    display: flex;
+    align-items: center;
+	position: relative;
+    justify-content: space-between;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 50px;
+    padding: 8px 8px 8px 24px;
+    background: #2323230A;
+    max-width: 588px;
+}
+
+.newsletter-input::placeholder {
+    color: #505050;
+    font-family: "Albert Sans", sans-serif;
+    font-size: 16px;
+    line-height: 20.8px;
+    letter-spacing: -0.48px;
+}
+.newsletter input[type="email"] {
+    font-weight: 500;
+}
+
+.newsletter-field .wpcf7-not-valid-tip {
+    position: absolute;
+    left: 0;
+    bottom: -40px; 
+}
+
+/* Input */
+.newsletter-input {
+    flex: 1;
+    border: none !important;
+    outline: none;
+    background: transparent;
+    font-size: 14px;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+/* Button */
+.newsletter-btn {
+  background: #000 !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 8px 16px !important; /* Figma exact */
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+.newsletter-field input.newsletter-input {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.newsletter-form span.wpcf7-spinner {
+	position: absolute;
+	top: 50%;
+	left: 103%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+}
+
+.newsletter-field p {
+    margin: 0;
+}
+.resources-loop-grid .elementor-heading-title a {
+    font-family: "Albert Sans", sans-serif !important;
+	font-weight: 500 !important;
+}
+.resources-loop-grid .elementor-button-text {
+    line-height: normal !important;
+}
+.resources-loop-grid .elementor-button-icon svg path{
+    fill: #FCFCFC !important;
+}
+.resources-loop-grid .elementor-button-wrapper a.elementor-button-link:hover svg path {
+    fill: #FCFCFC !important;
+}
+
+.blurred-btn .elementor-button-icon, 
+.blurred-btn .elementor-button-icon svg{
+	width: 20px;
+	height: 20px;
+}
+
+.homeloopitembutton:hover .elementor-button-icon {
+    left: 2px;
+    transition: all 0.4s;
+}
+.e-loop-item:hover  .elementor-element.featured-img,
+.hover-img:hover>.elementor-element:first-child{
+    transform: scale(1.05);
+	transition: all 0.4s ease;
+}
+/*********** Responsive CSS ****************/
+
+@media(max-width:1230px) and (min-width:1023px){
+
+	/* HOH Homes CSS */
+	.homes-tab:not(.featuredtabs.homes-tab) {
+    	width:80%;
+		margin:0 auto;
+  }
+	.homes-tab .elementor-widget-divider .elementor-widget-container .elementor-divider-separator{
+		margin-left:auto;
+	}
+	.homes-tab .sub-heading.elementor-widget-heading{
+		max-width:max-content;
+		align-self:center;
+	}
+	
+	.featuredtabs.homes-tab .e-n-tabs-heading{
+		justify-content:flex-start;
+	}
+}
+
+@media(max-width:1230px){
+	/* HOH Homes CSS */
+	.homes-tab {
+		position: relative !important;
+	 }
+	.homes-tab:not(.featuredtabs.homes-tab) *{
+		text-align: center !important;
+	  }
+	
+}
+
+@media (max-width: 1160px) {
+  /* Header CSS */
+	.site-header-section>div:first-child{
+		padding-right:0 !important;
+	}
+	.site-header p.header-official-site-text {
+    font-size: 12px;
+    line-height: 12px !important;
+    padding: 5px 6px 3px;
+}
+	.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img,
+header .custom-logo-link img {
+	max-width: 250px !important;
+	height:auto !important;
+}
+}
+
+@media (max-width: 1024px) {
+	
+	/* Landing Page CSS */
+	.landing-header span.elementor-menu-toggle__icon--open{
+		line-height:0 !important;
+	}
+	    .landing-header nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
+        margin-top: 18px;
+        padding: 10px 0;
+    }
+  /* New Header CSS*/
+	.ast-builder-button-wrap {
+		line-height: 0;
+	}
+
+	.ast-custom-button,
+  .mobile-menu-wrap {
+		display: none !important;
+	}
+	.hidden-desktop{
+		display:flex !important;
+	}
+
+	.ast-button-wrap button.menu-toggle.main-header-menu-toggle,
+	.landing-header .elementor-menu-toggle{
+		padding: 4px 11px !important;
+		border-radius: 50px;
+		border-width: 1.5px !important;
+		border-style:solid !important;
+		border-color:#FCFCFC !important;
+		
+	}
+
+	.ast-builder-menu-mobile .main-navigation .menu-item.menu-item-has-children > .ast-menu-toggle {
+		top: 16px;
+		left: 104px;
+	}
+
+	.ast-header-button-1 {
+		padding-right: 0;
+	}
+
+	.sticky .ast-mobile-header-wrap .menu-toggle .mobile-menu-toggle-icon:before,
+  .single .ast-mobile-header-wrap .menu-toggle .mobile-menu-toggle-icon:before,
+  .page-id-1034 .ast-mobile-header-wrap .menu-toggle .mobile-menu-toggle-icon:before,
+  .page-id-216 .ast-mobile-header-wrap .menu-toggle .mobile-menu-toggle-icon:before {
+		filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(2%)
+      hue-rotate(48deg) brightness(107%) contrast(101%) !important;
+	}
+
+	.sticky .ast-button-wrap button.menu-toggle.main-header-menu-toggle,
+  .single .ast-button-wrap button.menu-toggle.main-header-menu-toggle,
+  .page-id-1034 .ast-button-wrap button.menu-toggle.main-header-menu-toggle,
+  .page-id-216 .ast-button-wrap button.menu-toggle.main-header-menu-toggle {
+/* 		background: #202020 !important; */
+	  border-color:#141414 !important;
+	  filter: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(6321%) hue-rotate(164deg) brightness(92%) contrast(84%);
+	}
+
+	.ast-mobile-popup-drawer .ast-mobile-popup-header {
+		padding: 16px 24px;
+		margin-bottom: 24px;
+	}
+
+	.ahfb-svg-iconset::before {
+		content: unset;
+	}
+
+	.ast-builder-menu-mobile .main-navigation .main-header-menu {
+		padding-right: 24px;
+		padding-left: 24px;
+		padding-bottom: 24px;
+		gap: 20px;
+	}
+
+	.ast-header-break-point .ast-icon.icon-arrow svg {
+		font-size: 16px;
+	}
+
+	.site-header #ast-mobile-header {
+		padding: 16px 24px;
+	}
+
+	.ast-header-break-point
+    #masthead
+    .ast-mobile-header-wrap
+    .ast-primary-header-bar {
+		padding: 0 !important;
+	}
+
+	.main-header-bar-wrap a.ast-custom-button-link::after {
+		top: 2px !important;
+		position: relative;
+		margin-right: 5px;
+	}
+
+	.ast-mobile-popup-content li:hover .ast-icon svg {
+	fill: #707070;
+}
+
+.main-header-bar-wrap .mobile-menu-wrap {
+	margin-left: 0 !important;
+	margin-right: 8px;
+}
+
+.main-header-bar-wrap .mobile-menu-wrap span.mobile-menu {
+	font-family: "Albert Sans",sans-serif;
+	font-weight: 500 !important;
+	font-size: 16px !important;
+	color: #f1f1f1 !important;
+	line-height: normal;
+}
+.ast-mobile-popup-inner {
+	max-width: 368px !important;
+	background: #f1f1f1 !important;
+}
+
+.ast-mobile-popup-drawer .ast-mobile-popup-inner {
+	overflow-y: hidden;
+}
+
+button#menu-toggle-close {
+	padding: 0;
+}
+
+.ahfb-svg-iconset svg {
+	width: 24px;
+	height: 24px;
+	transition: none;
+	fill: #141414;
+	font-weight: 400 !important;
+	top: -1px;
+	right: 8px;
+	position: relative;
+}
+
+#ast-mobile-popup-wrapper .main-header-menu .sub-menu .menu-item:not(.menu-item-has-children) .menu-link .icon-arrow:first-of-type {
+	display: none;
+}
+
+.ast-mobile-popup-wrapper .ast-mobile-popup-drawer .ast-mobile-popup-overlay {
+	background-color: rgba(32, 32, 32, 0.25);
+}
+
+/***New CSS***/
+
+button.menu-toggle.main-header-menu-toggle.ast-mobile-menu-trigger-fill:focus {
+	outline: none;
+}
+
+.main-navigation ul.main-header-menu li.menu-item-has-children .ast-menu-toggle {
+	display: inline-block;
+}
+
+.ast-builder-menu-mobile .main-navigation span.dropdown-menu-toggle.ast-header-navigation-arrow {
+	display: none;
+}
+
+
+}
+
+
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+    /* New Header CSS */
+	.ast-header-button-1 a.ast-custom-button-link .ast-custom-button {
+		font-size: 16px !important;
+	}
+}
+
+@media (max-width: 767px) {
+	
+	/* JOH Homes CSS */
+	.homes-slider .swiper-slide>.elementor-element::before {
+		background: linear-gradient(164.57deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 69.59%, #000000 89.18%);
+		opacity: 1;
+	}
+	/* 	HOH About Us Page */
+		.record-section small {
+		font-size: 20px;
+	}
+	
+	/* Landing Page CSS */
+	 .landing-header nav.elementor-nav-menu--dropdown.elementor-nav-menu__container {
+        margin-top: 14px;
+    }
+	.left.sub-heading.elementor-widget-heading{
+		padding-left:0;
+	}
+	.left.sub-heading.elementor-widget-heading::before{
+		left:-60px;
+	}
+	.left.sub-heading.elementor-widget-heading::after {
+		content: "";
+		width: 40px;
+		height: 1px;
+		background-color: #672B21;
+		display: block;
+		position: absolute;
+		right: -60px;
+		left: unset;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.cus_virtual_tour.landing-gallery .e-n-tabs-heading{
+		width: max-content;
+		margin:auto;
+	}
+	.banner-info .elementor-widget-image-box .elementor-widget-container{
+		background-color: #FCFCFC0A !important;
+	}
+	.floor-info .elementor-widget-icon-box .elementor-widget-container{
+		background-color: #1414140A !important;
+	}
+	.floor-info{
+		background-color: unset !important;
+	}
+	.landing-gallery img.swiper-slide-image {
+		height: 320px;
+	}
+	/********HOH CSS********/
+
+
+
+  /* New Header CSS */
+
+	.ast-builder-menu-mobile .main-navigation .main-header-menu .sub-menu {
+		padding: 0 16px;
+	}
+	.ast-header-break-point .ast-header-html-1{
+		display:none;
+	}
+	.ast-mobile-popup-inner {
+		max-width: 100%!important;
+	}
+
+	.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img,
+	header .custom-logo-link img {
+		max-width: 214px !important;
+	}
+
+	
+
+	.ast-builder-menu-mobile .main-navigation .main-header-menu li.menu-item a.menu-link {
+		font-size: 20px;
+		line-height: 26px;
+		padding: 0 8px;
+	}
+
+	.ast-mobile-popup-drawer .ast-mobile-popup-header .menu-toggle-close {
+		line-height: 0;
+	}
+
+	.ast-builder-menu-mobile
+    .main-navigation
+    .main-header-menu
+    li.menu-item
+    ul.sub-menu
+    li.menu-item
+    a.menu-link {
+		font-size: 14px;
+		line-height: 18.2px;
+	}
+
+
+   /* New Search CSS */
+	.search-results .searchandfilter ul li.sf-field-search {
+		margin-bottom: 0;
+	}
+
+    /* New Contact CSS */
+	.form-control {
+		row-gap: 16px;
+	}
+
+	.form-control .contact-email-field,
+    .form-control .contact-number-field {
+		width: 100%;
+	}
+
+
+   /* New Project Loop CSS */
+	.e-loop-item.project-tag-upcoming a .elementor-element.projectloopitembox:hover, 
+   .e-loop-item.project-tag-upcoming a .elementor-element.featuredloopitemimagebox {
+		bottom: 10% !important;
+	}
+
+  /* Resources, Features Grid item CSS */
+
+	.resource-grid .e-loop-item .elementor-widget-image,
+  .resource-grid .e-loop-item .elementor-widget-image a,
+  .resource-grid .e-loop-item .elementor-widget-image img {
+		height: 100% !important;
+		object-fit: cover;
+		border-radius: 8px 0px 0px 8px !important;
+	}
+
+	.project-features-tab-card-image-box,
+  .project-features-tab-card-image-box a img {
+		height: 144px;
+	}
+
+	.grid.project-tabs-content-box {
+		padding-right: 14px;
+	}
+
+	.project-features-tab-card-title-box h3 a,
+  .project-features-tab-card-title-box h3 {
+		font-size: 20px;
+		line-height: 26px;
+	}
+
+	.project-tabs-flexitembox button.tab-button {
+		font-size: 14px;
+		line-height: 18px;
+	}
+}

@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fcfcfc;
+  --foreground: #141414;
+
+  /* Brand palette extracted from the live site's Elementor global colors */
+  --color-brand-primary: #8e3628; /* terracotta / brick — buttons, links, accents */
+  --color-brand-dark: #141414; /* near-black — headings, primary text */
+  --color-brand-ink: #111111;
+  --color-brand-cream: #e5e2cf; /* warm section backgrounds */
+  --color-brand-offwhite: #fcfcfc;
+  --color-brand-white: #ffffff;
+  --color-brand-accent: #ffc912; /* accent yellow */
+  --color-brand-gray: #4b4f58; /* secondary text */
+  --color-brand-border: #d1d5db;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-dark: var(--color-brand-dark);
+  --color-brand-ink: var(--color-brand-ink);
+  --color-brand-cream: var(--color-brand-cream);
+  --color-brand-offwhite: var(--color-brand-offwhite);
+  --color-brand-white: var(--color-brand-white);
+  --color-brand-accent: var(--color-brand-accent);
+  --color-brand-gray: var(--color-brand-gray);
+  --color-brand-border: var(--color-brand-border);
+
+  --font-sans: var(--font-albert-sans), "Albert Sans", ui-sans-serif, sans-serif;
+  --font-serif: var(--font-fraunces), "Fraunces", ui-serif, serif;
+
+  --container-page: 1320px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.container-page {
+  max-width: var(--container-page);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .container-page {
+    padding-inline: 2.5rem;
+  }
+}
