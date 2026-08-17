@@ -9,9 +9,9 @@ const FALLBACK_INSIGHT_IMAGE = "/images/home/harmony-social.jpg";
 
 export function LongFormPage({
   data,
-  eyebrow = "Resources",
 }: {
   data: ContentPageData;
+  /** @deprecated ContentHero no longer renders a breadcrumb/eyebrow — kept so existing call sites don't need updating. */
   eyebrow?: string;
 }) {
   const blocks = [...data.blocks];
@@ -23,7 +23,7 @@ export function LongFormPage({
 
   return (
     <>
-      <ContentHero eyebrow={eyebrow} title={data.h1 ?? data.title} intro={intro} image={data.heroImage ? heroSrc(data) : null} />
+      <ContentHero title={data.h1 ?? data.title} intro={intro} image={data.heroImage ? heroSrc(data) : null} />
 
       <section className="bg-brand-offwhite py-14 md:py-20">
         <div className="container-page max-w-3xl">

@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Albert_Sans } from "next/font/google";
 import "./globals.css";
-import { SiteHeader } from "@/components/layout/SiteHeader";
-import { SiteFooter } from "@/components/layout/SiteFooter";
-import { EnquiryModalProvider } from "@/components/modals/EnquiryModalProvider";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -38,11 +35,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${albertSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
-        <EnquiryModalProvider>
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </EnquiryModalProvider>
+        {children}
       </body>
     </html>
   );

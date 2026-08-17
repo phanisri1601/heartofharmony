@@ -30,7 +30,7 @@ export const footerQuickLinksColumn: NavLink[] = [
   { label: "The Clubhouse", href: "/project/#clubhouse" },
   { label: "Contact Us", href: "/contact-us/" },
   { label: "Privacy policy", href: "/privacy-policy/" },
-  { label: "Heart of Harmony Brochure", href: "/contact-us/" },
+  { label: "Heart of Harmony Brochure", href: "/heart-of-harmony-brochure/" },
 ];
 
 export const footerContact = {

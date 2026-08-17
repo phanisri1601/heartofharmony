@@ -21,9 +21,30 @@ export function ProjectAmenitiesSection() {
           accent={projectAmenities.headingAccent}
           className="mx-auto max-w-2xl"
         />
-        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-brand-gray">
+        <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-brand-gray md:text-base">
           {projectAmenities.intro}
         </p>
+
+        <div className="relative mt-10 aspect-[15/7] overflow-hidden rounded-2xl">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={category.key}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="absolute inset-0"
+            >
+              <Image
+                src={category.image}
+                alt={category.label}
+                fill
+                sizes="100vw"
+                className="object-cover"
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
 
         <div className="mt-8 flex flex-wrap justify-center gap-2">
           {projectAmenities.categories.map((c, i) => (
@@ -41,44 +62,24 @@ export function ProjectAmenitiesSection() {
           ))}
         </div>
 
-        <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-start">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={category.key}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={category.image}
-                  alt={category.label}
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </motion.div>
-            </AnimatePresence>
-          </div>
-
-          <div>
-            <ul className="grid grid-cols-1 gap-x-6 gap-y-2 sm:grid-cols-2">
-              {category.items.map((item) => (
-                <li key={item} className="flex items-start gap-2 py-1 text-sm text-brand-dark">
-                  <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-brand-primary" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-            <Link
-              href="/lifestyle/#amenities"
-              className="mt-6 inline-block rounded-full bg-brand-dark px-6 py-3 text-sm font-medium text-brand-white transition hover:opacity-90"
+        <div className="mt-8 flex flex-wrap justify-center gap-2.5">
+          {category.items.map((item) => (
+            <span
+              key={item}
+              className="rounded-lg border border-brand-dark/10 px-3.5 py-3 text-sm text-brand-dark"
             >
-              {projectAmenities.cta}
-            </Link>
-          </div>
+              {item}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Link
+            href="/lifestyle/#amenities"
+            className="inline-block rounded-full bg-brand-dark px-6 py-3 text-sm font-medium text-brand-white transition hover:opacity-90"
+          >
+            {projectAmenities.cta}
+          </Link>
         </div>
       </div>
     </section>

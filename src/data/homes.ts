@@ -1,8 +1,10 @@
 // Content extracted from the live /homes/ page.
 
 export const homesHero = {
-  eyebrow: "Homes",
-  h1: "3, 3.5 & 4 BHK Sky Residences - Floor Plans & Homes at Heart of Harmony, Kudlu Gate",
+  title: "3, 3.5 & 4 BHK Sky Residences -",
+  titleAccent: "Floor Plans & Homes at Heart of Harmony, Kudlu Gate",
+  intro:
+    "At Heart of Harmony, every 3 BHK, 3.5 BHK and 4 BHK home is designed to feel open, private, and effortlessly comfortable. With just 6 residences on each floor, zero common walls, and thoughtful layouts, these sky residences create a sense of calm rarely found in Bengaluru city living.",
   ctaPrimary: { label: "View Floor Plans", href: "/homes/#floor-plans" },
   ctaSecondary: { label: "Explore Amenities", href: "/lifestyle/" },
 };

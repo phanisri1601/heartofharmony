@@ -36,15 +36,22 @@
   --container-page: 1320px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-}
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+  }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  /* In @layer base (not unlayered) so per-instance Tailwind utilities —
+     e.g. font-normal/tracking-[...] on a specific heading that needs to
+     match a reference design exactly — can still override these site-wide
+     defaults. Unlayered CSS always beats every Tailwind layer regardless of
+     specificity, which is why this used to silently block such overrides. */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
 }
 
 .container-page {

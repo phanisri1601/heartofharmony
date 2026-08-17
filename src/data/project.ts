@@ -1,9 +1,11 @@
 // Content extracted from the live /project/ page.
 
 export const projectHero = {
-  h1: "Heart of Harmony by CKPC Project Overview, Master Plan & Amenities, Hosur Road, Bengaluru",
-  ctaPrimary: { label: "Explore Floor Plans", href: "/homes/#floor-plans" },
-  ctaSecondary: { label: "View Amenities", href: "#clubhouse" },
+  title: "Heart of Harmony by CKPC\nProject Overview, Master Plan & Amenities, Hosur Road, Bengaluru",
+  intro:
+    "Heart of Harmony by CKPC is a premium residential project on Hosur Main Road (NH48), Kudlu Gate, Bengaluru. Offering 137 exclusive 3 BHK, 3.5 BHK and 4 BHK sky residences, this CKPC Properties new launch on Hosur Road blends thoughtful planning with everyday functionality. Every corner is designed to serve you, not just exist around you. RERA: PRM/KA/RERA/1251/310/PR/310326/008560.",
+  ctaPrimary: { label: "Explore Floor Plans", href: "/homes/" },
+  ctaSecondary: { label: "View Amenities", href: "/lifestyle/" },
 };
 
 export const projectFeatures = {
@@ -15,22 +17,27 @@ export const projectFeatures = {
     {
       title: "Vehicle-Free Pedestrian Podium",
       body: "Beyond the ramp, the podium is fully pedestrian; creating rare calm, safer movement, and uninterrupted green space.",
+      image: "/images/project/ckpc-heart-of-harmony-homes-project-features-vehicle-free-spaces.jpg",
     },
     {
       title: "24-Storey High-Rise Architecture",
       body: "Impressive 2B+G+24 floor story tower with a contemporary look. 2 basement + ground + 24 floors designed for sweeping 270° views from every residence.",
+      image: "/images/project/ckpc-heart-of-harmony-homes-project-features-high-rise-facade.jpg",
     },
     {
       title: "Thoughtfully Planned 3, 3.5 & 4 BHK Residences",
       body: "A limited collection of 3, 3.5 & 4 bed residences featuring efficient layouts, enhanced privacy, and a keen attention to detail. 137 exclusive homes with only 6 per floor.",
+      image: "/images/project/ckpc-heart-of-harmony-homes-project-features-thoughtfully-planned-spaces.jpg",
     },
     {
       title: "Elevated Grand Arrival",
       body: "A hotel-like entrance with a well-planned drop-off, seamless basement access and a grand double-height lobby on the ground floor.",
+      image: "/images/project/ckpc-heart-of-harmony-homes-project-features-elevated-arrival.jpg",
     },
     {
       title: "Heart of Harmony Possession",
       body: "Heart of Harmony possession is scheduled for March 2030 as per RERA PRM/KA/RERA/1251/310/PR/310326/008560.",
+      image: "/images/project/ckpc-heart-of-harmony-homes-project-features-vehicle-ready-to-move-in.jpg",
     },
   ],
 };
@@ -59,7 +66,7 @@ export const projectAmenities = {
     {
       key: "wellness",
       label: "Wellness & Play",
-      image: "/images/home/harmony-active.jpg",
+      image: "/images/project/ckpc-heart-of-harmony-homes-project-lifestyle-features-wellness-play-games.jpg",
       items: [
         "Basketball practice court",
         "Outdoor gym",
@@ -78,7 +85,7 @@ export const projectAmenities = {
     {
       key: "relaxation",
       label: "Relaxation & Spa",
-      image: "/images/home/amenities-leisure.webp",
+      image: "/images/project/amenities-liftyle.jpg",
       items: [
         "Sauna & steam",
         "Spa",
@@ -89,7 +96,7 @@ export const projectAmenities = {
     {
       key: "social",
       label: "Social Experience",
-      image: "/images/home/harmony-social.jpg",
+      image: "/images/project/ckpc-heart-of-harmony-homes-project-lifestyle-features-social-experiences-1.jpg",
       items: [
         "Paw park",
         "Nature trail",
@@ -106,7 +113,7 @@ export const projectAmenities = {
     {
       key: "indulgence",
       label: "Indulgence",
-      image: "/images/home/harmony-indulgences.jpg",
+      image: "/images/project/ckpc-heart-of-harmony-homes-project-lifestyle-features-indulgence-1.jpg",
       items: ["Multipurpose room", "Co-working space", "Provision for convenience store"],
     },
   ],

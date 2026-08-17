@@ -5,9 +5,11 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { hero } from "@/data/homepage";
 import { useEnquiryModal } from "@/components/modals/EnquiryModalProvider";
+import { useHeaderOnDark } from "@/components/layout/HeaderThemeContext";
 
 export function Hero() {
   const { open } = useEnquiryModal();
+  useHeaderOnDark();
 
   return (
     <section className="relative overflow-hidden bg-brand-dark text-brand-white">

@@ -12,7 +12,7 @@ export function SectionHeading({
   align = "left",
   className = "",
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   /** Text before the accented/italic portion. */
   heading: string;
   /** The italic, brand-colored portion of the heading (rendered after `heading`). */
@@ -23,10 +23,12 @@ export function SectionHeading({
   const isCenter = align === "center";
   return (
     <div className={`${isCenter ? "text-center" : ""} ${className}`}>
-      <span className="inline-block rounded-full bg-brand-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-primary">
-        {eyebrow}
-      </span>
-      <h2 className="mt-4 font-serif text-3xl text-brand-dark md:text-4xl">
+      {eyebrow && (
+        <span className="inline-block rounded-full bg-brand-primary/10 px-4 py-1.5 text-xs font-medium uppercase tracking-wider text-brand-primary">
+          {eyebrow}
+        </span>
+      )}
+      <h2 className={`font-serif text-3xl text-brand-dark md:text-4xl ${eyebrow ? "mt-4" : ""}`}>
         {heading}
         {accent && <em className="text-brand-primary italic">{accent}</em>}
       </h2>
