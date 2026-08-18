@@ -3,7 +3,6 @@ import { ContentHero } from "@/components/content/ContentHero";
 import { HomesCommunity } from "@/components/sections/HomesCommunity";
 import { FloorPlans } from "@/components/sections/FloorPlans";
 import { Faq } from "@/components/sections/Faq";
-import { ContactSection } from "@/components/sections/ContactSection";
 import { homesHero, homesFaq } from "@/data/homes";
 
 export const metadata: Metadata = {
@@ -35,7 +34,6 @@ export default function HomesPage() {
       <HomesCommunity />
       <FloorPlans />
       <Faq heading={homesFaq.heading} accent={homesFaq.headingAccent} items={homesFaq.items} />
-      <ContactSection />
     </>
   );
 }

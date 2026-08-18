@@ -6,7 +6,6 @@ import { ClientLogos } from "@/components/sections/ClientLogos";
 import { TrackRecord } from "@/components/sections/TrackRecord";
 import { FlagshipProjects } from "@/components/sections/FlagshipProjects";
 import { MdMessage } from "@/components/sections/MdMessage";
-import { ContactSection } from "@/components/sections/ContactSection";
 import { aboutHero } from "@/data/about";
 
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ export default function AboutPage() {
       <TrackRecord />
       <FlagshipProjects />
       <MdMessage />
-      <ContactSection />
     </>
   );
 }

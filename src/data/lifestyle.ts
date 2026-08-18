@@ -9,6 +9,39 @@ export const lifestyleHero = {
   ctaSecondary: { label: "View Project Overview", href: "/project/" },
 };
 
+export const lifestyleLocation = {
+  eyebrow: "The Location",
+  heading: "Heart of Harmony Location - ",
+  headingAccent: "Near Koramangala, HSR Layout & Silk Board",
+  intro: "Can you imagine being minutes away from some of the city's best dining, shopping and entertainment?",
+  image: "/images/lifestyle/ckpc-heart-of-harmony-homes-project-lifestyle-location-connectivity-bangalore-kudlu-gate-singasandra.jpg",
+  blocks: [
+    {
+      title: "Seamless Connectivity — Hosur Main Road, Bengaluru",
+      points: [
+        {
+          icon: "house" as const,
+          text: "Heart of Harmony, right on Hosur Main Road, just 10 minutes from Silk Board, is at the center of Bengaluru's most vibrant lifestyle hubs, with Koramangala, HSR Layout, and BTM Layout, Electronic City close by.",
+        },
+        {
+          icon: "connect" as const,
+          text: "You can live in a neighbourhood where everyday life is convenient, making work, leisure, and entertainment easily accessible.",
+        },
+      ],
+    },
+    {
+      title: "Metro Access — 400 Metres from Kudlu Gate Station",
+      points: [
+        {
+          icon: "house" as const,
+          text: "Heart of Harmony's location at Kudlu Gate on Hosur Main Road puts the Yellow Line metro 400 metres from your door — the fastest way across South Bengaluru without driving.",
+        },
+      ],
+    },
+  ],
+  cta: { label: "View Location Map", href: "/project/#location-map" },
+};
+
 export const lifestyleAmenities = {
   heading: "Amenities at Heart of Harmony -",
   headingAccent: "Outdoor & Clubhouse Facilities",
@@ -61,17 +94,30 @@ export const lifestyleAmenities = {
 
 export const clubhouseHighlights = {
   eyebrow: "The Clubhouse",
-  heading: "Heart of Harmony Clubhouse — ",
+  heading: "Heart of Harmony Clubhouse",
   headingAccent: "Wellness & Leisure Above the City",
   intro:
     "Set against panoramic skyline views, the rooftop clubhouse offers a private retreat dedicated to wellness and relaxation.",
-  items: [
-    "Gym",
-    "Pickleball court",
-    "Swimming pool with paddle pool & lazy pool",
-    "Multipurpose activity room",
-    "Spa, sauna & steam",
-    "Indoor games",
+  // Three columns, each [tall, short] — matches the live site's masonry
+  // layout exactly (image + column position taken from its actual CSS
+  // background-image + box position at /lifestyle/).
+  columns: [
+    [
+      { title: "Gym", image: "/images/lifestyle/clubhouse-gym.jpg", tall: true },
+      { title: "Pickleball court", image: "/images/lifestyle/clubhouse-pickleball.jpg", tall: false },
+    ],
+    [
+      {
+        title: "Swimming pool with paddle pool & lazy pool",
+        image: "/images/lifestyle/clubhouse-pool.jpg",
+        tall: false,
+      },
+      { title: "Multipurpose activity room", image: "/images/lifestyle/clubhouse-multipurpose.jpg", tall: true },
+    ],
+    [
+      { title: "Spa, sauna & steam", image: "/images/lifestyle/clubhouse-spa.jpg", tall: true },
+      { title: "Indoor games", image: "/images/lifestyle/clubhouse-indoor-games.jpg", tall: false },
+    ],
   ],
 };
 

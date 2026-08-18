@@ -8,37 +8,43 @@ import { SectionHeading } from "@/components/common/SectionHeading";
 export function ClubhouseHighlights() {
   return (
     <section className="bg-brand-cream py-16 md:py-24">
-      <div className="container-page grid gap-10 md:grid-cols-2 md:items-center">
-        <div>
-          <SectionHeading
-            eyebrow={clubhouseHighlights.eyebrow}
-            heading={clubhouseHighlights.heading}
-            accent={clubhouseHighlights.headingAccent}
-          />
-          <p className="mt-4 text-sm text-brand-gray">{clubhouseHighlights.intro}</p>
-          <div className="mt-6 grid grid-cols-2 gap-3">
-            {clubhouseHighlights.items.map((item, i) => (
-              <motion.div
-                key={item}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-40px" }}
-                transition={{ duration: 0.4, delay: i * 0.05 }}
-                className="rounded-lg border border-brand-border bg-brand-white px-3 py-2.5 text-sm text-brand-dark"
-              >
-                {item}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-          <Image
-            src="/images/lifestyle/ckpc-heart-of-harmony-homes-project-lifestyle-amenities-clubhouse-1.jpg"
-            alt="Heart of Harmony rooftop clubhouse"
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover"
-          />
+      <div className="container-page">
+        <SectionHeading
+          align="center"
+          eyebrow={clubhouseHighlights.eyebrow}
+          heading={clubhouseHighlights.heading}
+          accent={clubhouseHighlights.headingAccent}
+          className="mx-auto max-w-xl"
+        />
+        <p className="mx-auto mt-4 max-w-xl text-center text-sm text-brand-gray">{clubhouseHighlights.intro}</p>
+
+        <div className="mt-12 grid gap-6 sm:grid-cols-3">
+          {clubhouseHighlights.columns.map((column, ci) => (
+            <div key={ci} className="flex flex-col gap-6">
+              {column.map((card, i) => (
+                <motion.div
+                  key={card.title}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-40px" }}
+                  transition={{ duration: 0.4, delay: ci * 0.08 + i * 0.05 }}
+                  className={`group relative overflow-hidden rounded-2xl ${card.tall ? "aspect-[384/480]" : "aspect-[384/280]"}`}
+                >
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    fill
+                    sizes="(min-width: 640px) 33vw, 100vw"
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+                  <h3 className="absolute inset-x-0 bottom-0 px-6 py-6 font-serif text-2xl leading-snug text-brand-white">
+                    {card.title}
+                  </h3>
+                </motion.div>
+              ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>

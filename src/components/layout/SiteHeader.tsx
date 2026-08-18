@@ -70,13 +70,21 @@ export function SiteHeader() {
         <div className="hidden lg:block">
           <Link
             href={headerCta.href}
-            className={`rounded-full border py-3 pl-3.5 pr-8 text-base font-medium tracking-[-0.32px] transition ${
+            className={`relative rounded-full border py-3 pl-3.5 pr-8 text-base font-medium tracking-[-0.32px] transition ${
               light
                 ? "border-white text-white hover:bg-white/10"
                 : "border-brand-dark text-brand-dark hover:bg-brand-dark/5"
             }`}
           >
             {headerCta.label}
+            <Image
+              src="/images/brand/right-arrow-icon.svg"
+              alt=""
+              aria-hidden="true"
+              width={14}
+              height={14}
+              className={`absolute right-4 top-[13px] h-3.5 w-3.5 ${light ? "" : "invert"}`}
+            />
           </Link>
         </div>
 

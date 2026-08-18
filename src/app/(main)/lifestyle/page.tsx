@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { ContentHero } from "@/components/content/ContentHero";
-import { LifestyleAccess } from "@/components/sections/LifestyleAccess";
+import { LifestyleLocation } from "@/components/sections/LifestyleLocation";
 import { LifestyleAmenities } from "@/components/sections/LifestyleAmenities";
 import { ClubhouseHighlights } from "@/components/sections/ClubhouseHighlights";
 import { Faq } from "@/components/sections/Faq";
-import { ContactSection } from "@/components/sections/ContactSection";
 import { lifestyleHero, lifestyleFaq } from "@/data/lifestyle";
 
 export const metadata: Metadata = {
@@ -33,11 +32,10 @@ export default function LifestylePage() {
         ctaPrimary={lifestyleHero.ctaPrimary}
         ctaSecondary={lifestyleHero.ctaSecondary}
       />
-      <LifestyleAccess />
+      <LifestyleLocation />
       <LifestyleAmenities />
       <ClubhouseHighlights />
       <Faq heading={lifestyleFaq.heading} accent={lifestyleFaq.headingAccent} items={lifestyleFaq.items} />
-      <ContactSection />
     </>
   );
 }

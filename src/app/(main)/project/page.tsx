@@ -6,7 +6,6 @@ import { ProjectAmenitiesSection } from "@/components/sections/ProjectAmenitiesS
 import { LocationMap } from "@/components/sections/LocationMap";
 import { Insights } from "@/components/sections/Insights";
 import { Faq } from "@/components/sections/Faq";
-import { ContactSection } from "@/components/sections/ContactSection";
 import { projectHero, projectInsights, projectFaq } from "@/data/project";
 
 export const metadata: Metadata = {
@@ -44,7 +43,6 @@ export default function ProjectPage() {
         items={projectInsights.items}
       />
       <Faq heading={projectFaq.heading} accent={projectFaq.headingAccent} items={projectFaq.items} />
-      <ContactSection />
     </>
   );
 }

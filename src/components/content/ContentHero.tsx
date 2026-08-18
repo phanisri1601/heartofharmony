@@ -7,12 +7,10 @@ import { useHeaderOnDark } from "@/components/layout/HeaderThemeContext";
 
 /**
  * The banner hero shared by Project, Lifestyle, Homes, About Us and Contact
- * Us — a full-bleed photo with no dark overlay (the source photos are
- * moody/dark enough on their own, matching the live site), the header
- * floating transparently over it, and a two-column content row anchored
- * toward the lower half: the heading on the left, the intro paragraph and
- * CTAs on the right — matching the live site's layout exactly (it is not a
- * single stacked column).
+ * Us — a full-bleed photo with a bottom-anchored dark gradient scrim for
+ * text contrast, the header floating transparently over it, and a
+ * two-column content row anchored toward the lower half: the heading on the
+ * left, the intro paragraph and CTAs on the right.
  */
 export function ContentHero({
   title,
@@ -39,9 +37,17 @@ export function ContentHero({
 
   return (
     <section className="relative flex min-h-screen items-end overflow-hidden bg-brand-dark text-brand-white">
-      {image && <Image src={image} alt={title} fill priority sizes="100vw" className="object-cover" />}
+      {image && (
+        <>
+          <Image src={image} alt={title} fill priority sizes="100vw" className="object-cover" />
+          {/* Bottom-anchored scrim so the white heading/copy stay legible
+              against whatever the photo is doing back there — strongest
+              right behind the text block, fading out toward the top. */}
+          <div className="absolute inset-0 z-[1] bg-gradient-to-t from-black/85 via-black/35 via-45% to-transparent" />
+        </>
+      )}
 
-      <div className="container-page relative z-10 grid w-full gap-6 pb-12 pt-28 md:grid-cols-2 md:gap-10 md:pb-16">
+      <div className="container-page relative z-10 grid w-full gap-y-6 pb-12 pt-28 md:grid-cols-[55fr_58fr] md:gap-x-[70px] md:pb-16">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,7 +87,7 @@ export function ContentHero({
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mt-6 flex flex-wrap items-center justify-center gap-2.5"
+              className="mt-6 flex flex-wrap items-center justify-center gap-[25px]"
             >
               {ctaPrimary && (
                 <Link
