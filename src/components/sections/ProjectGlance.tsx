@@ -7,8 +7,6 @@ import { projectStats, projectGlance } from "@/data/homepage";
 import { SectionHeading } from "@/components/common/SectionHeading";
 
 export function ProjectGlance() {
-  const [main, ...rest] = projectGlance.features;
-
   return (
     <section className="bg-brand-offwhite py-16 md:py-24">
       <div className="container-page">
@@ -34,31 +32,28 @@ export function ProjectGlance() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6 }}
-          className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-[1.4fr_1fr_1fr]"
+          className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-[2.52fr_1fr_1fr]"
         >
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl sm:aspect-auto sm:row-span-2">
-            <Image
-              src={main.image}
-              alt={main.title}
-              fill
-              sizes="(min-width: 640px) 40vw, 100vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 p-5 text-brand-white">
-              <p className="font-serif text-lg">{main.title}</p>
-              <p className="mt-1 text-xs text-brand-white/80">{main.body}</p>
-            </div>
-          </div>
-          {rest.map((f) => (
-            <div key={f.title} className="relative aspect-[4/3] overflow-hidden rounded-xl">
+          {projectGlance.features.map((f) => (
+            <div
+              key={f.title}
+              className="relative aspect-[4/3] overflow-hidden rounded-3xl sm:aspect-auto sm:h-[420px] md:h-[512px]"
+            >
               <Image
                 src={f.image}
                 alt={f.title}
                 fill
-                sizes="(min-width: 640px) 25vw, 100vw"
+                sizes="(min-width: 640px) 40vw, 100vw"
                 className="object-cover"
               />
+              {/* Live's card uses a corner gradient (252deg — dark toward
+                  the bottom-left where the text sits, transparent toward
+                  the top-right), not a plain bottom-up fade. */}
+              <div className="absolute inset-0 bg-gradient-to-bl from-transparent to-black/85" />
+              <div className="absolute inset-x-0 bottom-0 flex flex-col p-6 pb-10 text-brand-white sm:p-10">
+                <p className="font-serif text-[28px] leading-tight">{f.title}</p>
+                <p className="mt-2 max-w-[85%] text-base text-brand-white/90">{f.body}</p>
+              </div>
             </div>
           ))}
         </motion.div>

@@ -34,17 +34,17 @@ export const projectGlance = {
     {
       title: "Seamless Open-Plan Home Layouts",
       body: "Open flow from living to kitchen creates a vast, uninterrupted sense of space",
-      image: "/images/home/harmony-homes.jpg",
+      image: "/images/home/glance-seamless-layouts.jpg",
     },
     {
       title: "Private Sky Garden Terraces Every 3 Floors",
       body: "Open-to-sky garden decks every three floors",
-      image: "/images/home/harmony-wellness.jpg",
+      image: "/images/home/glance-panoramic-view.jpg",
     },
     {
       title: "270° Panoramic Views from Every Home",
       body: "Homes open on three sides to sweeping views",
-      image: "/images/home/facade.jpg",
+      image: "/images/home/glance-private-gardens.jpg",
     },
   ],
 };
@@ -184,42 +184,52 @@ export const stepIntoHarmony = {
   eyebrow: "Project Highlights",
   heading: "Step into a Life in ",
   headingAccent: "Harmony",
+  // Row 1: [large][small][small], Row 2: [small][small][large] — matches
+  // live's actual grid exactly (measured card widths: 561.5px large vs
+  // 303.2px small, ~1.85:1 ratio, confirmed by the source images
+  // themselves each being pre-cropped to one size or the other).
   items: [
     {
       title: "Harmony",
       subtitle: "in everyday experience",
       body: "Vehicle-free podium, and 84% open space",
-      image: "/images/home/harmony-everyday.jpg",
+      image: "/images/home/step-everyday-experience.jpg",
+      large: true,
     },
     {
       title: "Harmony",
       subtitle: "in indulgences",
       body: "Sky deck pool, jacuzzi, spa with steam, sauna and ice bath.",
-      image: "/images/home/harmony-indulgences.jpg",
+      image: "/images/home/step-indulgences.jpg",
+      large: false,
     },
     {
       title: "Harmony",
       subtitle: "in social experience",
       body: "Double-height lobby, banquet hall and vibrant community spaces.",
-      image: "/images/home/harmony-social.jpg",
+      image: "/images/home/step-social.jpg",
+      large: false,
     },
     {
       title: "Harmony",
       subtitle: "in wellness, play & relaxation",
       body: "Gym, sports courts, nature trails and serene spaces for everyday rejuvenation.",
-      image: "/images/home/harmony-active.jpg",
+      image: "/images/home/step-wellness.jpg",
+      large: false,
     },
     {
       title: "Harmony",
       subtitle: "in privacy",
       body: "Only six residences per floor and zero common walls.",
-      image: "/images/home/facade.jpg",
+      image: "/images/home/step-privacy.jpg",
+      large: false,
     },
     {
       title: "Harmony",
       subtitle: "in homes",
       body: "Spacious Signature Residences with three-sided views and private gardens.",
-      image: "/images/home/harmony-homes.jpg",
+      image: "/images/home/step-homes.jpg",
+      large: true,
     },
   ],
 };

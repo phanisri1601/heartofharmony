@@ -1,26 +1,28 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { triadOfDelight } from "@/data/homepage";
 import { SectionHeading } from "@/components/common/SectionHeading";
+import { HighwayAccessIcon, MetroAccessIcon, LifestyleAccessIcon } from "@/components/icons/AddressIcons";
 
-const icons: Record<string, React.ReactNode> = {
-  highway: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M3 17h18M5 17l2-10h10l2 10M9 7v10M15 7v10" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  ),
-  metro: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <rect x="5" y="4" width="14" height="13" rx="3" strokeLinejoin="round" />
-      <path d="M5 13h14M9 20l-2 2M15 20l2 2M9 9h.01M15 9h.01" strokeLinecap="round" />
-    </svg>
-  ),
-  lifestyle: (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-      <path d="M4 21V9l8-5 8 5v12M4 21h16M9 21v-6h6v6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  ),
+/**
+ * wave-lines.png's own 3 high points sit at x-fractions 2.24% / 50% / 97.6%
+ * of the file (pixel-traced), and its topmost point (the "peak" each icon
+ * should sit on) is ~7-10px into its 182px height, i.e. ~4% from the top.
+ * Our 3 icon columns sit at 14.7% / 50% / 85.3% of the row's width (traced
+ * from actual rendered icon centers). Solving icon_fraction = a * image_x +
+ * b for those two data points gives a≈0.74, b≈13%: render the image at 74%
+ * of the row's width, centered (13%/13% side margins), so its left/middle/
+ * right high points land under Highway/Metro/Lifestyle respectively — then
+ * nudge it up by ~4% of its own (scaled) height so those high points sit
+ * level with the icons' vertical center instead of above them.
+ */
+
+const icons: Record<string, (props: { className?: string }) => React.JSX.Element> = {
+  highway: HighwayAccessIcon,
+  metro: MetroAccessIcon,
+  lifestyle: LifestyleAccessIcon,
 };
 
 export function TriadOfDelight() {
@@ -35,27 +37,54 @@ export function TriadOfDelight() {
           className="mx-auto max-w-xl"
         />
 
-        <div className="relative mt-16 grid grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-6">
+        <div className="relative mt-16">
           <div
             aria-hidden="true"
-            className="absolute left-[16.5%] right-[16.5%] top-7 hidden border-t border-dashed border-brand-primary/40 sm:block"
-          />
-          {triadOfDelight.items.map((item, i) => (
-            <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative z-10 text-center"
-            >
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-brand-primary/10 text-brand-primary">
-                {icons[item.icon]}
-              </div>
-              <h3 className="mt-4 font-serif text-lg text-brand-dark">{item.title}</h3>
-              <p className="mx-auto mt-2 max-w-[220px] text-sm text-brand-gray">{item.body}</p>
-            </motion.div>
-          ))}
+            className="pointer-events-none absolute left-1/2 top-10 hidden w-[74%] -translate-x-1/2 -translate-y-[4%] sm:block"
+          >
+            <Image src="/downloads/wave-lines.png" alt="" width={981} height={182} className="h-auto w-full" />
+          </div>
+
+          <div className="relative grid grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-10 lg:gap-[70px]">
+            {triadOfDelight.items.map((item, i) => {
+              const Icon = icons[item.icon];
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 16 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="relative mx-auto h-20 w-20">
+                    {/* Pin decoration renders first so normal DOM paint
+                        order puts it behind the icon circle — a negative
+                        z-index here would sink it below the section's own
+                        background instead, since none of the ancestors
+                        establish their own stacking context. It overflows
+                        this h-20 box (its own bottom edge lands at 130px,
+                        50px past the box's 80px), so the title below needs
+                        enough margin-top to clear that, not just the icon. */}
+                    <Image
+                      src="/downloads/pointer-vector.svg"
+                      alt=""
+                      aria-hidden="true"
+                      width={20}
+                      height={42}
+                      className="absolute left-1/2 top-[67px] -translate-x-1/2 translate-y-1/2"
+                    />
+                    <Icon className="relative h-20 w-20" />
+                  </div>
+                  {/* mt-16 (64px) clears the pointer's overflow (ends 50px
+                      below this box) with a small gap, instead of the old
+                      mt-7 which put the title 22px into the pointer. */}
+                  <h3 className="mt-16 font-sans text-xl font-medium text-brand-dark">{item.title}</h3>
+                  <p className="mx-auto mt-2 max-w-[220px] text-base leading-relaxed text-brand-gray">{item.body}</p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

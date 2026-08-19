@@ -5,13 +5,14 @@ import Link from "next/link";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { lifestyleAccess } from "@/data/homepage";
+import { HospitalsIcon, SchoolsIcon, ShoppingIcon, NatureIcon, ItParksIcon } from "@/components/icons/TravelTabIcons";
 
-const tabIcons: Record<string, string> = {
-  hospitals: "🏥",
-  schools: "🎓",
-  shopping: "🛍️",
-  nature: "🌿",
-  "it-parks": "🏢",
+const tabIcons: Record<string, (props: { className?: string }) => React.JSX.Element> = {
+  hospitals: HospitalsIcon,
+  schools: SchoolsIcon,
+  shopping: ShoppingIcon,
+  nature: NatureIcon,
+  "it-parks": ItParksIcon,
 };
 
 export function LifestyleAccess() {
@@ -29,20 +30,24 @@ export function LifestyleAccess() {
         </h3>
 
         <div className="mt-8 flex flex-wrap justify-center gap-2">
-          {lifestyleAccess.categories.map((c) => (
-            <button
-              key={c.key}
-              onClick={() => setActive(c.key)}
-              className={`flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition ${
-                active === c.key
-                  ? "border-brand-primary bg-brand-primary text-brand-white"
-                  : "border-brand-border bg-brand-white text-brand-dark hover:border-brand-primary/40"
-              }`}
-            >
-              <span aria-hidden="true">{tabIcons[c.key]}</span>
-              {c.label}
-            </button>
-          ))}
+          {lifestyleAccess.categories.map((c) => {
+            const Icon = tabIcons[c.key];
+            const isActive = active === c.key;
+            return (
+              <button
+                key={c.key}
+                onClick={() => setActive(c.key)}
+                className={`flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition ${
+                  isActive
+                    ? "border-brand-primary bg-brand-primary text-brand-white"
+                    : "border-brand-border bg-brand-white text-brand-dark hover:border-brand-primary/40"
+                }`}
+              >
+                <Icon className={`h-4 w-4 ${isActive ? "text-brand-white" : "text-brand-primary"}`} />
+                {c.label}
+              </button>
+            );
+          })}
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-2 md:items-start">
