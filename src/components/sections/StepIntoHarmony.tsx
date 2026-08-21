@@ -45,9 +45,11 @@ export function StepIntoHarmony() {
     <section className="bg-brand-offwhite py-16 md:py-24">
       <div className="container-page">
         <SectionHeading
+          align="center"
           eyebrow={stepIntoHarmony.eyebrow}
           heading={stepIntoHarmony.heading}
           accent={stepIntoHarmony.headingAccent}
+          className="mx-auto max-w-xl"
         />
 
         <div className="mt-10 space-y-4">

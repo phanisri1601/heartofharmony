@@ -74,10 +74,14 @@ function YoutubeIcon() {
 }
 
 const socialLinks = [
-  { label: "Instagram", href: "#", icon: InstagramIcon },
-  { label: "LinkedIn", href: "#", icon: LinkedInIcon },
-  { label: "Facebook", href: "#", icon: FacebookIcon },
-  { label: "YouTube", href: "#", icon: YoutubeIcon },
+  { label: "Instagram", href: "https://www.instagram.com/ckpc_properties/", icon: InstagramIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/ckpc-properties/", icon: LinkedInIcon },
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/people/CKPC-Properties/61573434770842/",
+    icon: FacebookIcon,
+  },
+  { label: "YouTube", href: "https://www.youtube.com/@CKPCProperties/videos", icon: YoutubeIcon },
 ];
 
 export function SiteFooter() {
@@ -159,7 +163,14 @@ export function SiteFooter() {
 
           <div className="mt-5 flex items-center gap-4 text-brand-border">
             {socialLinks.map(({ label, href, icon: Icon }) => (
-              <a key={label} href={href} aria-label={label} className="hover:text-brand-white">
+              <a
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={label}
+                className="hover:text-brand-white"
+              >
                 <Icon />
               </a>
             ))}

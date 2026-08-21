@@ -153,17 +153,17 @@ export const projectInsights = {
     {
       title: "Heart of Harmony Amenities: Complete Guide to 40+ Facilities at Kudlu Gate, Bengaluru",
       href: "/exclusive-look-clubhouses-and-recreational-amenities-at-heart-of-harmony/",
-      image: "/images/home/harmony-social.jpg",
+      image: "/images/content/exclusive-look-clubhouses-and-recreational-amenities-at-heart-of-harmony.jpg",
     },
     {
       title: "Why Kudlu Gate is Bengaluru's Next Residential Growth Corridor",
       href: "/why-kudlu-gate-is-bengalurus-next-residential-growth-corridor/",
-      image: "/images/home/lifestyle-nature.jpg",
+      image: "/images/content/why-kudlu-gate-is-bengalurus-next-residential-growth-corridor.png",
     },
     {
       title: "The Thinking Behind (PX): Designing Spaces Around People Experience",
       href: "/the-thinking-behind-px-designing-spaces-around-people-experience/",
-      image: "/images/home/harmony-homes.jpg",
+      image: "/images/content/the-thinking-behind-px-designing-spaces-around-people-experience.jpg",
     },
   ],
 };

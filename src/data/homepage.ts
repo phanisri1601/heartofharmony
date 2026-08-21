@@ -243,17 +243,17 @@ export const insights = {
     {
       title: "3 BHK Flats in Kudlu Gate: The Complete 2026 Locality Guide for Hosur Road Buyers",
       href: "/3-bhk-flats-kudlu-gate-locality-guide-2026/",
-      image: "/images/content/3-bhk-flats-kudlu-gate-locality-guide-2026.jpg",
+      image: "/images/content/3-bhk-flats-kudlu-gate-locality-guide-2026.webp",
     },
     {
       title: "Luxury Apartments on Hosur Road Bengaluru: The 2026 Guide for Premium 4 BHK Buyers",
       href: "/luxury-apartments-hosur-road-bengaluru-2026/",
-      image: "/images/content/luxury-apartments-hosur-road-bengaluru-2026.jpg",
+      image: "/images/content/luxury-apartments-hosur-road-bengaluru-2026.webp",
     },
     {
       title: "CKPC Properties New Launch on Hosur Road: Heart of Harmony at Kudlu Gate, Bengaluru",
       href: "/ckpc-properties-new-launch-hosur-road-heart-of-harmony/",
-      image: "/images/content/ckpc-properties-new-launch-hosur-road-heart-of-harmony.jpg",
+      image: "/images/content/ckpc-properties-new-launch-hosur-road-heart-of-harmony.webp",
     },
   ],
 };

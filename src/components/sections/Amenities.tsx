@@ -16,9 +16,11 @@ export function Amenities() {
     <section className="bg-brand-offwhite py-16 md:py-24">
       <div className="container-page">
         <SectionHeading
+          align="center"
           eyebrow={amenities.eyebrow}
           heading={amenities.heading}
           accent={amenities.headingAccent}
+          className="mx-auto max-w-2xl"
         />
 
         <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-start">
