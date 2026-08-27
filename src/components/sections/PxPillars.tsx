@@ -29,7 +29,14 @@ export function PxPillars() {
                 className="rounded-3xl border border-brand-dark/10 p-[22px]"
               >
                 {Icon && <Icon className="h-8 w-8 text-brand-primary" />}
-                <p className="mt-4 font-serif text-[28px] leading-tight text-brand-dark">{item.title}</p>
+                {/* break-words is the real fix — "Sustainability" and
+                    "Inclusivity" are single unbreakable words that overflow
+                    the ~110px-wide mobile card at 28px with no way to wrap;
+                    the smaller mobile size just makes the forced break less
+                    ugly. */}
+                <p className="mt-4 break-words font-serif text-xl leading-tight text-brand-dark sm:text-[28px]">
+                  {item.title}
+                </p>
                 <p className="mt-2 text-base leading-[1.3] text-brand-gray">{item.body}</p>
               </motion.div>
             );

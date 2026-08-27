@@ -29,6 +29,7 @@ export default function ProjectPage() {
         title={projectHero.title}
         intro={projectHero.intro}
         image="/images/project/ckpc-heart-of-harmony-homes-3-3.5-4-bed-residences-project-banner.jpg"
+        mobileImage="/images/project/project-mob-banner.jpg"
         ctaPrimary={projectHero.ctaPrimary}
         ctaSecondary={projectHero.ctaSecondary}
       />

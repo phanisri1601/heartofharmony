@@ -14,12 +14,20 @@ export function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-dark text-brand-white">
       <Image
+        src="/images/home/hero-mobile.jpg"
+        alt="Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover md:hidden"
+      />
+      <Image
         src="/images/home/hero-desktop.jpg"
         alt="Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade"
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="hidden object-cover md:block"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/50 to-brand-dark/90" />
 
