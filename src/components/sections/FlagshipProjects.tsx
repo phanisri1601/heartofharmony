@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
@@ -66,6 +66,15 @@ export function FlagshipProjects() {
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
   const paginationRef = useRef<HTMLDivElement>(null);
+  // The nav/pagination refs point at elements rendered *after* the Swiper
+  // in the JSX tree — on the very first mount they're still null at the
+  // moment Swiper reads `navigation`/`pagination` props, so the pagination
+  // dots silently never attach (arrows still work off onBeforeInit, but
+  // dots don't get a second chance until something else forces a remount).
+  // Delaying the Swiper's own first mount by one tick, once refs are
+  // guaranteed attached, avoids the race entirely.
+  const [refsReady, setRefsReady] = useState(false);
+  useEffect(() => setRefsReady(true), []);
 
   const items = flagshipProjects.items.filter((p) => p.category === activeTab);
 
@@ -97,37 +106,43 @@ export function FlagshipProjects() {
         </div>
 
         <div className="mt-10">
-          <Swiper
-            key={activeTab}
-            modules={[Navigation, Pagination, Autoplay]}
-            spaceBetween={24}
-            loop={items.length > 2}
-            autoplay={{ delay: 5000, disableOnInteraction: false }}
-            breakpoints={{
-              0: { slidesPerView: 1.05 },
-              640: { slidesPerView: 1.3 },
-              1024: { slidesPerView: items.length > 1 ? 1.6 : 1 },
-            }}
-            onBeforeInit={(swiper: SwiperType) => {
-              const nav = swiper.params.navigation;
-              if (nav && typeof nav !== "boolean") {
-                nav.prevEl = prevRef.current;
-                nav.nextEl = nextRef.current;
-              }
-              const pag = swiper.params.pagination;
-              if (pag && typeof pag !== "boolean") {
-                pag.el = paginationRef.current;
-              }
-            }}
-            navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
-            pagination={{ el: paginationRef.current, clickable: true }}
-          >
-            {items.map((p) => (
-              <SwiperSlide key={p.title}>
-                <ProjectCard p={p} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
+          {/* The arrow buttons and pagination dots render unconditionally
+              so their refs exist — the Swiper itself waits for refsReady
+              (one tick after mount) so it always sees the real DOM nodes
+              instead of racing them on the very first render. */}
+          {refsReady && (
+            <Swiper
+              key={activeTab}
+              modules={[Navigation, Pagination, Autoplay]}
+              spaceBetween={24}
+              loop={items.length > 2}
+              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              breakpoints={{
+                0: { slidesPerView: 1.05 },
+                640: { slidesPerView: 1.3 },
+                1024: { slidesPerView: items.length > 1 ? 1.6 : 1 },
+              }}
+              onBeforeInit={(swiper: SwiperType) => {
+                const nav = swiper.params.navigation;
+                if (nav && typeof nav !== "boolean") {
+                  nav.prevEl = prevRef.current;
+                  nav.nextEl = nextRef.current;
+                }
+                const pag = swiper.params.pagination;
+                if (pag && typeof pag !== "boolean") {
+                  pag.el = paginationRef.current;
+                }
+              }}
+              navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+              pagination={{ el: paginationRef.current, clickable: true }}
+            >
+              {items.map((p) => (
+                <SwiperSlide key={p.title}>
+                  <ProjectCard p={p} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          )}
 
           <div className="mt-8 flex items-center justify-center gap-2">
             <button
@@ -139,7 +154,7 @@ export function FlagshipProjects() {
             </button>
             <div
               ref={paginationRef}
-              className="!static flex w-auto items-center gap-2 [&_.swiper-pagination-bullet]:h-2 [&_.swiper-pagination-bullet]:w-2 [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet]:bg-brand-border [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet-active]:bg-brand-primary"
+              className="!static !w-auto flex items-center justify-center gap-2 [&_.swiper-pagination-bullet]:h-2 [&_.swiper-pagination-bullet]:w-2 [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet]:bg-brand-border [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet-active]:bg-brand-primary"
             />
             <button
               ref={nextRef}
