@@ -20,7 +20,7 @@ export function ProjectGlance() {
   return (
     <section className="bg-brand-offwhite py-16 md:py-24">
       <div className="container-page">
-        <div className="grid grid-cols-2 gap-6 border-b border-brand-border pb-10 md:grid-cols-4">
+        <div className="grid grid-cols-2 gap-6 border-b border-brand-border pb-10 text-center md:grid-cols-4">
           {projectStats.map((s) => (
             <div key={s.label}>
               <p className="font-serif text-2xl text-brand-dark md:text-3xl">{s.value}</p>

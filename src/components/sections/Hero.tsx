@@ -55,22 +55,28 @@ export function Hero() {
           sizes="100vw"
           className="hidden object-cover object-[40%_0%] md:block"
         />
-        {/* Desktop: scrim across the whole photo so the overlaid text stays
-            legible — unchanged from before. Mobile: just a bottom fade into
-            solid brand-dark so the photo blends into the content block
-            below it instead of cutting off hard. */}
-        <div className="absolute inset-0 z-[1] hidden bg-gradient-to-b from-brand-dark/80 via-brand-dark/50 to-brand-dark/90 md:block" />
+        {/* Desktop: matches live's exact scrim — the top half of the photo
+            stays completely clear, only fading in over the bottom half
+            (transparent to 50%, 60% by 75%, 80% right at the bottom edge)
+            so the text stays legible without darkening the whole image.
+            Mobile: a bottom fade into solid brand-dark so the photo blends
+            into the content block below it instead of cutting off hard. */}
+        <div className="absolute inset-0 z-[1] hidden bg-[linear-gradient(rgba(20,20,20,0)_50%,rgba(20,20,20,0.6)_75%,rgba(20,20,20,0.8)_100%)] md:block" />
         <div className="absolute inset-0 z-[1] block bg-gradient-to-b from-brand-dark/0 via-brand-dark/0 to-brand-dark md:hidden" />
       </div>
 
-      <div className="container-page relative z-10 pb-14 pt-8 md:pt-24">
+      <div className="container-page relative z-10 pb-14 pt-8 md:pt-40">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="max-w-2xl font-serif text-3xl leading-tight sm:text-4xl md:text-5xl"
+          className="max-w-2xl font-serif text-2xl leading-tight sm:text-3xl md:text-4xl"
         >
-          {hero.h1} <em className="italic text-brand-white/90">{hero.h1Accent}</em>
+          {hero.h1Lines.map((line, i) => (
+            <span key={line} className={i > 0 ? "block" : undefined}>
+              {line}
+            </span>
+          ))}
         </motion.h1>
 
         <motion.p
@@ -117,7 +123,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 max-w-2xl border-t border-white/10 pt-6"
         >
-          <p className="text-xs leading-relaxed text-brand-white/60">
+          <p className="text-sm leading-relaxed text-brand-white/60">
             <span className="font-semibold text-brand-white/80">{hero.description}</span>
           </p>
           <Link

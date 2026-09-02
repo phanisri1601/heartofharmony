@@ -1,8 +1,7 @@
 // Content extracted from the live homepage (https://www.ckpcheartofharmony.com/).
 
 export const hero = {
-  h1: "CKPC Heart of Harmony —",
-  h1Accent: "Premium 3, 3.5 & 4 BHK Apartments in Kudlu Gate, Bengaluru",
+  h1Lines: [ "Luxury 3, 3.5 & 4 Bed Residences", "Hosur Road Main"],
   intro:
     "137 exclusive sky residences on Hosur Main Road, Bengaluru. 400m from Kudlu Gate Metro. 10 mins from Silk Board.",
   eyebrow: "Silk Board",
@@ -143,8 +142,8 @@ export const lifestyleAccess = {
 
 export const amenities = {
   eyebrow: "Project Features",
-  heading: "Amenities at Heart of Harmony, ",
-  headingAccent: "Hosur Road Bengaluru",
+  heading: "Amenities at Heart of Harmony",
+  headingAccent: "",
   cta: "Discover More",
   categories: [
     {
@@ -259,8 +258,8 @@ export const insights = {
 };
 
 export const faq = {
-  heading: "Frequently Asked Questions — ",
-  headingAccent: "Heart of Harmony, Kudlu Gate",
+  heading: "Frequently Asked Questions",
+  headingAccent: "",
   // Sourced from the page's FAQPage JSON-LD structured data (fuller than the visible copy).
   items: [
     {

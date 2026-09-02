@@ -28,7 +28,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`fixed top-0 z-40 w-full transition-colors duration-300 ${
+      className={`fixed top-[10px] z-40 w-full transition-colors duration-300 ${
         scrolled ? "bg-brand-offwhite/95 shadow-sm backdrop-blur" : "bg-transparent"
       }`}
     >
