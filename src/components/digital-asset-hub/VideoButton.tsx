@@ -1,0 +1,58 @@
+"use client";
+
+import { useState } from "react";
+
+function PlayIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" className="shrink-0">
+      <path
+        d="M8 1.5C6.71443 1.5 5.45772 1.88122 4.3888 2.59545C3.31988 3.30968 2.48676 4.32484 1.99479 5.51256C1.50282 6.70028 1.37409 8.00721 1.6249 9.26809C1.8757 10.529 2.49477 11.6872 3.40381 12.5962C4.31285 13.5052 5.47104 14.1243 6.73192 14.3751C7.99279 14.6259 9.29973 14.4972 10.4874 14.0052C11.6752 13.5132 12.6903 12.6801 13.4046 11.6112C14.1188 10.5423 14.5 9.28558 14.5 8C14.4982 6.27665 13.8128 4.62441 12.5942 3.40582C11.3756 2.18722 9.72335 1.50182 8 1.5ZM10.5344 8.41125L7.28438 10.6613C7.20935 10.7131 7.12156 10.7435 7.03051 10.7491C6.93946 10.7546 6.84862 10.7352 6.76783 10.6928C6.68704 10.6505 6.61938 10.5868 6.57217 10.5088C6.52496 10.4307 6.5 10.3412 6.5 10.25V5.75C6.5 5.65878 6.52496 5.5693 6.57217 5.49124C6.61938 5.41319 6.68704 5.34954 6.76783 5.30718C6.84862 5.26482 6.93946 5.24537 7.03051 5.25094C7.12156 5.2565 7.20935 5.28687 7.28438 5.33875L10.5344 7.58875C10.6009 7.63475 10.6553 7.6962 10.6928 7.76783C10.7304 7.83946 10.75 7.91912 10.75 8C10.75 8.08088 10.7304 8.16055 10.6928 8.23217C10.6553 8.3038 10.6009 8.36525 10.5344 8.41125Z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
+
+/**
+ * Pill button that opens the given video in a lightbox — matches live's
+ * exact "360° Drone View" / "Project Walkthrough" popup behavior. Points at
+ * live's own hosted mp4s rather than mirroring the (large) video files
+ * locally.
+ */
+export function VideoButton({ label, videoSrc }: { label: string; videoSrc: string }) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <>
+      <button
+        onClick={() => setOpen(true)}
+        className="inline-flex items-center gap-2 rounded-full bg-brand-offwhite px-5 py-2.5 text-base font-medium text-brand-dark transition hover:opacity-90"
+      >
+        {label}
+        <PlayIcon />
+      </button>
+
+      {open && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-4 md:p-10"
+          onClick={() => setOpen(false)}
+        >
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Close video"
+            className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-2xl text-white transition hover:bg-white/20"
+          >
+            ×
+          </button>
+          <video
+            src={videoSrc}
+            controls
+            autoPlay
+            className="max-h-full max-w-full rounded-xl"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
+    </>
+  );
+}

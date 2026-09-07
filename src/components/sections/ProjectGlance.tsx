@@ -6,6 +6,10 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { projectStats, projectGlance } from "@/data/homepage";
 import { SectionHeading } from "@/components/common/SectionHeading";
+import { ResidencesIcon, PerFloorIcon, FloorsIcon, AmenitiesLevelsIcon } from "@/components/icons/ProjectStatsIcons";
+
+// One icon per stat card, in the same order as projectStats.
+const statIcons = [ResidencesIcon, PerFloorIcon, FloorsIcon, AmenitiesLevelsIcon];
 
 export function ProjectGlance() {
   // Accordion hover: whichever card is hovered grows to the "large" share
@@ -21,12 +25,16 @@ export function ProjectGlance() {
     <section className="bg-brand-offwhite py-16 md:py-24">
       <div className="container-page">
         <div className="grid grid-cols-2 gap-6 border-b border-brand-border pb-10 text-center md:grid-cols-4">
-          {projectStats.map((s) => (
-            <div key={s.label}>
-              <p className="font-serif text-2xl text-brand-dark md:text-3xl">{s.value}</p>
-              <p className="mt-1 text-sm text-brand-gray">{s.label}</p>
-            </div>
-          ))}
+          {projectStats.map((s, i) => {
+            const Icon = statIcons[i];
+            return (
+              <div key={s.label} className="flex flex-col items-center">
+                <Icon className="h-7 w-7 text-brand-primary md:h-8 md:w-8" />
+                <p className="mt-3 font-serif text-2xl text-brand-dark md:text-3xl">{s.value}</p>
+                <p className="mt-1 text-sm text-brand-gray">{s.label}</p>
+              </div>
+            );
+          })}
         </div>
 
         <SectionHeading
