@@ -13,10 +13,8 @@ export const hero = {
     { value: "400mtrs", label: "from Kudlu Gate Metro station" },
     { value: "Hosur Main Road", label: "10 mins from Silk Board" },
   ],
-  // "**bold**" segments render as brighter/semibold spans — see the
-  // renderBoldSegments() helper in Hero.tsx.
   description:
-    "**Heart of Harmony by CKPC Properties** is a premium 24-storey residential high-rise at Kudlu Gate, Hosur Main Road (NH48), Bengaluru. It features **137 exclusive 3, 3.5 & 4 BHK sky residences**, with just **6 homes per floor, zero common walls, and 270° panoramic views**. Located only **400 metres from Kudlu Gate Metro Station (Yellow Line)**, possession is scheduled for **March 2030**. **RERA: PRM/KA/RERA/1251/310/PR/310326/008560.**",
+    "Heart of Harmony by CKPC Properties is a premium 24-storey residential high-rise at Kudlu Gate, Hosur Main Road (NH48), Bengaluru. It features 137 exclusive 3, 3.5 & 4 BHK sky residences, with just 6 homes per floor, zero common walls, and 270° panoramic views. Located only 400 metres from Kudlu Gate Metro Station (Yellow Line), possession is scheduled for March 2030. RERA: PRM/KA/RERA/1251/310/PR/310326/008560.",
 };
 
 export const projectStats = [

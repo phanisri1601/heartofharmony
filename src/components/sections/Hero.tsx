@@ -22,22 +22,6 @@ function ArrowIcon() {
   );
 }
 
-/** Splits text on "**bold**" markers and renders the marked segments as
- * brighter/semibold spans — lets hero.description mix bold and regular
- * text without needing raw JSX in the data file. */
-function renderBoldSegments(text: string) {
-  return text.split(/(\*\*[^*]+\*\*)/g).map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <span key={i} className="font-semibold text-brand-white/80">
-          {part.slice(2, -2)}
-        </span>
-      );
-    }
-    return <span key={i}>{part}</span>;
-  });
-}
-
 export function Hero() {
   const { open } = useEnquiryModal();
   useHeaderOnDark();
@@ -139,7 +123,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 max-w-2xl border-t border-white/10 pt-6"
         >
-          <p className="text-base leading-relaxed text-brand-white/60">{renderBoldSegments(hero.description)}</p>
+          <p className="text-base leading-relaxed text-brand-white">{hero.description}</p>
           <Link
             href="/homes/#floor-plans"
             className="mt-3 inline-block text-base font-medium text-brand-white underline underline-offset-4"
