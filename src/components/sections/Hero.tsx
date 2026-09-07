@@ -123,12 +123,12 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-8 max-w-2xl border-t border-white/10 pt-6"
         >
-          <p className="text-sm leading-relaxed text-brand-white/60">
+          <p className="text-base leading-relaxed text-brand-white/60">
             <span className="font-semibold text-brand-white/80">{hero.description}</span>
           </p>
           <Link
             href="/homes/#floor-plans"
-            className="mt-3 inline-block text-sm font-medium text-brand-white underline underline-offset-4"
+            className="mt-3 inline-block text-base font-medium text-brand-white underline underline-offset-4"
           >
             {hero.floorPlanCta}
           </Link>

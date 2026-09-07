@@ -291,7 +291,10 @@ export const faq = {
 };
 
 export const contactSection = {
+  eyebrow: "Contact Us",
   heading: "Get in touch",
+  intro:
+    "Reach out to us with any questions about Heart of Harmony — we're always happy to help or schedule a site visit.",
   specifications: [
     "3 BHK - 1786 sq.ft",
     "3 BHK - 1981 sq.ft",
