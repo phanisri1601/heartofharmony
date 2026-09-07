@@ -70,7 +70,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="max-w-2xl font-serif text-2xl leading-tight sm:text-3xl md:text-4xl"
+          className="max-w-2xl font-serif text-2xl font-normal leading-tight sm:text-3xl md:text-4xl"
         >
           {hero.h1Lines.map((line, i) => (
             <span key={line} className={i > 0 ? "block" : undefined}>
