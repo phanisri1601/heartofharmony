@@ -33,19 +33,19 @@ export function SiteHeader() {
       }`}
     >
       <div className="container-page flex h-20 items-center justify-between">
-        <div className="flex items-center gap-[26px]">
+        <div className="flex items-center gap-[14px] sm:gap-[18px]">
           <Link href="/" aria-label="Heart of Harmony" className="shrink-0">
             <Image
-              src={light ? "/images/brand/header-logo.svg" : "/images/brand/header-logo-black.svg"}
+              src="/images/logos/logo (1) (1).png"
               alt="Heart of Harmony"
-              width={325}
-              height={48}
+              width={320}
+              height={62}
               priority
-              className="h-[26px] w-[176px] sm:h-[38px] sm:w-[260px] lg:h-[51.7px] lg:w-[350px]"
+              className="h-[28px] w-auto object-contain sm:h-[36px] lg:h-[52px]"
             />
           </Link>
           <span
-            className={`hidden rounded-full border px-2 py-1 text-sm tracking-[-0.48px] sm:inline-block ${
+            className={`hidden -ml-1 rounded-full border px-2 py-1 text-sm tracking-[-0.48px] sm:inline-block ${
               light ? "border-white/90 bg-white/[0.04] text-white" : "border-brand-dark bg-white/[0.04] text-brand-dark"
             }`}
           >
