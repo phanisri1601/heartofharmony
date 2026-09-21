@@ -41,7 +41,7 @@ export function SiteHeader() {
               width={320}
               height={62}
               priority
-              className="h-[28px] w-auto object-contain sm:h-[36px] lg:h-[52px]"
+              className="h-[128px] w-auto object-contain sm:h-[36px] lg:h-[122px]"
             />
           </Link>
           <span
