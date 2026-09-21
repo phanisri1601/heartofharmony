@@ -1,11 +1,11 @@
 // Content extracted from the live /project/ page.
 
 export const projectHero = {
-  title: "Heart of Harmony by CKPC\nProject Overview, Master Plan & Amenities, Hosur Road, Bengaluru",
-  intro:
-    "Heart of Harmony by CKPC is a premium residential project on Hosur Main Road (NH48), Kudlu Gate, Bengaluru. Offering 137 exclusive 3 BHK, 3.5 BHK and 4 BHK sky residences, this CKPC Properties new launch on Hosur Road blends thoughtful planning with everyday functionality. Every corner is designed to serve you, not just exist around you. RERA: PRM/KA/RERA/1251/310/PR/310326/008560.",
-  ctaPrimary: { label: "Explore Floor Plans", href: "/homes/" },
-  ctaSecondary: { label: "View Amenities", href: "/lifestyle/" },
+  title: "Heart Of Harmony By CKPC Group",
+  titleAccent: "Project overview",
+  intro: "",
+  ctaPrimary: undefined,
+  ctaSecondary: undefined,
 };
 
 export const projectFeatures = {
@@ -122,11 +122,11 @@ export const projectAmenities = {
 export const locationSection = {
   eyebrow: "Location Map",
   heading: "Heart of Harmony Location — ",
-  headingAccent: "Kudlu Gate, Hosur Road, Bengaluru",
+  headingAccent: "Hosur main road, Hosur Road, Bengaluru",
   intro:
-    "Heart of Harmony is located at Kudlu Gate on Hosur Main Road (NH48), Bengaluru — 400 metres from Kudlu Gate Metro Station (Yellow Line) and 10 minutes from Silk Board junction. Koramangala, HSR Layout, BTM Layout and Electronic City are all minutes away.",
+    "Heart of Harmony is located at Hosur main road on Hosur Main Road (NH48), Bengaluru — 400 metres from Hosur main road Metro Station (Yellow Line) and 10 minutes from Silk Board junction. Koramangala, HSR Layout, BTM Layout and Electronic City are all minutes away.",
   distances: [
-    { label: "Kudlu Gate Metro Station", value: "400m · 5 min walk" },
+    { label: "Hosur main road Metro Station", value: "400m · 5 min walk" },
     { label: "Silk Board Junction", value: "10 mins" },
     { label: "Koramangala", value: "15 mins" },
     { label: "HSR Layout", value: "12 mins" },
@@ -136,7 +136,7 @@ export const locationSection = {
   ],
   features: [
     { title: "Road Connectivity", body: "NH48, Hosur Main Road" },
-    { title: "Metro Access", body: "Kudlu Gate Station (Yellow Line)" },
+    { title: "Metro Access", body: "Hosur main road Station (Yellow Line)" },
     { title: "Neighbourhoods", body: "Koramangala, HSR, Silk Board" },
   ],
   cityHeading: "At the Heart of the City",
@@ -151,12 +151,12 @@ export const projectInsights = {
   headingAccent: "Harmony",
   items: [
     {
-      title: "Heart of Harmony Amenities: Complete Guide to 40+ Facilities at Kudlu Gate, Bengaluru",
+      title: "Heart of Harmony Amenities: Complete Guide to 40+ Facilities at Hosur main road, Bengaluru",
       href: "/exclusive-look-clubhouses-and-recreational-amenities-at-heart-of-harmony/",
       image: "/images/content/exclusive-look-clubhouses-and-recreational-amenities-at-heart-of-harmony.jpg",
     },
     {
-      title: "Why Kudlu Gate is Bengaluru's Next Residential Growth Corridor",
+      title: "Why Hosur main road is Bengaluru's Next Residential Growth Corridor",
       href: "/why-kudlu-gate-is-bengalurus-next-residential-growth-corridor/",
       image: "/images/content/why-kudlu-gate-is-bengalurus-next-residential-growth-corridor.png",
     },
@@ -182,7 +182,7 @@ export const projectFaq = {
     },
     {
       q: "Where is Heart of Harmony located?",
-      a: "Heart of Harmony is located at Kudlu Gate on Hosur Main Road (NH48), Bengaluru 560068. It is 400 metres from Kudlu Gate Metro Station (Yellow Line) and 10 minutes from Silk Board junction, with easy access to Koramangala, HSR Layout and Electronic City.",
+      a: "Heart of Harmony is located at Hosur main road on Hosur Main Road (NH48), Bengaluru 560068. It is 400 metres from Hosur main road Metro Station (Yellow Line) and 10 minutes from Silk Board junction, with easy access to Koramangala, HSR Layout and Electronic City.",
     },
     {
       q: "What is the possession date of Heart of Harmony?",

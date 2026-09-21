@@ -4,14 +4,14 @@ import path from "node:path";
 import { LandingPageClient } from "./LandingPageClient";
 
 export const metadata: Metadata = {
-  title: "Apartments for Sale in Kudlu Gate, Hosur Road",
+  title: "Apartments for Sale in Hosur main road, Hosur Road",
   description:
-    "Explore premium 3, 3.5 & 4 BHK flats for sale in Kudlu Gate, Hosur Road, Bengaluru. 137 exclusive residencies · 400m from metro · Zero common walls · Possession March 2030. Enquire now.",
+    "Explore premium 3, 3.5 & 4 BHK flats for sale in Hosur main road, Hosur Road, Bengaluru. 137 exclusive residencies · 400m from metro · Zero common walls · Possession March 2030. Enquire now.",
   alternates: { canonical: "/landing-page/" },
   openGraph: {
-    title: "Apartments for Sale in Kudlu Gate, Hosur Road",
+    title: "Apartments for Sale in Hosur main road, Hosur Road",
     description:
-      "Explore premium 3, 3.5 & 4 BHK flats for sale in Kudlu Gate, Hosur Road, Bengaluru. 137 exclusive residencies · 400m from metro · Zero common walls · Possession March 2030. Enquire now.",
+      "Explore premium 3, 3.5 & 4 BHK flats for sale in Hosur main road, Hosur Road, Bengaluru. 137 exclusive residencies · 400m from metro · Zero common walls · Possession March 2030. Enquire now.",
     url: "/landing-page/",
     type: "article",
     images: [

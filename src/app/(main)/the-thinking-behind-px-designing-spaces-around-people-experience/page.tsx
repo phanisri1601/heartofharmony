@@ -7,11 +7,11 @@ const pageData = data as ContentPageData;
 
 export const metadata: Metadata = {
   title: 'The Thinking Behind PX: How CKPC Properties Designs Spaces Around People Experience',
-  description: "People Experience (PX) is CKPC Properties' design philosophy — placing everyday usability, movement, and interaction at the centre of every building. See how PX shapes Heart of Harmony at Kudlu Gate, Hosur Road, Bengaluru.",
+  description: "People Experience (PX) is CKPC Properties' design philosophy — placing everyday usability, movement, and interaction at the centre of every building. See how PX shapes Heart of Harmony at Hosur main road, Hosur Road, Bengaluru.",
   alternates: { canonical: "/the-thinking-behind-px-designing-spaces-around-people-experience/" },
   openGraph: {
     title: 'The Thinking Behind PX: How CKPC Properties Designs Spaces Around People Experience',
-    description: "People Experience (PX) is CKPC Properties' design philosophy — placing everyday usability, movement, and interaction at the centre of every building. See how PX shapes Heart of Harmony at Kudlu Gate, Hosur Road, Bengaluru.",
+    description: "People Experience (PX) is CKPC Properties' design philosophy — placing everyday usability, movement, and interaction at the centre of every building. See how PX shapes Heart of Harmony at Hosur main road, Hosur Road, Bengaluru.",
     url: "/the-thinking-behind-px-designing-spaces-around-people-experience/",
     type: "article",
   },

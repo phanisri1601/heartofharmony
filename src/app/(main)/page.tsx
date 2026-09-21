@@ -11,14 +11,14 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { insights, faq } from "@/data/homepage";
 
 export const metadata: Metadata = {
-  title: "CKPC Heart of Harmony – 3, 3.5 & 4 BHK Apartments, Kudlu Gate",
+  title: "CKPC Heart of Harmony – 3, 3.5 & 4 BHK Apartments, Hosur main road",
   description:
-    "Heart of Harmony by CKPC — premium 3, 3.5 & 4 BHK signature residences at Kudlu Gate, Hosur Road, Bengaluru. 400mtrs from Kudlu Gate Metro Station.",
+    "Heart of Harmony by CKPC — premium 3, 3.5 & 4 BHK signature residences at Hosur main road, Hosur Road, Bengaluru. 400mtrs from Hosur main road Metro Station.",
   alternates: { canonical: "/" },
   openGraph: {
-    title: "CKPC Heart of Harmony – 3, 3.5 & 4 BHK Apartments, Kudlu Gate",
+    title: "CKPC Heart of Harmony – 3, 3.5 & 4 BHK Apartments, Hosur main road",
     description:
-      "Heart of Harmony by CKPC — premium 3, 3.5 & 4 BHK signature residences at Kudlu Gate, Hosur Road, Bengaluru.",
+      "Heart of Harmony by CKPC — premium 3, 3.5 & 4 BHK signature residences at Hosur main road, Hosur Road, Bengaluru.",
     url: "/",
     type: "website",
   },

@@ -30,11 +30,11 @@ export const lifestyleLocation = {
       ],
     },
     {
-      title: "Metro Access — 400 Metres from Kudlu Gate Station",
+      title: "Metro Access — 400 Metres from Hosur main road Station",
       points: [
         {
           icon: "house" as const,
-          text: "Heart of Harmony's location at Kudlu Gate on Hosur Main Road puts the Yellow Line metro 400 metres from your door — the fastest way across South Bengaluru without driving.",
+          text: "Heart of Harmony's location at Hosur main road on Hosur Main Road puts the Yellow Line metro 400 metres from your door — the fastest way across South Bengaluru without driving.",
         },
       ],
     },
@@ -139,7 +139,7 @@ export const lifestyleFaq = {
     },
     {
       q: "Is Heart of Harmony well connected to the rest of Bengaluru?",
-      a: "Yes. Heart of Harmony is located on Hosur Main Road (NH48) at Kudlu Gate — approximately 15 minutes from Koramangala and 12 minutes from HSR Layout. The Kudlu Gate Metro Station (Yellow Line) is 400 metres away.",
+      a: "Yes. Heart of Harmony is located on Hosur Main Road (NH48) at Hosur main road — approximately 15 minutes from Koramangala and 12 minutes from HSR Layout. The Hosur main road Metro Station (Yellow Line) is 400 metres away.",
     },
   ],
 };

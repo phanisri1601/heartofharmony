@@ -7,11 +7,11 @@ const pageData = data as ContentPageData;
 
 export const metadata: Metadata = {
   title: 'CKPC Properties Track Record | 8M Sq Ft, Fortune 100 Clients & Heart of Harmony, Bengaluru',
-  description: 'CKPC Properties has delivered 8 million sq ft of Grade A+ commercial spaces in Bengaluru, trusted by Fortune 100 companies including TCS, Siemens, Bosch and Merck. Now building Heart of Harmony — luxury residential at Kudlu Gate.',
+  description: 'CKPC Properties has delivered 8 million sq ft of Grade A+ commercial spaces in Bengaluru, trusted by Fortune 100 companies including TCS, Siemens, Bosch and Merck. Now building Heart of Harmony — luxury residential at Hosur main road.',
   alternates: { canonical: "/built-for-the-long-term-ckpcs-track-record-in-commercial-and-residential-spaces/" },
   openGraph: {
     title: 'CKPC Properties Track Record | 8M Sq Ft, Fortune 100 Clients & Heart of Harmony, Bengaluru',
-    description: 'CKPC Properties has delivered 8 million sq ft of Grade A+ commercial spaces in Bengaluru, trusted by Fortune 100 companies including TCS, Siemens, Bosch and Merck. Now building Heart of Harmony — luxury residential at Kudlu Gate.',
+    description: 'CKPC Properties has delivered 8 million sq ft of Grade A+ commercial spaces in Bengaluru, trusted by Fortune 100 companies including TCS, Siemens, Bosch and Merck. Now building Heart of Harmony — luxury residential at Hosur main road.',
     url: "/built-for-the-long-term-ckpcs-track-record-in-commercial-and-residential-spaces/",
     type: "article",
   },

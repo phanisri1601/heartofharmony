@@ -110,7 +110,7 @@ export const flagshipProjects = {
       category: "Residential" as const,
       title: "Heart of Harmony",
       location: "Hosur Main Road, Bengaluru",
-      body: "Heart of Harmony by CKPC Properties is a premium 24-storey residential high-rise at Kudlu Gate, Hosur Main Road (NH48), Bengaluru 560068. The project offers 137 exclusive 3 BHK, 3.5 BHK and 4 BHK sky residences with only 6 homes per floor, zero common walls, and 270° panoramic views.",
+      body: "Heart of Harmony by CKPC Properties is a premium 24-storey residential high-rise at Hosur main road, Hosur Main Road (NH48), Bengaluru 560068. The project offers 137 exclusive 3 BHK, 3.5 BHK and 4 BHK sky residences with only 6 homes per floor, zero common walls, and 270° panoramic views.",
       sizeLabel: "Signature Residences",
       size: "3, 3.5 & 4 Bed",
       status: "Ongoing",

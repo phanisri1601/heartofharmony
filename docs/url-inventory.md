@@ -10,7 +10,7 @@ Legend: **Template** = reusable Next.js page template this route will use.
 
 | # | Path | Title (from `<title>`) | Template |
 |---|------|------|----------|
-| 1 | `/` | CKPC Heart of Harmony – 3, 3.5 & 4 BHK Apartments, Kudlu Gate | Home |
+| 1 | `/` | CKPC Heart of Harmony – 3, 3.5 & 4 BHK Apartments, Hosur main road | Home |
 | 2 | `/about-us/` | About Us | About |
 | 3 | `/project/` | Project (overview, clubhouse #clubhouse, location map #location-map) | Project |
 | 4 | `/homes/` | Homes (floor plans #floor-plans) | Homes |
@@ -35,12 +35,12 @@ the homepage/project pages but a different H1, intro copy, and meta title/descri
 | 12 | `/heart-of-harmony-master-plan/` | master plan |
 | 13 | `/ckpc-heart-of-harmony-review/` | reviews |
 | 14 | `/premium-3-bhk-4-bhk-near-hsr-layout-kudlu-gate/` | HSR Layout proximity |
-| 15 | `/3-bhk-apartments-kudlu-gate-hosur-road/` | 3BHK Kudlu Gate |
+| 15 | `/3-bhk-apartments-kudlu-gate-hosur-road/` | 3BHK Hosur main road |
 | 16 | `/4-bhk-apartments-kudlu-gate-hosur-road/` | 4BHK Hosur Road |
 | 17 | `/luxury-apartments-hosur-road-bengaluru-2026/` | luxury Hosur Road |
 | 18 | `/3-bhk-flats-kudlu-gate-locality-guide-2026/` | locality guide |
 | 19 | `/3-bhk-3-5-bhk-4-bhk-buyers-guide-kudlu-gate/` | buyer's guide |
-| 20 | `/3-bhk-4-bhk-apartments-for-sale-kudlu-gate-bengaluru.html` | Kudlu Gate for-sale (legacy `.html` route — canonical tag on this page is broken/points to a 404; kept as-is since that's the real working URL) |
+| 20 | `/3-bhk-4-bhk-apartments-for-sale-kudlu-gate-bengaluru.html` | Hosur main road for-sale (legacy `.html` route — canonical tag on this page is broken/points to a 404; kept as-is since that's the real working URL) |
 | 21 | `/luxury-3-bhk-4-bhk-apartments-for-sale-near-silk-board-bengaluru.html` | Silk Board proximity (legacy `.html` route) |
 | 22 | `/premium-3-bhk-4-bhk-flats-near-hsr-layout-bengaluru.html` | HSR Layout premium (legacy `.html` route) |
 

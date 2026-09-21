@@ -11,12 +11,12 @@ import { projectHero, projectInsights, projectFaq } from "@/data/project";
 export const metadata: Metadata = {
   title: "Project Overview, Master Plan & Amenities",
   description:
-    "Heart of Harmony by CKPC — project overview, master plan, 40+ amenities and location at Kudlu Gate, Hosur Road, Bengaluru.",
+    "Heart of Harmony by CKPC — project overview, master plan, 40+ amenities and location at Hosur main road, Hosur Road, Bengaluru.",
   alternates: { canonical: "/project/" },
   openGraph: {
     title: "Heart of Harmony — Project Overview, Master Plan & Amenities",
     description:
-      "Heart of Harmony by CKPC — project overview, master plan, 40+ amenities and location at Kudlu Gate, Hosur Road, Bengaluru.",
+      "Heart of Harmony by CKPC — project overview, master plan, 40+ amenities and location at Hosur main road, Hosur Road, Bengaluru.",
     url: "/project/",
     type: "website",
   },

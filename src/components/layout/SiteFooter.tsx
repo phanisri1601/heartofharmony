@@ -28,11 +28,11 @@ export function SiteFooter() {
 
           <a href="https://www.ckpcproperties.com/" target="_blank" rel="noreferrer" className="w-fit">
             <Image
-              src="/images/brand/ckpc-logo.png"
+              src="/images/brand/ckpc-logos.png"
               alt="CKPC Properties — builder of Heart of Harmony, Bengaluru"
-              width={160}
-              height={50}
-              className="h-10 w-auto"
+              width={260}
+              height={100}
+              className="h-22 w-auto object-contain container-page"
             />
           </a>
           <p className="text-sm leading-relaxed text-brand-border">{footerBuilderBlurb}</p>

@@ -8,12 +8,12 @@ import { homesHero, homesFaq } from "@/data/homes";
 export const metadata: Metadata = {
   title: "3, 3.5 & 4 BHK Floor Plans & Homes",
   description:
-    "Explore 3 BHK, 3.5 BHK & 4 BHK floor plans at Heart of Harmony, Kudlu Gate. Zero common walls, 270° views, private gardens. Possession March 2030. Enquire for price.",
+    "Explore 3 BHK, 3.5 BHK & 4 BHK floor plans at Heart of Harmony, Hosur main road. Zero common walls, 270° views, private gardens. Possession March 2030. Enquire for price.",
   alternates: { canonical: "/homes/" },
   openGraph: {
-    title: "3, 3.5 & 4 BHK Floor Plans & Homes | Heart of Harmony, Kudlu Gate",
+    title: "3, 3.5 & 4 BHK Floor Plans & Homes | Heart of Harmony, Hosur main road",
     description:
-      "Explore 3 BHK, 3.5 BHK & 4 BHK floor plans at Heart of Harmony, Kudlu Gate. Zero common walls, 270° views, private gardens.",
+      "Explore 3 BHK, 3.5 BHK & 4 BHK floor plans at Heart of Harmony, Hosur main road. Zero common walls, 270° views, private gardens.",
     url: "/homes/",
     type: "website",
   },

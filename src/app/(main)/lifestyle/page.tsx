@@ -9,7 +9,7 @@ import { lifestyleHero, lifestyleFaq } from "@/data/lifestyle";
 export const metadata: Metadata = {
   title: "Amenities & Lifestyle — Wellness, Pool, Spa & 40+ Features",
   description:
-    "Explore 40+ amenities at Heart of Harmony, Hosur Road — outdoor sports, sky deck pool, spa, sauna, pickleball court, co-working space & more. Near Kudlu Gate Metro.",
+    "Explore 40+ amenities at Heart of Harmony, Hosur Road — outdoor sports, sky deck pool, spa, sauna, pickleball court, co-working space & more. Near Hosur main road Metro.",
   alternates: { canonical: "/lifestyle/" },
   openGraph: {
     title: "Amenities at Heart of Harmony — Wellness, Pool, Spa & 40+ Lifestyle Features",

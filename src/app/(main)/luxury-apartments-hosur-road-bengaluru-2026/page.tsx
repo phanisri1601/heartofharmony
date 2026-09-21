@@ -7,11 +7,11 @@ const pageData = data as ContentPageData;
 
 export const metadata: Metadata = {
   title: 'Luxury Apartments on Hosur Road Bengaluru 2026 | 4 BHK Corridor Guide — Heart of Harmony',
-  description: 'Looking for luxury apartments on Hosur Road, Bengaluru? This 2026 corridor guide covers what makes Hosur Road the right address for premium 4 BHK buyers — metro access, Electronic City proximity, and why Heart of Harmony at Kudlu Gate leads luxury supply.',
+  description: 'Looking for luxury apartments on Hosur Road, Bengaluru? This 2026 corridor guide covers what makes Hosur Road the right address for premium 4 BHK buyers — metro access, Electronic City proximity, and why Heart of Harmony at Hosur main road leads luxury supply.',
   alternates: { canonical: "/luxury-apartments-hosur-road-bengaluru-2026/" },
   openGraph: {
     title: 'Luxury Apartments on Hosur Road Bengaluru 2026 | 4 BHK Corridor Guide — Heart of Harmony',
-    description: 'Looking for luxury apartments on Hosur Road, Bengaluru? This 2026 corridor guide covers what makes Hosur Road the right address for premium 4 BHK buyers — metro access, Electronic City proximity, and why Heart of Harmony at Kudlu Gate leads luxury supply.',
+    description: 'Looking for luxury apartments on Hosur Road, Bengaluru? This 2026 corridor guide covers what makes Hosur Road the right address for premium 4 BHK buyers — metro access, Electronic City proximity, and why Heart of Harmony at Hosur main road leads luxury supply.',
     url: "/luxury-apartments-hosur-road-bengaluru-2026/",
     type: "article",
   },

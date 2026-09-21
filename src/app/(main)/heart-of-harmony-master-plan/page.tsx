@@ -7,11 +7,11 @@ const pageData = data as ContentPageData;
 
 export const metadata: Metadata = {
   title: 'Heart of Harmony Master Plan | Site Layout, Tower Design & Floor Plans — CKPC',
-  description: 'Explore the Heart of Harmony master plan by CKPC — 2B+G+24 floors, vehicle-free podium, 6 homes per floor, 84% open green space. Full site layout & floor plan guide for Kudlu Gate, Bengaluru.',
+  description: 'Explore the Heart of Harmony master plan by CKPC — 2B+G+24 floors, vehicle-free podium, 6 homes per floor, 84% open green space. Full site layout & floor plan guide for Hosur main road, Bengaluru.',
   alternates: { canonical: "/heart-of-harmony-master-plan/" },
   openGraph: {
     title: 'Heart of Harmony Master Plan | Site Layout, Tower Design & Floor Plans — CKPC',
-    description: 'Explore the Heart of Harmony master plan by CKPC — 2B+G+24 floors, vehicle-free podium, 6 homes per floor, 84% open green space. Full site layout & floor plan guide for Kudlu Gate, Bengaluru.',
+    description: 'Explore the Heart of Harmony master plan by CKPC — 2B+G+24 floors, vehicle-free podium, 6 homes per floor, 84% open green space. Full site layout & floor plan guide for Hosur main road, Bengaluru.',
     url: "/heart-of-harmony-master-plan/",
     type: "article",
   },

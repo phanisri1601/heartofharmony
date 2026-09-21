@@ -275,7 +275,7 @@ function setLocalizedConfig() {
       lightbox_title_src: "title",
       lightbox_description_src: "description",
     },
-    post: { id: 19474, title: "Apartments for Sale in Kudlu Gate, Hosur Road", excerpt: "", featuredImage: false },
+    post: { id: 19474, title: "Apartments for Sale in Hosur main road, Hosur Road", excerpt: "", featuredImage: false },
   };
 
   w.ElementorProFrontendConfig = {

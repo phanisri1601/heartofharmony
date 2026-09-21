@@ -12,13 +12,13 @@ export const resourcesHero = {
   heading: "Heart of Harmony Blog",
   accent: "Real Estate, Location & Lifestyle Insights",
   intro:
-    "The Heart of Harmony blog covers residential real estate in Bengaluru — from the Kudlu Gate and Hosur Road location story, to apartment design, lifestyle amenities, and the CKPC Properties builder track record. Whether you’re researching 3 BHK apartments in South Bengaluru or comparing lifestyle near HSR Layout and Silk Board, these articles are written to help you make the right decision.",
+    "The Heart of Harmony blog covers residential real estate in Bengaluru — from the Hosur main road and Hosur Road location story, to apartment design, lifestyle amenities, and the CKPC Properties builder track record. Whether you’re researching 3 BHK apartments in South Bengaluru or comparing lifestyle near HSR Layout and Silk Board, these articles are written to help you make the right decision.",
 };
 
 export const articles = [
   // Page 1
   {
-    title: "3 BHK Flats in Kudlu Gate: The Complete 2026 Locality Guide for Hosur Road Buyers",
+    title: "3 BHK Flats in Hosur main road: The Complete 2026 Locality Guide for Hosur Road Buyers",
     href: "/3-bhk-flats-kudlu-gate-locality-guide-2026/",
     image: "/images/content/3-bhk-flats-kudlu-gate-locality-guide-2026.webp",
   },
@@ -28,35 +28,35 @@ export const articles = [
     image: "/images/content/luxury-apartments-hosur-road-bengaluru-2026.webp",
   },
   {
-    title: "CKPC Properties New Launch on Hosur Road: Heart of Harmony at Kudlu Gate, Bengaluru",
+    title: "CKPC Properties New Launch on Hosur Road: Heart of Harmony at Hosur main road, Bengaluru",
     href: "/ckpc-properties-new-launch-hosur-road-heart-of-harmony/",
     image: "/images/content/ckpc-properties-new-launch-hosur-road-heart-of-harmony.webp",
   },
   {
     title:
-      "4 BHK Apartments in Kudlu Gate: Why Heart of Harmony is the Finest Ultra-Luxury Option on Hosur Road in 2026",
+      "4 BHK Apartments in Hosur main road: Why Heart of Harmony is the Finest Ultra-Luxury Option on Hosur Road in 2026",
     href: "/4-bhk-apartments-kudlu-gate-hosur-road/",
     image: "/images/content/4-bhk-apartments-kudlu-gate-hosur-road.webp",
   },
   {
-    title: "3 BHK Apartments in Kudlu Gate: The Complete 2026 Buyer’s Guide for Hosur Road",
+    title: "3 BHK Apartments in Hosur main road: The Complete 2026 Buyer’s Guide for Hosur Road",
     href: "/3-bhk-apartments-kudlu-gate-hosur-road/",
     image: "/images/content/3-bhk-apartments-kudlu-gate-hosur-road.webp",
   },
   {
     title:
-      "Premium 3 BHK and 4 BHK Flats Near HSR Layout: Why Kudlu Gate on Hosur Road is the Smarter Buy in 2026",
+      "Premium 3 BHK and 4 BHK Flats Near HSR Layout: Why Hosur main road on Hosur Road is the Smarter Buy in 2026",
     href: "/premium-3-bhk-4-bhk-near-hsr-layout-kudlu-gate/",
     image: "/images/content/premium-3-bhk-4-bhk-near-hsr-layout-kudlu-gate.webp",
   },
   {
     title:
-      "CKPC Heart of Harmony Review 2026: An Honest Buyer’s Analysis of Kudlu Gate’s Finest Luxury Project",
+      "CKPC Heart of Harmony Review 2026: An Honest Buyer’s Analysis of Hosur main road’s Finest Luxury Project",
     href: "/ckpc-heart-of-harmony-review/",
     image: "/images/content/ckpc-heart-of-harmony-review.webp",
   },
   {
-    title: "Heart of Harmony Price 2026: Complete Guide to 3, 3.5 & 4 BHK Pricing at Kudlu Gate",
+    title: "Heart of Harmony Price 2026: Complete Guide to 3, 3.5 & 4 BHK Pricing at Hosur main road",
     href: "/heart-of-harmony-price/",
     image: "/images/content/heart-of-harmony-price.webp",
   },
@@ -72,12 +72,12 @@ export const articles = [
     image: "/images/content/heart-of-harmony-master-plan.webp",
   },
   {
-    title: "3 BHK, 3.5 BHK & 4 BHK Flats at Kudlu Gate: The Complete Buyer’s Guide for 2026",
+    title: "3 BHK, 3.5 BHK & 4 BHK Flats at Hosur main road: The Complete Buyer’s Guide for 2026",
     href: "/3-bhk-3-5-bhk-4-bhk-buyers-guide-kudlu-gate/",
     image: "/images/content/3-bhk-3-5-bhk-4-bhk-buyers-guide-kudlu-gate.webp",
   },
   {
-    title: "Heart of Harmony Location: Why Kudlu Gate on Hosur Main Road Is Bengaluru’s Smartest Address",
+    title: "Heart of Harmony Location: Why Hosur main road on Hosur Main Road Is Bengaluru’s Smartest Address",
     href: "/heart-of-harmony-location/",
     image: "/images/content/heart-of-harmony-location.webp",
   },
@@ -105,12 +105,12 @@ export const articles = [
     image: "/images/content/the-thinking-behind-px-designing-spaces-around-people-experience.jpg",
   },
   {
-    title: "Why Kudlu Gate is Bengaluru’s Next Residential Growth Corridor",
+    title: "Why Hosur main road is Bengaluru’s Next Residential Growth Corridor",
     href: "/why-kudlu-gate-is-bengalurus-next-residential-growth-corridor/",
     image: "/images/content/why-kudlu-gate-is-bengalurus-next-residential-growth-corridor.png",
   },
   {
-    title: "Heart of Harmony Amenities: Complete Guide to 40+ Facilities at Kudlu Gate, Bengaluru",
+    title: "Heart of Harmony Amenities: Complete Guide to 40+ Facilities at Hosur main road, Bengaluru",
     href: "/exclusive-look-clubhouses-and-recreational-amenities-at-heart-of-harmony/",
     image: "/images/content/exclusive-look-clubhouses-and-recreational-amenities-at-heart-of-harmony.jpg",
   },

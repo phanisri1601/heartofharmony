@@ -1,12 +1,11 @@
 // Content extracted from the live /homes/ page.
 
 export const homesHero = {
-  title: "3, 3.5 & 4 BHK Sky Residences -",
-  titleAccent: "Floor Plans & Homes at Heart of Harmony, Kudlu Gate",
-  intro:
-    "At Heart of Harmony, every 3 BHK, 3.5 BHK and 4 BHK home is designed to feel open, private, and effortlessly comfortable. With just 6 residences on each floor, zero common walls, and thoughtful layouts, these sky residences create a sense of calm rarely found in Bengaluru city living.",
-  ctaPrimary: { label: "View Floor Plans", href: "/homes/#floor-plans" },
-  ctaSecondary: { label: "Explore Amenities", href: "/lifestyle/" },
+  title: "Heart Of Harmony By CKPC Group",
+  titleAccent: "Project overview",
+  intro: "",
+  ctaPrimary: undefined,
+  ctaSecondary: undefined,
 };
 
 export const homesCommunity = {
@@ -26,8 +25,7 @@ export const floorPlans = {
   eyebrow: "Floor Plans",
   heading: "Heart of Harmony Floor Plans — ",
   headingAccent: "3 BHK, 3.5 BHK & 4 BHK Configurations",
-  intro:
-    "Heart of Harmony offers 137 exclusive 3 BHK, 3.5 BHK and 4 BHK sky residences at Kudlu Gate, Bengaluru. Every floor plan is designed for maximum space, privacy and 270° panoramic views. Possession: March 2030. RERA: PRM/KA/RERA/1251/310/PR/310326/008560.",
+  intro:"",
   units: [
     {
       key: "3bhk-classic",

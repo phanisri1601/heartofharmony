@@ -21,11 +21,11 @@ const albertSans = Albert_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.ckpcheartofharmony.com"),
   title: {
-    default: "CKPC Heart of Harmony – 3, 3.5 & 4 BHK Apartments, Kudlu Gate",
+    default: "CKPC Heart of Harmony – 3, 3.5 & 4 BHK Apartments, Hosur main road",
     template: "%s | Heart of Harmony by CKPC",
   },
   description:
-    "Heart of Harmony by CKPC — premium 3, 3.5 & 4 BHK apartments at Kudlu Gate, Hosur Road, Bengaluru.",
+    "Heart of Harmony by CKPC — premium 3, 3.5 & 4 BHK apartments at Hosur main road, Hosur Road, Bengaluru.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

@@ -6,12 +6,12 @@ import type { ContentPageData } from "@/types/content";
 const pageData = data as ContentPageData;
 
 export const metadata: Metadata = {
-  title: 'Heart of Harmony Location | Kudlu Gate, Hosur Main Road, Bengaluru 560068',
-  description: 'Heart of Harmony by CKPC is at Kudlu Gate, Hosur Main Road, Bengaluru 560068 — 400m from Kudlu Gate Metro Station (Yellow Line). Full location guide: distances, connectivity, schools, hospitals & map.',
+  title: 'Heart of Harmony Location | Hosur main road, Hosur Main Road, Bengaluru 560068',
+  description: 'Heart of Harmony by CKPC is at Hosur main road, Hosur Main Road, Bengaluru 560068 — 400m from Hosur main road Metro Station (Yellow Line). Full location guide: distances, connectivity, schools, hospitals & map.',
   alternates: { canonical: "/heart-of-harmony-location/" },
   openGraph: {
-    title: 'Heart of Harmony Location | Kudlu Gate, Hosur Main Road, Bengaluru 560068',
-    description: 'Heart of Harmony by CKPC is at Kudlu Gate, Hosur Main Road, Bengaluru 560068 — 400m from Kudlu Gate Metro Station (Yellow Line). Full location guide: distances, connectivity, schools, hospitals & map.',
+    title: 'Heart of Harmony Location | Hosur main road, Hosur Main Road, Bengaluru 560068',
+    description: 'Heart of Harmony by CKPC is at Hosur main road, Hosur Main Road, Bengaluru 560068 — 400m from Hosur main road Metro Station (Yellow Line). Full location guide: distances, connectivity, schools, hospitals & map.',
     url: "/heart-of-harmony-location/",
     type: "article",
   },

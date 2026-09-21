@@ -7,12 +7,12 @@ import { resourcesHero } from "@/data/resources";
 export const metadata: Metadata = {
   title: "Blog — Real Estate Insights, Location & Lifestyle",
   description:
-    "Read insights on Kudlu Gate real estate, Heart of Harmony amenities, Hosur Road lifestyle, and CKPC builder updates.",
+    "Read insights on Hosur main road real estate, Heart of Harmony amenities, Hosur Road lifestyle, and CKPC builder updates.",
   alternates: { canonical: "/resources/" },
   openGraph: {
     title: "Heart of Harmony Blog — Real Estate Insights, Location & Lifestyle | CKPC",
     description:
-      "Read insights on Kudlu Gate real estate, Heart of Harmony amenities, Hosur Road lifestyle, and CKPC builder updates.",
+      "Read insights on Hosur main road real estate, Heart of Harmony amenities, Hosur Road lifestyle, and CKPC builder updates.",
     url: "/resources/",
     type: "website",
   },

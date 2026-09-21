@@ -36,7 +36,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-[14px] sm:gap-[18px]">
           <Link href="/" aria-label="Heart of Harmony" className="shrink-0">
             <Image
-              src= { light ? "/images/logos/CKPC_NewLOGO_white.png" : "/images/logos/CKPC_Black_LOGO_updated.png"}
+              src= { light ? "/images/logos/CKPC_NewLOGO_white-1.png" : "/images/logos/CKPC_Black_LOGO_updated.png"}
               alt="Heart of Harmony"
               width={320}
               height={62}

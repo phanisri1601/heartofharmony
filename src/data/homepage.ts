@@ -3,18 +3,18 @@
 export const hero = {
   h1Lines: [ "Luxury 3, 3.5 & 4 Bed Residences", "Hosur Road Main"],
   intro:
-    "137 exclusive sky residences on Hosur Main Road, Bengaluru. 400m from Kudlu Gate Metro. 10 mins from Silk Board.",
+    "137 exclusive sky residences on Hosur Main Road, Bengaluru. 400m from Hosur main road Metro. 10 mins from Silk Board.",
   eyebrow: "Silk Board",
   cta: "Enquire Now",
   floorPlanCta: "Explore 3, 3.5 & 4 BHK floor plans",
   reraNumber: "PRM/KA/RERA/1251/310/PR/310326/008560",
   stats: [
     { value: "3, 3.5 & 4 Bed", label: "Signature Residences" },
-    { value: "400mtrs", label: "from Kudlu Gate Metro station" },
+    { value: "400mtrs", label: "from Hosur main road Metro station" },
     { value: "Hosur Main Road", label: "10 mins from Silk Board" },
   ],
   description:
-    "Heart of Harmony by CKPC Properties is a premium 24-storey residential high-rise at Kudlu Gate, Hosur Main Road (NH48), Bengaluru. It features 137 exclusive 3, 3.5 & 4 BHK sky residences, with just 6 homes per floor, zero common walls, and 270° panoramic views. Located only 400 metres from Kudlu Gate Metro Station (Yellow Line), possession is scheduled for March 2030. RERA: PRM/KA/RERA/1251/310/PR/310326/008560.",
+    "Heart of Harmony by CKPC Group is a premium 24-storey residential high-rise at Hosur main road, Hosur Main Road (NH48), Bengaluru. It features 137 exclusive 3, 3.5 & 4 BHK sky residences, with just 6 homes per floor, zero common walls, and 270° panoramic views. Located only 400 metres from Hosur main road Metro Station (Yellow Line), possession is scheduled for March 2030. RERA: PRM/KA/RERA/1251/310/PR/310326/008560.",
 };
 
 export const projectStats = [
@@ -57,7 +57,7 @@ export const triadOfDelight = {
     {
       icon: "metro",
       title: "Metro Access",
-      body: "400mtrs away from Kudlu Gate Metro Station on the Yellow Line",
+      body: "400mtrs away from Hosur main road Metro Station on the Yellow Line",
     },
     {
       icon: "lifestyle",
@@ -240,7 +240,7 @@ export const insights = {
   cta: "Discover More",
   items: [
     {
-      title: "3 BHK Flats in Kudlu Gate: The Complete 2026 Locality Guide for Hosur Road Buyers",
+      title: "3 BHK Flats in Hosur main road: The Complete 2026 Locality Guide for Hosur Road Buyers",
       href: "/3-bhk-flats-kudlu-gate-locality-guide-2026/",
       image: "/images/content/3-bhk-flats-kudlu-gate-locality-guide-2026.webp",
     },
@@ -250,7 +250,7 @@ export const insights = {
       image: "/images/content/luxury-apartments-hosur-road-bengaluru-2026.webp",
     },
     {
-      title: "CKPC Properties New Launch on Hosur Road: Heart of Harmony at Kudlu Gate, Bengaluru",
+      title: "CKPC Properties New Launch on Hosur Road: Heart of Harmony at Hosur main road, Bengaluru",
       href: "/ckpc-properties-new-launch-hosur-road-heart-of-harmony/",
       image: "/images/content/ckpc-properties-new-launch-hosur-road-heart-of-harmony.webp",
     },
@@ -271,8 +271,8 @@ export const faq = {
       a: "Heart of Harmony's expected possession date is March 2030, with phased construction milestones as per RERA registration PRM/KA/RERA/1251/310/PR/310326/008560.",
     },
     {
-      q: "How far is Heart of Harmony from Kudlu Gate Metro Station?",
-      a: "Heart of Harmony is 400 metres from Kudlu Gate Metro Station on the Yellow Line (Namma Metro Phase 2) — approximately a 5-minute walk.",
+      q: "How far is Heart of Harmony from Hosur main road Metro Station?",
+      a: "Heart of Harmony is 400 metres from Hosur main road Metro Station on the Yellow Line (Namma Metro Phase 2) — approximately a 5-minute walk.",
     },
     {
       q: "What BHK configurations are available at Heart of Harmony?",

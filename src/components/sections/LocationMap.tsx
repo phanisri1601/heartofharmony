@@ -29,7 +29,7 @@ export function LocationMap() {
           >
             <iframe
               title="Heart of Harmony location map"
-              src="https://www.google.com/maps?q=Hosur+Main+Road,+Kudlu+Gate,+Bengaluru+560068&output=embed"
+              src="https://www.google.com/maps?q=Hosur+Main+Road,+Bengaluru+560068&output=embed"
               className="aspect-[4/3] w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

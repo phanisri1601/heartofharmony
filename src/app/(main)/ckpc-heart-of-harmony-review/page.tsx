@@ -6,12 +6,12 @@ import type { ContentPageData } from "@/types/content";
 const pageData = data as ContentPageData;
 
 export const metadata: Metadata = {
-  title: 'CKPC Heart of Harmony Review 2026 | Honest Buyer Analysis — Kudlu Gate, Bengaluru',
-  description: 'Read our detailed CKPC Heart of Harmony review — location, master plan, amenities, floor plans, developer track record & buyer testimonials. Luxury 3, 3.5 & 4 BHK homes at Kudlu Gate, Hosur Road.',
+  title: 'CKPC Heart of Harmony Review 2026 | Honest Buyer Analysis — Hosur main road, Bengaluru',
+  description: 'Read our detailed CKPC Heart of Harmony review — location, master plan, amenities, floor plans, developer track record & buyer testimonials. Luxury 3, 3.5 & 4 BHK homes at Hosur main road, Hosur Road.',
   alternates: { canonical: "/ckpc-heart-of-harmony-review/" },
   openGraph: {
-    title: 'CKPC Heart of Harmony Review 2026 | Honest Buyer Analysis — Kudlu Gate, Bengaluru',
-    description: 'Read our detailed CKPC Heart of Harmony review — location, master plan, amenities, floor plans, developer track record & buyer testimonials. Luxury 3, 3.5 & 4 BHK homes at Kudlu Gate, Hosur Road.',
+    title: 'CKPC Heart of Harmony Review 2026 | Honest Buyer Analysis — Hosur main road, Bengaluru',
+    description: 'Read our detailed CKPC Heart of Harmony review — location, master plan, amenities, floor plans, developer track record & buyer testimonials. Luxury 3, 3.5 & 4 BHK homes at Hosur main road, Hosur Road.',
     url: "/ckpc-heart-of-harmony-review/",
     type: "article",
   },
