@@ -2,11 +2,10 @@
 
 export const aboutHero = {
   title: "About CKPC Properties",
-  titleAccent: "— Developer of Heart of Harmony, Bengaluru",
-  intro:
-    "CKPC Properties is a Bengaluru-based real estate developer with over 8 million sq ft of Grade A+ commercial and residential spaces delivered. With years of experience across real estate, design, and innovation, CKPC brings the same passion and precision that earned the trust of Fortune 100 companies to every home and community they build.",
-  ctaPrimary: { label: "Explore Heart of Harmony", href: "/project/" },
-  ctaSecondary: { label: "View Floor Plans & Pricing", href: "/homes/" },
+  titleAccent: "",
+   intro: "",
+  ctaPrimary: undefined,
+  ctaSecondary: undefined,
 };
 
 export const aboutApproach = {

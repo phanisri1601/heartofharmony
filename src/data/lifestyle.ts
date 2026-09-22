@@ -1,12 +1,11 @@
 // Content extracted from the live /lifestyle/ page.
 
 export const lifestyleHero = {
-  title: "Lifestyle & Amenities at Heart of Harmony -",
-  titleAccent: "Hosur Road, Bengaluru",
-  intro:
-    "Heart of Harmony is a community of 137 exclusive homes on Hosur Main Road, Bengaluru — designed around shared values and a richer everyday lifestyle. With 40+ amenities across two levels, landscaped podium spaces, and community zones for every stage of life, this is where home and lifestyle meet.",
-  ctaPrimary: { label: "Explore Floor Plans", href: "/homes/" },
-  ctaSecondary: { label: "View Project Overview", href: "/project/" },
+  title: "Lifestyle & Amenities",
+  titleAccent: "",
+  intro: "",
+  ctaPrimary: undefined,
+  ctaSecondary: undefined,
 };
 
 export const lifestyleLocation = {
