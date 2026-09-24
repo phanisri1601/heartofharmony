@@ -44,7 +44,7 @@ export function Hero() {
           alt="Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 767px) 100vw, 1px"
           className="object-cover object-[80%_0%] md:hidden"
         />
         <Image
@@ -52,7 +52,7 @@ export function Hero() {
           alt="Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade"
           fill
           priority
-          sizes="100vw"
+          sizes="(min-width: 768px) 100vw, 1px"
           className="hidden object-cover object-[40%_0%] md:block"
         />
         {/* Desktop: matches live's exact scrim — the top half of the photo

@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node scripts/dev.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "dev:php": "php -S 127.0.0.1:8081 -t server/php/public"
   },
   "dependencies": {
     "clsx": "^2.1.1",

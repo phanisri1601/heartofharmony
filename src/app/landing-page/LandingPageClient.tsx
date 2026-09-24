@@ -1,5 +1,6 @@
 "use client";
 
+import { submitEnquiry } from "@/lib/submit-enquiry";
 import { useEffect, useLayoutEffect, useRef } from "react";
 
 // Classes WordPress/Astra/Elementor put on <body> for this exact page
@@ -317,25 +318,29 @@ function initFormHandoff(root: HTMLElement) {
         const submitBtn = form.querySelector<HTMLInputElement>('input[type="submit"]');
         if (submitBtn) submitBtn.disabled = true;
 
-        const data = new FormData(form);
-        const payload: Record<string, string> = {};
-        data.forEach((value, key) => {
-          if (key === "checkbox-accept[]") return;
-          payload[key] = String(value);
-        });
-        payload["checkbox-accept"] = data.get("checkbox-accept[]") ? "1" : "";
-
-        fetch("/api/enquiry", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        })
-          .catch(() => null)
-          .finally(() => {
-            if (submitBtn) submitBtn.disabled = false;
+        if (!form.reportValidity()) {
+          if (submitBtn) submitBtn.disabled = false;
+          return;
+        }
+        let errorEl = form.querySelector<HTMLElement>(".enquiry-error");
+        if (!errorEl) {
+          errorEl = document.createElement("p");
+          errorEl.className = "enquiry-error";
+          errorEl.setAttribute("role", "alert");
+          form.appendChild(errorEl);
+        }
+        errorEl.textContent = "";
+        submitEnquiry(new FormData(form))
+          .then(() => {
             form.reset();
             if (wrapper) (wrapper as HTMLElement).style.display = "none";
             if (successEl) successEl.style.display = "block";
+          })
+          .catch(() => {
+            errorEl.textContent = "Unable to submit your enquiry. Please try again or call us directly.";
+          })
+          .finally(() => {
+            if (submitBtn) submitBtn.disabled = false;
           });
       },
       true,

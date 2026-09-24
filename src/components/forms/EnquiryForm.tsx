@@ -2,6 +2,8 @@
 
 import { useState, type FormEvent } from "react";
 
+import { submitEnquiry } from "@/lib/submit-enquiry";
+
 type Status = "idle" | "submitting" | "success" | "error";
 
 /**
@@ -14,8 +16,7 @@ type Status = "idle" | "submitting" | "success" | "error";
  * borderless, bottom-underline-only fields with no card, no labels, no
  * wrapper — as opposed to the boxed/bordered fields the popup modal uses.
  *
- * Submission is wired to a placeholder /api/enquiry route — swap in the real
- * CRM/email endpoint when the backend is ready.
+ * Submits through the PHP Salesforce integration via /api/enquiry.
  */
 export function EnquiryForm({
   compact = false,
@@ -46,12 +47,7 @@ export function EnquiryForm({
     }
 
     try {
-      const res = await fetch("/api/enquiry", {
-        method: "POST",
-        body: JSON.stringify(Object.fromEntries(data)),
-        headers: { "Content-Type": "application/json" },
-      });
-      if (!res.ok) throw new Error("Request failed");
+      await submitEnquiry(data);
       setStatus("success");
       form.reset();
     } catch {

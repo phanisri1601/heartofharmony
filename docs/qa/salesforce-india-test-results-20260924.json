@@ -1,0 +1,72 @@
+[
+  {
+    "name": "HOH TEST Aarav IN 20260924",
+    "email": "hoh-qa-in-aarav-20260924@example.com",
+    "phone": "+910007048326",
+    "message": "TEST ONLY — DO NOT CONTACT. Please share the 3 BHK floor plans and current pricing.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Diya IN 20260924",
+    "email": "hoh-qa-in-diya-20260924@example.com",
+    "phone": "+910003817954",
+    "message": "TEST ONLY — DO NOT CONTACT. I would like details about 3.5 BHK availability and carpet area.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Vihaan IN 20260924",
+    "email": "hoh-qa-in-vihaan-20260924@example.com",
+    "phone": "+910009264073",
+    "message": "TEST ONLY — DO NOT CONTACT. Please send the 4 BHK brochure and payment schedule.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Ananya IN 20260924",
+    "email": "hoh-qa-in-ananya-20260924@example.com",
+    "phone": "+910001579382",
+    "message": "TEST ONLY — DO NOT CONTACT. I would like information about weekend site visits.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Arjun IN 20260924",
+    "email": "hoh-qa-in-arjun-20260924@example.com",
+    "phone": "+910008432609",
+    "message": "TEST ONLY — DO NOT CONTACT. Please share details of the clubhouse and family amenities.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Meera IN 20260924",
+    "email": "hoh-qa-in-meera-20260924@example.com",
+    "phone": "+910002695817",
+    "message": "TEST ONLY — DO NOT CONTACT. I am interested in a higher-floor apartment. Please share availability.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Ishaan IN 20260924",
+    "email": "hoh-qa-in-ishaan-20260924@example.com",
+    "phone": "+910006153974",
+    "message": "TEST ONLY — DO NOT CONTACT. Please share the possession timeline and construction progress.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Kavya IN 20260924",
+    "email": "hoh-qa-in-kavya-20260924@example.com",
+    "phone": "+910004927068",
+    "message": "TEST ONLY — DO NOT CONTACT. I would like details about parking and maintenance charges.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Advik IN 20260924",
+    "email": "hoh-qa-in-advik-20260924@example.com",
+    "phone": "+910007381495",
+    "message": "TEST ONLY — DO NOT CONTACT. Please share the project location and connectivity details.",
+    "result": "success"
+  },
+  {
+    "name": "HOH TEST Saanvi IN 20260924",
+    "email": "hoh-qa-in-saanvi-20260924@example.com",
+    "phone": "+910005849231",
+    "message": "TEST ONLY — DO NOT CONTACT. I would like the all-inclusive price breakdown for a 3 BHK home.",
+    "result": "success"
+  }
+]

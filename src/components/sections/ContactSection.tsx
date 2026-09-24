@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { submitEnquiry } from "@/lib/submit-enquiry";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { contactSection } from "@/data/homepage";
@@ -14,6 +15,8 @@ const fieldClass =
   "w-full border-0 border-b border-brand-border bg-transparent px-0 py-3 text-base text-brand-dark placeholder:text-brand-gray focus:border-brand-primary focus:outline-none";
 
 export function ContactSection() {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
   // Native <select> always renders its currently-selected option's text in
   // the select's own color (there's no `placeholder:` pseudo-class for it
@@ -23,10 +26,20 @@ export function ContactSection() {
   const [specifications, setSpecifications] = useState("");
   const [purpose, setPurpose] = useState("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    // TODO: wire to real backend/CRM endpoint.
-    setSubmitted(true);
+    if (submitting) return;
+    const data = new FormData(e.currentTarget);
+    setSubmitting(true);
+    setError("");
+    try {
+      await submitEnquiry(data);
+      setSubmitted(true);
+    } catch {
+      setError("Unable to submit your enquiry. Please try again or call us directly.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   return (
@@ -131,11 +144,13 @@ export function ContactSection() {
                   <span>{contactSection.consentText}</span>
                 </label>
 
+                {error && <p role="alert" className="text-sm text-brand-primary">{error}</p>}
                 <button
+                  disabled={submitting}
                   type="submit"
                   className="mt-2 inline-block rounded-full bg-brand-primary px-8 py-3 text-sm font-medium text-brand-white transition hover:opacity-90"
                 >
-                  Book for a callback
+                  {submitting ? "Sending…" : "Book for a callback"}
                 </button>
               </form>
             </div>
