@@ -1,15 +1,22 @@
-# Enquiry form backend
+# Enquiry backend on Vercel
 
-All forms post to `/api/enquiry`, which forwards to the supplied PHP Salesforce OAuth / CreateLeadService integration. Google Sheets and its Composer dependency have been removed. Success is shown only after the backend confirms submission; failures keep the form available to retry.
+All forms post to the Next.js `/api/enquiry` route. It obtains a Salesforce OAuth token and calls CreateLeadService directly using the field mapping from the supplied PHP code. No PHP service, Google Sheets integration or ENQUIRY_PHP_URL is required.
 
-## Local development
+## Local setup
 
-Run `npm run dev` to start both Next.js and the PHP service. The launcher reuses an already-running local PHP enquiry service and skips starting local PHP when `ENQUIRY_PHP_URL` is configured. `npm run dev:php` is also available for starting PHP separately. PHP requires the cURL extension. Development defaults to `http://127.0.0.1:8081/enquiry.php`.
+Copy `.env.example` to `.env.local` in the Next.js project root and fill in SALESFORCE_CLIENT_ID and SALESFORCE_CLIENT_SECRET. Run `npm run dev`. Keep `.env.local` ignored by Git and never use NEXT_PUBLIC_ for secrets.
 
-Salesforce credentials are stored in the ignored `server/php/.env`, outside the PHP document root. On a fresh checkout, copy `server/php/.env.example` to `server/php/.env` and fill in the values locally. Only the placeholder example belongs in Git. Never use `NEXT_PUBLIC_` for credentials or put the environment file in either public directory. PHP environment variables `SALESFORCE_CLIENT_ID` and `SALESFORCE_CLIENT_SECRET` override the local environment file.
+## Vercel setup
 
-## Deployment
+1. Deploy the updated Next.js project (the old PHP-proxy route will not use these credentials).
+2. Set SALESFORCE_CLIENT_ID and SALESFORCE_CLIENT_SECRET in Vercel's project environment variables. Paste raw values without surrounding quotes.
+3. Select Production for production deployments; also select Preview if testing a preview deployment.
+4. Redeploy after adding or changing variables, then test the new deployment URL.
 
-Serve `server/php/public` with a PHP-capable web server and configure the PHP credentials through environment variables or the private `server/php/.env` file. Set `ENQUIRY_PHP_URL` on the Next.js server to the deployed endpoint, for example `https://your-php-host.example/enquiry.php`, and restart Next.js. A Next.js-only host does not execute PHP. For a shared host, the PHP service can listen on an internal address. Allow at least 65 seconds for the Next.js request (OAuth and lead requests each have a 30-second timeout).
+Missing credentials return 503. Salesforce or network failures return 502; server logs show the OAuth/create-lead stage and HTTP status without credentials or form details. Success returns {"ok":true}. Requests time out after 25 seconds per Salesforce call, within the route's 60-second duration.
 
-The existing Salesforce field mapping is preserved. Specifications, purpose and UTM content are included in customer remarks because their custom Salesforce field mappings were absent or commented out in the supplied code. Other ad/UTM values are collected from the current page query string. No access tokens or lead payloads are written to public debug files.
+Specifications, purpose and UTM content are preserved in customer remarks. Other campaign fields retain the supplied mapping; Salesforce can reject values that violate its field rules.
+
+The old server/php handler is retained only as a reference/optional standalone integration. It is not used by Next.js or Vercel. Its private environment file must remain ignored as well.
+
+If a secret was committed previously, removing the local file does not remove it from earlier commits. Clean the affected unpushed history before pushing; do not bypass secret scanning.
