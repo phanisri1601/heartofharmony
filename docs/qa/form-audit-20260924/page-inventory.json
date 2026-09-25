@@ -1,0 +1,1031 @@
+[
+  {
+    "title": "CKPC Heart of Harmony \u2013 3, 3.5 & 4 BHK Apartments, Hosur main road | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Project Overview, Master Plan & Amenities | Heart of Harmony by CKPC",
+    "forms": [],
+    "url": "https://heartofharmony.vercel.app/project",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Amenities & Lifestyle \u2014 Wellness, Pool, Spa & 40+ Features | Heart of Harmony by CKPC",
+    "forms": [],
+    "url": "https://heartofharmony.vercel.app/lifestyle",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "3, 3.5 & 4 BHK Floor Plans & Homes | Heart of Harmony by CKPC",
+    "forms": [],
+    "url": "https://heartofharmony.vercel.app/homes",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "About CKPC Properties \u2014 Developer of Heart of Harmony | Heart of Harmony by CKPC",
+    "forms": [],
+    "url": "https://heartofharmony.vercel.app/about-us",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Blog \u2014 Real Estate Insights, Location & Lifestyle | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/resources",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Contact Us \u2014 Book a Site Visit | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-message",
+            "type": "textarea",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/contact-us",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "3 BHK Flats in Hosur main road 2026 | Locality Guide for Hosur Road Buyers \u2014 Heart of Harmony | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/3-bhk-flats-kudlu-gate-locality-guide-2026",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Luxury Apartments on Hosur Road Bengaluru 2026 | 4 BHK Corridor Guide \u2014 Heart of Harmony | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/luxury-apartments-hosur-road-bengaluru-2026",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "CKPC Properties New Launch on Hosur Road 2026 | Heart of Harmony, Hosur main road, Bengaluru | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/ckpc-properties-new-launch-hosur-road-heart-of-harmony",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Privacy Policy | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/privacy-policy",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Heart of Harmony Brochure | Download PDF \u2013 3, 3.5 & 4 BHK, Hosur main road | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/heart-of-harmony-brochure",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Heart of Harmony Master Plan | Site Layout, Tower Design & Floor Plans \u2014 CKPC | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/heart-of-harmony-master-plan",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Heart of Harmony Amenities | 40+ Facilities \u2014 Clubhouse, Pool, Spa & Outdoor Sports, Hosur main road | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/exclusive-look-clubhouses-and-recreational-amenities-at-heart-of-harmony",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Why Hosur main road is Bengaluru's Next Residential Growth Corridor | Hosur Road, 2026 | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/why-kudlu-gate-is-bengalurus-next-residential-growth-corridor",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "The Thinking Behind PX: How CKPC Properties Designs Spaces Around People Experience | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/the-thinking-behind-px-designing-spaces-around-people-experience",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "CKPC Properties Track Record | 8M Sq Ft, Fortune 100 Clients & Heart of Harmony, Bengaluru | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/built-for-the-long-term-ckpcs-track-record-in-commercial-and-residential-spaces",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "4 BHK Apartments in Hosur main road 2026 | Luxury Flats on Hosur Road \u2014 Heart of Harmony | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/4-bhk-apartments-kudlu-gate-hosur-road",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "3 BHK Apartments in Hosur main road 2026 | Luxury Flats on Hosur Road \u2014 Heart of Harmony | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/3-bhk-apartments-kudlu-gate-hosur-road",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Premium 3 BHK & 4 BHK Flats Near HSR Layout | Why Hosur main road on Hosur Road is the Smarter Buy in 2026 | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/premium-3-bhk-4-bhk-near-hsr-layout-kudlu-gate",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "CKPC Heart of Harmony Review 2026 | Honest Buyer Analysis \u2014 Hosur main road, Bengaluru | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/ckpc-heart-of-harmony-review",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  },
+  {
+    "title": "Heart of Harmony Price 2026 | 3, 3.5 & 4 BHK Cost at Hosur main road, Bengaluru | Heart of Harmony by CKPC",
+    "forms": [
+      {
+        "visible": true,
+        "fields": [
+          {
+            "name": "your-name",
+            "type": "text",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-email",
+            "type": "email",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "your-phone",
+            "type": "tel",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "specifications",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "purpose",
+            "type": "select-one",
+            "required": false
+          },
+          {
+            "name": "checkbox-accept",
+            "type": "checkbox",
+            "required": true,
+            "pattern": ""
+          },
+          {
+            "name": "",
+            "type": "submit"
+          }
+        ]
+      }
+    ],
+    "url": "https://heartofharmony.vercel.app/heart-of-harmony-price",
+    "popup_trigger": true,
+    "popup": {
+      "dialog": true,
+      "form": true,
+      "emptyInvalid": true
+    }
+  }
+]

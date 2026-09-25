@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint",
-    "dev:php": "php -S 127.0.0.1:8081 -t server/php/public"
+    "lint": "eslint"
   },
   "dependencies": {
     "clsx": "^2.1.1",

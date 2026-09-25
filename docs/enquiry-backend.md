@@ -1,22 +1,13 @@
-# Enquiry backend on Vercel
+# Enquiry backend
 
-All forms post to the Next.js `/api/enquiry` route. It obtains a Salesforce OAuth token and calls CreateLeadService directly using the field mapping from the supplied PHP code. No PHP service, Google Sheets integration or ENQUIRY_PHP_URL is required.
+All website forms send JSON to the Next.js `/api/enquiry` route. The route validates the form and forwards these fields as an `application/x-www-form-urlencoded` POST to `https://jjcruzad.a2hosted.com/lead-catpure/test.php`: `name`, `email`, `phone`, `message`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_id`, `specifications`, and `purpose`.
 
-## Local setup
+The route no longer calls Salesforce directly. The hosted PHP endpoint must create the Salesforce lead. The Vercel project does not execute local PHP files, so the new Contact Form 7 integration in `server/php/cf7-lead-capture.php` is only for a separate WordPress site. Install it there as a plugin if that WordPress form still needs to send leads to the same endpoint. Do not install it for the Vercel website.
 
-Copy `.env.example` to `.env.local` in the Next.js project root and fill in SALESFORCE_CLIENT_ID and SALESFORCE_CLIENT_SECRET. Run `npm run dev`. Keep `.env.local` ignored by Git and never use NEXT_PUBLIC_ for secrets.
+## Logs
 
-## Vercel setup
+Local development writes `logs/enquiry-submissions.jsonl`. Each request has a `submissionId` connecting the received form, forwarded payload, PHP response and final result. The file is ignored by Git because it contains lead details. On Vercel, use the project function logs and search for `Enquiry debug log`; the `/tmp` file is temporary and does not sync to your computer.
 
-1. Deploy the updated Next.js project (the old PHP-proxy route will not use these credentials).
-2. Set SALESFORCE_CLIENT_ID and SALESFORCE_CLIENT_SECRET in Vercel's project environment variables. Paste raw values without surrounding quotes.
-3. Select Production for production deployments; also select Preview if testing a preview deployment.
-4. Redeploy after adding or changing variables, then test the new deployment URL.
+## Deployment
 
-Missing credentials return 503. Salesforce or network failures return 502; server logs show the OAuth/create-lead stage and HTTP status without credentials or form details. Success returns {"ok":true}. Requests time out after 25 seconds per Salesforce call, within the route's 60-second duration.
-
-Specifications, purpose and UTM content are preserved in customer remarks. Other campaign fields retain the supplied mapping; Salesforce can reject values that violate its field rules.
-
-The old server/php handler is retained only as a reference/optional standalone integration. It is not used by Next.js or Vercel. Its private environment file must remain ignored as well.
-
-If a secret was committed previously, removing the local file does not remove it from earlier commits. Clean the affected unpushed history before pushing; do not bypass secret scanning.
+Deploy the updated Next.js project to Vercel, then submit a test enquiry. The old `SALESFORCE_CLIENT_ID` and `SALESFORCE_CLIENT_SECRET` variables are no longer used by this website route. The form only reports success when the PHP endpoint returns HTTP 2xx with JSON `status: true` and `data.salesforce_apex: true`; other replies return 502. A live synthetic test on 25 September 2026 returned both `salesforce_apex: true` and `google_sheet: true`, so the hosted PHP endpoint still writes to Google Sheets.

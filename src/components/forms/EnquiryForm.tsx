@@ -16,7 +16,7 @@ type Status = "idle" | "submitting" | "success" | "error";
  * borderless, bottom-underline-only fields with no card, no labels, no
  * wrapper — as opposed to the boxed/bordered fields the popup modal uses.
  *
- * Submits through the PHP Salesforce integration via /api/enquiry.
+ * Submits to the PHP lead capture endpoint through /api/enquiry.
  */
 export function EnquiryForm({
   compact = false,

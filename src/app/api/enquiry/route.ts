@@ -1,104 +1,102 @@
+import { randomUUID } from "node:crypto";
+import { appendFile, mkdir } from "node:fs/promises";
+import * as path from "node:path";
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
-const salesforceOrigin = "https://ckpc.my.salesforce.com";
+const leadCaptureUrl = "https://jjcruzad.a2hosted.com/lead-catpure/test.php";
+const logDirectory = process.env.ENQUIRY_LOG_DIR?.trim() || (process.env.VERCEL ? "/tmp" : path.join(process.cwd(), "logs"));
+const logFile = path.join(logDirectory, "enquiry-submissions.jsonl");
+
+async function writeEnquiryLog(submissionId: string, event: string, details: Record<string, unknown> = {}) {
+  const entry = { timestamp: new Date().toISOString(), submissionId, event, ...details };
+  console.info("Enquiry debug log", entry);
+
+  try {
+    await mkdir(logDirectory, { recursive: true });
+    await appendFile(logFile, `${JSON.stringify(entry)}\n`, "utf8");
+  } catch (error) {
+    console.error("Unable to write enquiry log file", { submissionId, event, error });
+  }
+}
 
 export async function POST(request: Request) {
+  const submissionId = randomUUID();
   const data = await request.json().catch(() => null);
   if (!data || Array.isArray(data) || typeof data !== "object" ||
       Object.values(data).some((value) => typeof value !== "string")) {
+    await writeEnquiryLog(submissionId, "invalid-form-data", { receivedType: Array.isArray(data) ? "array" : typeof data });
     return NextResponse.json({ ok: false, error: "Invalid form data" }, { status: 400 });
   }
+
+  await writeEnquiryLog(submissionId, "form-data-received", { formData: data });
   if (!["your-name", "your-email", "your-phone"].every((key) => data[key]?.trim())) {
+    await writeEnquiryLog(submissionId, "validation-failed", { reason: "missing-required-fields" });
     return NextResponse.json({ ok: false, error: "Name, email and phone are required" }, { status: 422 });
   }
   if (data["checkbox-accept"] !== "1") {
+    await writeEnquiryLog(submissionId, "validation-failed", { reason: "missing-consent" });
     return NextResponse.json({ ok: false, error: "Please accept the consent checkbox" }, { status: 422 });
   }
 
-  const clientId = process.env.SALESFORCE_CLIENT_ID?.trim();
-  const clientSecret = process.env.SALESFORCE_CLIENT_SECRET?.trim();
-  if (!clientId || !clientSecret) {
-    console.error("Enquiry: missing Salesforce environment variables");
-    return NextResponse.json({ ok: false, error: "Enquiry service is unavailable. Please call us directly." }, { status: 503 });
-  }
+  const value = (...keys: string[]): string => {
+    for (const key of keys) if (data[key] !== undefined) return data[key].trim();
+    return "";
+  };
+  const payload = {
+    name: value("your-name"),
+    email: value("your-email"),
+    phone: value("your-phone"),
+    message: value("your-message", "message") || "Interested",
+    utm_source: value("utm_source") || "Website",
+    utm_medium: value("utm_medium") || "Website",
+    utm_campaign: value("utm_campaign"),
+    utm_content: value("utm_content"),
+    utm_id: value("utm_id", "campaign_id", "utm_term"),
+    specifications: value("specifications", "configuration"),
+    purpose: value("purpose", "select-833"),
+  };
 
-  let stage = "oauth";
-  let upstreamStatus: number | undefined;
+  await writeEnquiryLog(submissionId, "php-payload-prepared", { payload });
   try {
-    const tokenResponse = await fetch(`${salesforceOrigin}/services/oauth2/token`, {
+    const response = await fetch(leadCaptureUrl, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" },
-      body: new URLSearchParams({ grant_type: "client_credentials", client_id: clientId, client_secret: clientSecret }),
+      body: new URLSearchParams(payload),
       signal: AbortSignal.timeout(25_000),
       cache: "no-store",
       redirect: "error",
     });
-    upstreamStatus = tokenResponse.status;
-    if (!tokenResponse.ok) throw new Error("OAuth rejected");
-    const token = await tokenResponse.json();
-    if (typeof token?.access_token !== "string" || !token.access_token) throw new Error("Missing token");
-    const instance = new URL(token.instance_url || salesforceOrigin);
-    if (instance.protocol !== "https:" || !instance.hostname.endsWith(".salesforce.com") || instance.username || instance.password) {
-      throw new Error("Invalid Salesforce instance");
+    const body = await response.text();
+    await writeEnquiryLog(submissionId, "php-response-received", { status: response.status, body });
+
+    let result: unknown;
+    try {
+      result = JSON.parse(body);
+      if (typeof result === "string") result = JSON.parse(result);
+    } catch {
+      result = null;
+    }
+    const salesforceAccepted = result !== null && typeof result === "object" && !Array.isArray(result) &&
+      "status" in result && result.status === true &&
+      "data" in result && result.data !== null && typeof result.data === "object" &&
+      "salesforce_apex" in result.data && result.data.salesforce_apex === true;
+
+    if (!response.ok || !salesforceAccepted) {
+      await writeEnquiryLog(submissionId, "submission-failed", { stage: "php-lead-capture", upstreamStatus: response.status });
+      return NextResponse.json({ ok: false, error: "Unable to submit your enquiry. Please try again or call us directly." }, { status: 502 });
     }
 
-    const value = (...keys: string[]): string => {
-      for (const key of keys) if (data[key] !== undefined) return data[key].trim();
-      return "";
-    };
-    const [firstName, ...rest] = value("your-name").split(/\s+/);
-    const remarks = [value("message", "your-message") || "Interested"];
-    for (const [key, label] of [["specifications", "Specifications"], ["purpose", "Purpose of Purchase"], ["utm_content", "UTM Content"]]) {
-      if (value(key)) remarks.push(`${label}: ${value(key)}`);
-    }
-    const payload = {
-      FirstName: firstName,
-      LastName: rest.join(" ") || firstName,
-      MobilePhone: value("your-phone"),
-      Email: value("your-email"),
-      Company: "Website Lead",
-      Status: "Yet To Service",
-      Customer_Remarks__c: remarks.join("\n"),
-      Submitted_By__c: "Website Form",
-      Lead_Source__c: "Marketing Online",
-      Sub_Source__c: value("utm_medium"),
-      source__c: value("utm_source"),
-      Channel__c: value("utm_medium"),
-      campaigns__c: value("utm_campaign"),
-      keyword__c: value("utm_term"),
-      ad_name__c: value("ad_name", "Ad Name"),
-      adset_name__c: value("adset_name", "ad_set_name", "Ad Set Name"),
-      gclid__c: value("gclid", "Google click ID"),
-      Campaign_Id__c: value("campaign_id", "utm_id", "Campaign Id", "Campaing Id"),
-      Project__r: { Name: "Heart Of Harmony" },
-    };
-    stage = "create-lead";
-    upstreamStatus = undefined;
-    const leadResponse = await fetch(`${instance.origin}/services/apexrest/CreateLeadService`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json", Authorization: `Bearer ${token.access_token}` },
-      body: JSON.stringify(payload),
-      signal: AbortSignal.timeout(25_000),
-      cache: "no-store",
-      redirect: "error",
-    });
-    upstreamStatus = leadResponse.status;
-    if (!leadResponse.ok) throw new Error("Lead rejected");
-    let result = await leadResponse.json();
-    // Apex may return a JSON-encoded string instead of an object.
-    if (typeof result === "string") result = JSON.parse(result);
-    if (!result || typeof result !== "object" || Array.isArray(result) ||
-        result.success === false || result.status === false || result.error || result.errorCode ||
-        (Array.isArray(result.errors) ? result.errors.length > 0 : result.errors)) {
-      throw new Error("Lead not accepted");
-    }
+    await writeEnquiryLog(submissionId, "submission-complete", { upstreamStatus: response.status });
     return NextResponse.json({ ok: true });
-  } catch {
-    // Log only the stage and HTTP status, never credentials, tokens or lead details.
-    console.error("Enquiry Salesforce request failed", { stage, upstreamStatus });
+  } catch (error) {
+    console.error("Enquiry PHP request failed", { submissionId, error: error instanceof Error ? error.message : String(error) });
+    await writeEnquiryLog(submissionId, "submission-failed", {
+      stage: "php-lead-capture",
+      error: error instanceof Error ? error.message : String(error),
+    });
     return NextResponse.json({ ok: false, error: "Unable to submit your enquiry. Please try again or call us directly." }, { status: 502 });
   }
 }
