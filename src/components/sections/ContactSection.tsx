@@ -1,6 +1,6 @@
 "use client";
 
-import { useId, useState, type FormEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { submitEnquiry } from "@/lib/submit-enquiry";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -15,7 +15,6 @@ const fieldClass =
   "w-full border-0 border-b border-brand-border bg-transparent px-0 py-3 text-base text-brand-dark placeholder:text-brand-gray focus:border-brand-primary focus:outline-none";
 
 export function ContactSection() {
-  const fieldIdPrefix = useId();
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -92,91 +91,47 @@ export function ContactSection() {
 
               {/* Right: borderless underline form */}
               <form onSubmit={handleSubmit} className="space-y-7">
-                <div>
-                  <label htmlFor={`${fieldIdPrefix}-name`} className="sr-only">
-                    Your Name
-                  </label>
-                  <input
-                    id={`${fieldIdPrefix}-name`}
-                    name="your-name"
-                    type="text"
-                    placeholder="Your Name"
-                    required
-                    className={fieldClass}
-                  />
-                </div>
+                <input name="your-name" type="text" placeholder="Your Name" required className={fieldClass} />
+                <input name="your-email" type="email" placeholder="Your Email ID" required className={fieldClass} />
+                <input
+                  name="your-phone"
+                  type="tel"
+                  placeholder="Contact Number"
+                  required
+                  className={fieldClass}
+                />
 
-                <div>
-                  <label htmlFor={`${fieldIdPrefix}-email`} className="sr-only">
-                    Your Email ID
-                  </label>
-                  <input
-                    id={`${fieldIdPrefix}-email`}
-                    name="your-email"
-                    type="email"
-                    placeholder="Your Email ID"
-                    required
-                    className={fieldClass}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor={`${fieldIdPrefix}-phone`} className="sr-only">
-                    Contact Number
-                  </label>
-                  <input
-                    id={`${fieldIdPrefix}-phone`}
-                    name="your-phone"
-                    type="tel"
-                    placeholder="Contact Number"
-                    required
-                    className={fieldClass}
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor={`${fieldIdPrefix}-specifications`} className="sr-only">
+                <select
+                  name="specifications"
+                  value={specifications}
+                  onChange={(e) => setSpecifications(e.target.value)}
+                  className={`${fieldClass} appearance-none ${specifications ? "" : "text-brand-gray"}`}
+                >
+                  <option value="" disabled className="bg-brand-white text-brand-gray">
                     Specifications
-                  </label>
-                  <select
-                    id={`${fieldIdPrefix}-specifications`}
-                    name="specifications"
-                    value={specifications}
-                    onChange={(e) => setSpecifications(e.target.value)}
-                    className={`${fieldClass} appearance-none ${specifications ? "" : "text-brand-gray"}`}
-                  >
-                    <option value="" disabled className="bg-brand-white text-brand-gray">
-                      Specifications
+                  </option>
+                  {contactSection.specifications.map((s) => (
+                    <option key={s} value={s} className="bg-brand-white text-brand-dark">
+                      {s}
                     </option>
-                    {contactSection.specifications.map((s) => (
-                      <option key={s} value={s} className="bg-brand-white text-brand-dark">
-                        {s}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                  ))}
+                </select>
 
-                <div>
-                  <label htmlFor={`${fieldIdPrefix}-purpose`} className="sr-only">
+                <select
+                  name="purpose"
+                  value={purpose}
+                  onChange={(e) => setPurpose(e.target.value)}
+                  className={`${fieldClass} appearance-none ${purpose ? "" : "text-brand-gray"}`}
+                >
+                  <option value="" disabled className="bg-brand-white text-brand-gray">
                     Purpose of Purchase
-                  </label>
-                  <select
-                    id={`${fieldIdPrefix}-purpose`}
-                    name="purpose"
-                    value={purpose}
-                    onChange={(e) => setPurpose(e.target.value)}
-                    className={`${fieldClass} appearance-none ${purpose ? "" : "text-brand-gray"}`}
-                  >
-                    <option value="" disabled className="bg-brand-white text-brand-gray">
-                      Purpose of Purchase
+                  </option>
+                  {contactSection.purposeOfPurchase.map((s) => (
+                    <option key={s} value={s} className="bg-brand-white text-brand-dark">
+                      {s}
                     </option>
-                    {contactSection.purposeOfPurchase.map((s) => (
-                      <option key={s} value={s} className="bg-brand-white text-brand-dark">
-                        {s}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                  ))}
+                </select>
 
                 <label className="flex items-start gap-2.5 pt-2 text-xs leading-relaxed text-brand-gray">
                   <input

@@ -45,30 +45,18 @@ export async function POST(request: Request) {
     for (const key of keys) if (data[key] !== undefined) return data[key].trim();
     return "";
   };
-  const source = value("utm_source", "source", "source__c") || "Website";
-  const subSource = value("utm_medium", "sub_source", "Sub_Source__c") || "Website";
   const payload = {
     name: value("your-name"),
     email: value("your-email"),
     phone: value("your-phone"),
     message: value("your-message", "message") || "Interested",
-    // Send both tracking names and Salesforce field aliases. The hosted PHP
-    // receiver may read either set when it builds the Apex lead payload.
-    utm_source: source,
-    utm_medium: subSource,
-    source,
-    sub_source: subSource,
-    source__c: source,
-    Sub_Source__c: subSource,
-    Channel__c: subSource,
-    Lead_Source__c: "Marketing Online",
+    utm_source: value("utm_source") || "Website",
+    utm_medium: value("utm_medium") || "Website",
     utm_campaign: value("utm_campaign"),
     utm_content: value("utm_content"),
     utm_id: value("utm_id", "campaign_id", "utm_term"),
     specifications: value("specifications", "configuration"),
     purpose: value("purpose", "select-833"),
-    page_url: value("page_url"),
-    page_path: value("page_path"),
   };
 
   await writeEnquiryLog(submissionId, "php-payload-prepared", { payload });

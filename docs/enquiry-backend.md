@@ -1,15 +1,6 @@
 # Enquiry backend
 
-All website forms send JSON to the Next.js `/api/enquiry` route. The route validates the form and forwards the lead to `https://jjcruzad.a2hosted.com/lead-catpure/test.php` as an `application/x-www-form-urlencoded` POST. Organic visits use `Website` for Source, Sub Source and Channel. Campaign visits preserve `utm_source` and `utm_medium`. Lead Source is always `Marketing Online`.
-
-The sender includes both tracking names (`utm_source`, `utm_medium`) and Salesforce aliases (`source__c`, `Sub_Source__c`, `Channel__c`, `Lead_Source__c`). The hosted PHP receiver must map these values into the Apex payload as follows:
-
-```php
-'source__c'      => $_POST['utm_source'] ?? $_POST['source__c'] ?? 'Website',
-'Sub_Source__c'  => $_POST['utm_medium'] ?? $_POST['Sub_Source__c'] ?? 'Website',
-'Channel__c'     => $_POST['utm_medium'] ?? $_POST['Channel__c'] ?? 'Website',
-'Lead_Source__c' => 'Marketing Online',
-```
+All website forms send JSON to the Next.js `/api/enquiry` route. The route validates the form and forwards these fields as an `application/x-www-form-urlencoded` POST to `https://jjcruzad.a2hosted.com/lead-catpure/test.php`: `name`, `email`, `phone`, `message`, `utm_source`, `utm_medium`, `utm_campaign`, `utm_content`, `utm_id`, `specifications`, and `purpose`.
 
 The route no longer calls Salesforce directly. The hosted PHP endpoint must create the Salesforce lead. The Vercel project does not execute local PHP files, so the new Contact Form 7 integration in `server/php/cf7-lead-capture.php` is only for a separate WordPress site. Install it there as a plugin if that WordPress form still needs to send leads to the same endpoint. Do not install it for the Vercel website.
 

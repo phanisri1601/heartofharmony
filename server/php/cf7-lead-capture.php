@@ -47,22 +47,13 @@ function hoh_forward_cf7_lead($contact_form): void
         return $default;
     };
 
-    $source = $field(['utm_source', 'source', 'source__c'], 'Website');
-    $sub_source = $field(['utm_medium', 'sub_source', 'Sub_Source__c'], 'Website');
-
     $payload = [
         'name'           => $field(['your-name']),
         'email'          => sanitize_email($field(['your-email'])),
         'phone'          => $field(['your-phone']),
         'message'        => sanitize_textarea_field($field(['your-message', 'message'], 'Interested')),
-        'utm_source'     => $source,
-        'utm_medium'     => $sub_source,
-        'source'         => $source,
-        'sub_source'     => $sub_source,
-        'source__c'      => $source,
-        'Sub_Source__c'  => $sub_source,
-        'Channel__c'     => $sub_source,
-        'Lead_Source__c' => 'Marketing Online',
+        'utm_source'     => $field(['utm_source'], 'Website'),
+        'utm_medium'     => $field(['utm_medium'], 'Website'),
         'utm_campaign'   => $field(['utm_campaign']),
         'utm_content'    => $field(['utm_content']),
         'utm_id'         => $field(['utm_id', 'utm_term']),
