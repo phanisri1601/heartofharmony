@@ -45,13 +45,22 @@ export async function POST(request: Request) {
     for (const key of keys) if (data[key] !== undefined) return data[key].trim();
     return "";
   };
+  const source = value("utm_source", "source", "source__c") || "Website";
+  const subSource = value("utm_medium", "sub_source", "subsource", "channel", "Channel__c", "Sub_Source__c") || "Website";
   const payload = {
     name: value("your-name"),
     email: value("your-email"),
     phone: value("your-phone"),
     message: value("your-message", "message") || "Interested",
-    utm_source: value("utm_source") || "Website",
-    utm_medium: value("utm_medium") || "Website",
+    utm_source: source,
+    utm_medium: subSource,
+    source,
+    sub_source: subSource,
+    channel: subSource,
+    source__c: source,
+    Sub_Source__c: subSource,
+    Channel__c: subSource,
+    Lead_Source__c: "Marketing Online",
     utm_campaign: value("utm_campaign"),
     utm_content: value("utm_content"),
     utm_id: value("utm_id", "campaign_id", "utm_term"),

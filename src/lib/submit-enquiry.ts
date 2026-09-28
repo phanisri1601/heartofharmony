@@ -12,6 +12,15 @@ export async function submitEnquiry(data: FormData) {
     const value = params.get(key);
     if (value !== null) payload[key] = value;
   }
+
+  const source = payload.utm_source?.trim() || "Website";
+  const subSource = payload.utm_medium?.trim() || "Website";
+  payload.utm_source = source;
+  payload.utm_medium = subSource;
+  payload.source = source;
+  payload.sub_source = subSource;
+  payload.channel = subSource;
+
   const response = await fetch("/api/enquiry", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
