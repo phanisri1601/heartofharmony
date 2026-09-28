@@ -12,6 +12,14 @@ export async function submitEnquiry(data: FormData) {
     const value = params.get(key);
     if (value !== null) payload[key] = value;
   }
+  // Organic website visits do not have UTM parameters. Send explicit
+  // defaults so Salesforce Source/Sub Source are never left blank.
+  payload["utm_source"] ||= "Website";
+  payload["utm_medium"] ||= "Website";
+  payload["source"] = payload["utm_source"];
+  payload["sub_source"] = payload["utm_medium"];
+  payload["page_url"] = window.location.href;
+  payload["page_path"] = window.location.pathname;
   const response = await fetch("/api/enquiry", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

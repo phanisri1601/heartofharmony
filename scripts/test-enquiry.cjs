@@ -69,6 +69,12 @@ async function run(name, body, mock, expectedStatus) {
   assert.equal(calls[0].options.body.get('purpose'), 'Investment');
   assert.equal(calls[0].options.body.get('utm_id'), 'campaign');
   assert.equal(calls[0].options.body.get('utm_medium'), 'Website');
+  assert.equal(calls[0].options.body.get('source'), 'qa');
+  assert.equal(calls[0].options.body.get('sub_source'), 'Website');
+  assert.equal(calls[0].options.body.get('source__c'), 'qa');
+  assert.equal(calls[0].options.body.get('Sub_Source__c'), 'Website');
+  assert.equal(calls[0].options.body.get('Channel__c'), 'Website');
+  assert.equal(calls[0].options.body.get('Lead_Source__c'), 'Marketing Online');
 
   await run('PHP HTTP rejection', input, reply({ error: 'validation' }, 400), 502);
   await run('PHP application rejection', input, reply({ status: false }), 502);
