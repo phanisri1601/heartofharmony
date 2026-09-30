@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { useEnquiryModal } from "@/components/modals/EnquiryModalProvider";
 
@@ -47,19 +46,11 @@ export function Faq({
                   <span className="text-sm font-medium text-brand-dark">{item.q}</span>
                   <span className="shrink-0 text-lg text-brand-primary">{isOpen ? "−" : "+"}</span>
                 </button>
-                <AnimatePresence initial={false}>
                   {isOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.25 }}
-                      className="overflow-hidden"
-                    >
+                    <div className="overflow-hidden">
                       <p className="pb-4 text-xs text-brand-gray">{item.a}</p>
-                    </motion.div>
+                    </div>
                   )}
-                </AnimatePresence>
               </div>
             );
           })}

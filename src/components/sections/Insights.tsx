@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/common/SectionHeading";
 
 export type InsightItem = { title: string; href: string; image: string };
@@ -34,13 +31,9 @@ export function Insights({
         />
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {items.map((item, i) => (
-            <motion.div
+          {items.map((item) => (
+            <div
               key={item.href}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
             >
               <Link href={item.href} className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
@@ -57,7 +50,7 @@ export function Insights({
                 </h3>
                 <span className="mt-2 inline-block text-sm text-brand-primary">Read more →</span>
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
 

@@ -43,6 +43,7 @@ export function SiteHeader() {
               width={325}
               height={48}
               loading="eager"
+              fetchPriority="low"
               className="h-10 w-auto object-contain sm:h-9 lg:h-12"
             />
           </Link>

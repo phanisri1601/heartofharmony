@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { amenities } from "@/data/homepage";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { useEnquiryModal } from "@/components/modals/EnquiryModalProvider";
@@ -25,15 +24,7 @@ export function Amenities() {
 
         <div className="mt-10 grid gap-8 md:grid-cols-2 md:items-start">
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeCategory.key}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute inset-0"
-              >
+              <div key={activeCategory.key} className="absolute inset-0">
                 <Image
                   src={activeCategory.image}
                   alt={activeCategory.label}
@@ -41,8 +32,7 @@ export function Amenities() {
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
                 />
-              </motion.div>
-            </AnimatePresence>
+              </div>
           </div>
 
           <div>
@@ -70,19 +60,11 @@ export function Amenities() {
                         {c.label}
                       </span>
                     </button>
-                    <AnimatePresence initial={false}>
                       {isActive && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.25 }}
-                          className="overflow-hidden pl-6"
-                        >
+                        <div className="overflow-hidden pl-6">
                           <p className="pb-4 text-sm text-brand-gray">{c.body}</p>
-                        </motion.div>
+                        </div>
                       )}
-                    </AnimatePresence>
                   </div>
                 );
               })}

@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { lifestyleAccess } from "@/data/homepage";
 import { HospitalsIcon, SchoolsIcon, ShoppingIcon, NatureIcon, ItParksIcon } from "@/components/icons/TravelTabIcons";
 
@@ -73,15 +72,7 @@ export function LifestyleAccess() {
           </div>
 
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={category.key}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="absolute inset-0"
-              >
+              <div key={category.key} className="absolute inset-0">
                 <Image
                   src={category.image}
                   alt={`${category.label} near Heart of Harmony`}
@@ -89,8 +80,7 @@ export function LifestyleAccess() {
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
                 />
-              </motion.div>
-            </AnimatePresence>
+              </div>
           </div>
         </div>
       </div>

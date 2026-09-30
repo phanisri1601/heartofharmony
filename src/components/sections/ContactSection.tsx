@@ -2,7 +2,6 @@
 
 import { useState, type FormEvent } from "react";
 import { submitEnquiry } from "@/lib/submit-enquiry";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { contactSection } from "@/data/homepage";
 import { footerContact } from "@/data/navigation";
@@ -47,11 +46,7 @@ export function ContactSection() {
       <div className="container-page">
         <div className="rounded-[32px] border border-brand-border bg-brand-white px-8 py-12 md:px-14 md:py-16">
           {submitted ? (
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="py-10 text-center"
-            >
+            <div className="py-10 text-center">
               <h2 className="font-serif text-3xl text-brand-dark">{contactSection.thankYou.heading}</h2>
               <p className="mt-3 text-brand-gray">{contactSection.thankYou.body}</p>
               <Link
@@ -60,7 +55,7 @@ export function ContactSection() {
               >
                 {contactSection.thankYou.cta}
               </Link>
-            </motion.div>
+            </div>
           ) : (
             <div className="grid gap-10 md:grid-cols-2 md:items-center md:gap-16">
               {/* Left: eyebrow, heading, intro, quick contact details —

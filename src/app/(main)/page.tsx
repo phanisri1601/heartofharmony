@@ -28,6 +28,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <div className="home-sections">
       <ProjectGlance />
       <TriadOfDelight />
       <LifestyleAccess />
@@ -42,6 +43,7 @@ export default function Home() {
       />
       <Faq heading={faq.heading} accent={faq.headingAccent} items={faq.items} ctaText={faq.ctaText} />
       <ContactSection />
+      </div>
     </>
   );
 }

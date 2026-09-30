@@ -3,7 +3,6 @@
 import { useState, type CSSProperties } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { projectStats, projectGlance } from "@/data/homepage";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { ResidencesIcon, PerFloorIcon, FloorsIcon, AmenitiesLevelsIcon } from "@/components/icons/ProjectStatsIcons";
@@ -45,13 +44,7 @@ export function ProjectGlance() {
           className="mx-auto mt-12 max-w-3xl sm:[&_h2]:whitespace-nowrap"
         />
 
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.6 }}
-          className="mt-10 flex flex-col gap-4 sm:flex-row"
-        >
+        <div className="mt-10 flex flex-col gap-4 sm:flex-row">
           {projectGlance.features.map((f, i) => {
             const grow = hovered === null ? (i === 0 ? 2.52 : 1) : hovered === i ? 2.52 : 1;
             return (
@@ -81,7 +74,7 @@ export function ProjectGlance() {
               </div>
             );
           })}
-        </motion.div>
+        </div>
 
         <div className="mt-10 text-center">
           <Link

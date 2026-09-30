@@ -8,7 +8,6 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { AnimatePresence, motion } from "framer-motion";
 import { EnquiryForm } from "@/components/forms/EnquiryForm";
 
 type EnquiryModalContextValue = {
@@ -44,21 +43,13 @@ export function EnquiryModalProvider({ children }: { children: ReactNode }) {
     <EnquiryModalContext.Provider value={{ open, close }}>
       {children}
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
+      {isOpen && (
+          <div
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
             onClick={close}
           >
-            <motion.div
+            <div
               className="relative w-full max-w-md rounded-xl bg-brand-offwhite p-6 shadow-xl sm:p-8"
-              initial={{ opacity: 0, y: 24, scale: 0.97 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 16, scale: 0.97 }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
               onClick={(e) => e.stopPropagation()}
               role="dialog"
               aria-modal="true"
@@ -76,10 +67,9 @@ export function EnquiryModalProvider({ children }: { children: ReactNode }) {
                 Share your details and our team will get back to you.
               </p>
               <EnquiryForm compact />
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
 
       <EnquireFab onOpen={open} />
     </EnquiryModalContext.Provider>

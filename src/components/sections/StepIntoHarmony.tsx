@@ -1,25 +1,10 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { stepIntoHarmony } from "@/data/homepage";
 import { SectionHeading } from "@/components/common/SectionHeading";
 
-function HarmonyCard({
-  item,
-  delay,
-}: {
-  item: (typeof stepIntoHarmony.items)[number];
-  delay: number;
-}) {
+function HarmonyCard({ item }: { item: (typeof stepIntoHarmony.items)[number] }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay }}
-      className="group relative aspect-[4/3] overflow-hidden rounded-3xl sm:aspect-auto sm:h-[300px] md:h-[390px]"
-    >
+    <div className="group relative aspect-[4/3] overflow-hidden rounded-3xl sm:aspect-auto sm:h-[300px] md:h-[390px]">
       <Image
         src={item.image}
         alt={`${item.title} ${item.subtitle}`}
@@ -34,7 +19,7 @@ function HarmonyCard({
         </p>
         <p className="mt-2 max-w-[90%] text-sm text-brand-white/80">{item.body}</p>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -55,14 +40,14 @@ export function StepIntoHarmony() {
         <div className="mt-10 space-y-4">
           {/* Row 1: large | small | small */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1.85fr_1fr_1fr]">
-            {row1.map((item, i) => (
-              <HarmonyCard key={item.subtitle} item={item} delay={i * 0.08} />
+            {row1.map((item) => (
+              <HarmonyCard key={item.subtitle} item={item} />
             ))}
           </div>
           {/* Row 2: small | small | large */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-[1fr_1fr_1.85fr]">
-            {row2.map((item, i) => (
-              <HarmonyCard key={item.subtitle} item={item} delay={i * 0.08} />
+            {row2.map((item) => (
+              <HarmonyCard key={item.subtitle} item={item} />
             ))}
           </div>
         </div>

@@ -1,11 +1,6 @@
-"use client";
-
-import { getImageProps } from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { hero } from "@/data/homepage";
-import { useEnquiryModal } from "@/components/modals/EnquiryModalProvider";
-import { useHeaderOnDark } from "@/components/layout/HeaderThemeContext";
+import { HeroEnquiryButton } from "@/components/sections/HeroEnquiryButton";
 
 /** The arrow live uses inside its "Enquire Now" pills — ported 1:1 from
  * right-arrow-icon.svg, but with `fill="currentColor"` so it follows
@@ -23,33 +18,12 @@ function ArrowIcon() {
 }
 
 export function Hero() {
-  const { open } = useEnquiryModal();
-  useHeaderOnDark();
-
   const imageAlt = "Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade";
-  const commonImageProps = { alt: imageAlt, sizes: "100vw", quality: 75 } as const;
-  const {
-    props: { srcSet: desktopSrcSet },
-  } = getImageProps({
-    ...commonImageProps,
-    src: "/images/home/hero-desktop.jpg",
-    width: 2560,
-    height: 1400,
-  });
-  const {
-    props: { srcSet: mobileSrcSet, ...mobileImageProps },
-  } = getImageProps({
-    ...commonImageProps,
-    src: "/images/home/hero-mobile.jpg",
-    width: 768,
-    height: 420,
-    quality: 50,
-    loading: "eager",
-    fetchPriority: "high",
-  });
 
   return (
     <section className="relative overflow-hidden bg-brand-dark text-brand-white">
+      <link rel="preload" as="image" href="/images/home/hero-mobile-sharp.avif" type="image/avif" media="(max-width: 767px)" fetchPriority="high" />
+      <link rel="preload" as="image" href="/images/home/hero-desktop-sharp.avif" type="image/avif" media="(min-width: 768px)" fetchPriority="high" />
       {/* Photo block — mobile crops this to a fixed ~55vh block with the
           heading/copy in a separate solid-dark block below it (not
           overlaid), matching live exactly; at md+ it's the full-bleed
@@ -62,11 +36,15 @@ export function Hero() {
             to match live's vertical crop (0% — crops from the bottom, not
             both edges evenly). */}
         <picture>
-          <source media="(min-width: 768px)" srcSet={desktopSrcSet} />
+          <source media="(min-width: 768px)" srcSet="/images/home/hero-desktop-sharp.avif" />
           <img
-            {...mobileImageProps}
+            src="/images/home/hero-mobile-sharp.avif"
             alt={imageAlt}
-            srcSet={mobileSrcSet}
+            width={960}
+            height={1050}
+            loading="eager"
+            fetchPriority="high"
+            decoding="sync"
             className="absolute inset-0 h-full w-full object-cover object-[80%_0%] md:object-[40%_0%]"
           />
         </picture>
@@ -81,63 +59,37 @@ export function Hero() {
       </div>
 
       <div className="container-page relative z-10 pb-14 pt-8 md:pt-40">
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="max-w-2xl font-serif text-2xl font-normal leading-tight sm:text-3xl md:text-4xl"
-        >
+        <h1 className="max-w-2xl font-serif text-2xl font-normal leading-tight sm:text-3xl md:text-4xl">
           {hero.h1Lines.map((line, i) => (
             <span key={line} className={i > 0 ? "block" : undefined}>
               {line}
             </span>
           ))}
-        </motion.h1>
+        </h1>
 
-        <motion.p
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mt-4 max-w-lg text-sm text-brand-white/75"
-        >
+        <p className="mt-4 max-w-lg text-sm text-brand-white/75">
           {hero.intro}
-        </motion.p>
+        </p>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-7"
-        >
-          <button
-            onClick={open}
+        <div className="mt-7">
+          <HeroEnquiryButton
             className="inline-flex items-center gap-2 rounded-full bg-brand-offwhite px-5 py-2.5 text-base font-medium text-brand-dark transition hover:opacity-90"
           >
             {hero.cta}
             <ArrowIcon />
-          </button>
-        </motion.div>
+          </HeroEnquiryButton>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/20 pt-6"
-        >
+        <div className="mt-10 flex flex-wrap gap-x-8 gap-y-4 border-t border-white/20 pt-6">
           {hero.stats.map((s) => (
             <div key={s.label}>
               <p className="font-serif text-lg">{s.value}</p>
               <p className="mt-0.5 text-xs text-brand-white/60">{s.label}</p>
             </div>
           ))}
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-8 max-w-2xl border-t border-white/10 pt-6"
-        >
+        <div className="mt-8 max-w-2xl border-t border-white/10 pt-6">
           <p className="text-base leading-relaxed text-brand-white">{hero.description}</p>
           <Link
             href="/homes/#floor-plans"
@@ -145,7 +97,7 @@ export function Hero() {
           >
             {hero.floorPlanCta}
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

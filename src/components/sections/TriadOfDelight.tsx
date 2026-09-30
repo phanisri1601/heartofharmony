@@ -1,7 +1,4 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { triadOfDelight } from "@/data/homepage";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { HighwayAccessIcon, MetroAccessIcon, LifestyleAccessIcon } from "@/components/icons/AddressIcons";
@@ -46,15 +43,11 @@ export function TriadOfDelight() {
           </div>
 
           <div className="relative grid grid-cols-1 gap-12 sm:grid-cols-3 sm:gap-10 lg:gap-[70px]">
-            {triadOfDelight.items.map((item, i) => {
+            {triadOfDelight.items.map((item) => {
               const Icon = icons[item.icon];
               return (
-                <motion.div
+                <div
                   key={item.title}
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="text-center"
                 >
                   <div className="relative mx-auto h-20 w-20">
@@ -81,7 +74,7 @@ export function TriadOfDelight() {
                       mt-7 which put the title 22px into the pointer. */}
                   <h3 className="mt-16 font-sans text-xl font-medium text-brand-dark">{item.title}</h3>
                   <p className="mx-auto mt-2 max-w-[220px] text-base leading-relaxed text-brand-gray">{item.body}</p>
-                </motion.div>
+                </div>
               );
             })}
           </div>

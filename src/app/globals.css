@@ -65,6 +65,12 @@
   padding-inline: 1.25rem;
 }
 
+/* Keep offscreen content in the document while deferring its layout and paint. */
+.home-sections > section {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
+}
+
 @media (min-width: 768px) {
   .container-page {
     padding-inline: 2.5rem;
