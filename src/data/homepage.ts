@@ -68,8 +68,8 @@ export const triadOfDelight = {
 };
 
 export const lifestyleAccess = {
-  subheading: "You won't have to travel far for anything ",
-  subheadingAccent: "important",
+  subheading: "You won't have to travel far for anything",
+  subheadingAccent: "",
   cta: "Discover Location",
   categories: [
     {
@@ -77,7 +77,6 @@ export const lifestyleAccess = {
       label: "Hospitals",
       image: "/images/home/lifestyle-hospitals.jpg",
       places: [
-        { name: "Medfluence Best Healthcare", distance: "1.2 km" },
         { name: "Prashanth Hospital", distance: "2.6 km" },
         { name: "Narayana Multispeciality Hospital", distance: "2.6 km" },
         { name: "Curemaxx Hospitals", distance: "3.1 km" },
