@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import { getImageProps } from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { hero } from "@/data/homepage";
@@ -26,6 +26,27 @@ export function Hero() {
   const { open } = useEnquiryModal();
   useHeaderOnDark();
 
+  const imageAlt = "Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade";
+  const commonImageProps = { alt: imageAlt, sizes: "100vw", quality: 75 } as const;
+  const {
+    props: { srcSet: desktopSrcSet },
+  } = getImageProps({
+    ...commonImageProps,
+    src: "/images/home/hero-desktop.jpg",
+    width: 2560,
+    height: 1400,
+  });
+  const {
+    props: { srcSet: mobileSrcSet, ...mobileImageProps },
+  } = getImageProps({
+    ...commonImageProps,
+    src: "/images/home/hero-mobile.jpg",
+    width: 768,
+    height: 420,
+    loading: "eager",
+    fetchPriority: "high",
+  });
+
   return (
     <section className="relative overflow-hidden bg-brand-dark text-brand-white">
       {/* Photo block — mobile crops this to a fixed ~55vh block with the
@@ -39,22 +60,15 @@ export function Hero() {
             so the tower isn't crowded against the right edge, top-anchored
             to match live's vertical crop (0% — crops from the bottom, not
             both edges evenly). */}
-        <Image
-          src="/images/home/hero-mobile.jpg"
-          alt="Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade"
-          fill
-          priority
-          sizes="(max-width: 767px) 100vw, 1px"
-          className="object-cover object-[80%_0%] md:hidden"
-        />
-        <Image
-          src="/images/home/hero-desktop.jpg"
-          alt="Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade"
-          fill
-          priority
-          sizes="(min-width: 768px) 100vw, 1px"
-          className="hidden object-cover object-[40%_0%] md:block"
-        />
+        <picture>
+          <source media="(min-width: 768px)" srcSet={desktopSrcSet} />
+          <img
+            {...mobileImageProps}
+            alt={imageAlt}
+            srcSet={mobileSrcSet}
+            className="absolute inset-0 h-full w-full object-cover object-[80%_0%] md:object-[40%_0%]"
+          />
+        </picture>
         {/* Desktop: matches live's exact scrim — the top half of the photo
             stays completely clear, only fading in over the bottom half
             (transparent to 50%, 60% by 75%, 80% right at the bottom edge)
