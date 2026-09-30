@@ -66,7 +66,8 @@ export function ProjectGlance() {
                   src={f.image}
                   alt={f.title}
                   fill
-                  sizes="(min-width: 640px) 40vw, 100vw"
+                  quality={60}
+                  sizes="(min-width: 1280px) 34vw, (min-width: 640px) 40vw, calc(100vw - 2.5rem)"
                   className="object-cover"
                 />
                 {/* Live's card uses a corner gradient (252deg — dark toward

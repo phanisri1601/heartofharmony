@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { primaryNav, headerCta } from "@/data/navigation";
 import { useIsHeaderOnDark } from "@/components/layout/HeaderThemeContext";
@@ -9,11 +10,12 @@ import { useIsHeaderOnDark } from "@/components/layout/HeaderThemeContext";
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
   const onDark = useIsHeaderOnDark();
   // Once scrolled, always render the readable (opaque, dark-text) variant
   // regardless of what's behind it — matches the live site's header staying
   // transparent only while it overlaps the hero banner.
-  const light = onDark && !scrolled;
+  const light = (onDark || pathname === "/") && !scrolled;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -36,12 +38,12 @@ export function SiteHeader() {
         <div className="flex items-center gap-[14px] sm:gap-[18px]">
           <Link href="/" aria-label="Heart of Harmony" className="shrink-0">
             <Image
-              src= { light ? "/images/logos/CKPC_NewLOGO_white-1.png" : "/images/logos/CKPC_Black_LOGO_updated.png"}
+              src={light ? "/images/brand/header-logo.svg" : "/images/brand/header-logo-black.svg"}
               alt="Heart of Harmony"
-              width={320}
-              height={62}
-              priority
-              className="h-[128px] w-auto object-contain sm:h-[36px] lg:h-[122px]"
+              width={325}
+              height={48}
+              loading="eager"
+              className="h-10 w-auto object-contain sm:h-9 lg:h-12"
             />
           </Link>
           <span
