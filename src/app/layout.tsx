@@ -5,16 +5,22 @@ import "./globals.css";
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: "normal",
   display: "swap",
+});
+
+const frauncesItalic = Fraunces({
+  variable: "--font-fraunces-italic",
+  subsets: ["latin"],
+  style: "italic",
+  display: "swap",
+  preload: false,
 });
 
 const albertSans = Albert_Sans({
   variable: "--font-albert-sans",
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  style: "normal",
   display: "swap",
 });
 
@@ -32,7 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${albertSans.variable} h-full antialiased`}
+      className={`${fraunces.variable} ${frauncesItalic.variable} ${albertSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans">
         {children}

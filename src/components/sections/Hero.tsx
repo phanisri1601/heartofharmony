@@ -43,7 +43,7 @@ export function Hero() {
     src: "/images/home/hero-mobile.jpg",
     width: 768,
     height: 420,
-    quality: 60,
+    quality: 50,
     loading: "eager",
     fetchPriority: "high",
   });

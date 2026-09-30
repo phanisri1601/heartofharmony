@@ -32,6 +32,7 @@
 
   --font-sans: var(--font-albert-sans), "Albert Sans", ui-sans-serif, sans-serif;
   --font-serif: var(--font-fraunces), "Fraunces", ui-serif, serif;
+  --font-serif-italic: var(--font-fraunces-italic), var(--font-fraunces), "Fraunces", ui-serif, serif;
 
   --container-page: 1320px;
 }
@@ -51,6 +52,10 @@
     font-family: var(--font-serif);
     font-weight: 500;
     letter-spacing: -0.01em;
+  }
+
+  em, i {
+    font-family: var(--font-serif-italic);
   }
 }
 
