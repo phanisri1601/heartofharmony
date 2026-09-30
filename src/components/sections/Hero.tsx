@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getImageProps } from "next/image";
 import { hero } from "@/data/homepage";
 import { HeroEnquiryButton } from "@/components/sections/HeroEnquiryButton";
 
@@ -19,10 +20,20 @@ function ArrowIcon() {
 
 export function Hero() {
   const imageAlt = "Heart of Harmony — 3, 3.5 & 4 BHK signature residences, high-rise facade";
+  const { props: mobileImage } = getImageProps({
+    src: "/images/home/hero-mobile-sharp.webp",
+    alt: imageAlt,
+    width: 1280,
+    height: 1400,
+    sizes: "100vw",
+    quality: 75,
+    loading: "eager",
+    fetchPriority: "high",
+  });
 
   return (
     <section className="relative overflow-hidden bg-brand-dark text-brand-white">
-      <link rel="preload" as="image" href="/images/home/hero-mobile-sharp.avif" type="image/avif" media="(max-width: 767px)" fetchPriority="high" />
+      <link rel="preload" as="image" imageSrcSet={mobileImage.srcSet} imageSizes={mobileImage.sizes} media="(max-width: 767px)" fetchPriority="high" />
       <link rel="preload" as="image" href="/images/home/hero-desktop-sharp.avif" type="image/avif" media="(min-width: 768px)" fetchPriority="high" />
       {/* Photo block — mobile crops this to a fixed ~55vh block with the
           heading/copy in a separate solid-dark block below it (not
@@ -38,12 +49,8 @@ export function Hero() {
         <picture>
           <source media="(min-width: 768px)" srcSet="/images/home/hero-desktop-sharp.avif" />
           <img
-            src="/images/home/hero-mobile-sharp.avif"
+            {...mobileImage}
             alt={imageAlt}
-            width={960}
-            height={1050}
-            loading="eager"
-            fetchPriority="high"
             decoding="sync"
             className="absolute inset-0 h-full w-full object-cover object-[80%_0%] md:object-[40%_0%]"
           />
