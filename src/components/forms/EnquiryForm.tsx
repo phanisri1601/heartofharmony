@@ -16,7 +16,7 @@ type Status = "idle" | "submitting" | "success" | "error";
  * borderless, bottom-underline-only fields with no card, no labels, no
  * wrapper — as opposed to the boxed/bordered fields the popup modal uses.
  *
- * Submits to the PHP lead capture endpoint through /api/enquiry.
+ * Submits to CKPC Salesforce through /api/enquiry.
  */
 export function EnquiryForm({
   compact = false,
@@ -47,7 +47,7 @@ export function EnquiryForm({
     }
 
     try {
-      await submitEnquiry(data);
+      await submitEnquiry(data, compact ? "Enquire Now Popup" : "Contact Us Page");
       setStatus("success");
       form.reset();
     } catch {

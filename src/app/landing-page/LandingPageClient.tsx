@@ -330,7 +330,7 @@ function initFormHandoff(root: HTMLElement) {
           form.appendChild(errorEl);
         }
         errorEl.textContent = "";
-        submitEnquiry(new FormData(form))
+        submitEnquiry(new FormData(form), "Landing Page Enquiry")
           .then(() => {
             form.reset();
             if (wrapper) (wrapper as HTMLElement).style.display = "none";

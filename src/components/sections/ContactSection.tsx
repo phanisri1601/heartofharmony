@@ -32,7 +32,7 @@ export function ContactSection() {
     setSubmitting(true);
     setError("");
     try {
-      await submitEnquiry(data);
+      await submitEnquiry(data, "Homepage Get in Touch");
       setSubmitted(true);
     } catch {
       setError("Unable to submit your enquiry. Please try again or call us directly.");
